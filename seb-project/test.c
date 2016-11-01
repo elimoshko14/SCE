@@ -5,7 +5,8 @@
 
 void main(int argc, char *argv[]) {
 
-	printf("C is cool !");
+	printf("arie katz is amazing!");
 	return;
 
 }
+
