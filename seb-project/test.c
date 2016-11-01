@@ -5,7 +5,7 @@
 
 void main(int argc, char *argv[]) {
 
-	printf("Eli sucks");
+	printf("test");
 	return;
 
 }
