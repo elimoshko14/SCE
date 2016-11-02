@@ -6,6 +6,8 @@
 void main(int argc, char *argv[]) {
 
 	
+
+	printf("arie");
 	return;
 
 }
