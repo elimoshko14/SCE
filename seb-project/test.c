@@ -4,7 +4,7 @@
 #include <string.h>
 
 void main(int argc, char *argv[]) {
-
+printf("eli");
 	
 	return;
 
