@@ -5,7 +5,7 @@
 
 void main(int argc, char *argv[]) {
 
-	printf("linux clon working");
+	printf("linux clon working 2");
 	return;
 }
 
