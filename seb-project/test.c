@@ -4,11 +4,8 @@
 #include <string.h>
 
 void main(int argc, char *argv[]) {
-printf("eli");
-	
 
-	printf("arie");
+	printf("linux clon working 2");
 	return;
-
 }
 
