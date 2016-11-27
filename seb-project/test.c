@@ -4,8 +4,9 @@
 #include <string.h>
 
 void main(int argc, char *argv[]) {
-
-	printf("linux clon working 2");
+	system("chcp 1251");
+	printf("פûגמ פûגמ פהûגמ פהûכגמ פ");
+	system("pause");
 	return;
 }
 
