@@ -1,4 +1,4 @@
-typedef struct users{
+typedef struct users {
 	long id;
 	char * name;
 	int level;
@@ -14,10 +14,18 @@ typedef struct users{
 
 }users;
 
+typedef struct proj {
+
+
+}proj;
+
+
+
 typedef struct user_node {
 	users * ptr;
 	user_node * next;
 }user_node;
+<<<<<<< HEAD
 
 
 typedef struct tasks {
@@ -40,3 +48,5 @@ typedef struct task_node {
 	tasks * ptr;
 	task_node * next;
 }task_node;
+=======
+>>>>>>> fe58fb9e85c84708bedaf379f2e697ec08dc6942
