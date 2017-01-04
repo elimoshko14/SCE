@@ -1,6 +1,6 @@
-typedef struct users {
+typedef struct user{
 	long id;
-	char * name;
+	char name[256];
 	int level;
 
 	int porj_id;
@@ -34,16 +34,16 @@ typedef struct user_node {
 	struct user_node * next;
 }user_node;
 
-typedef struct tasks {
-	long id;
-	char * title;
+typedef struct task {
+	int id;
+	char title[256];
 
-	int user_id;
+	long user_id;
 	int category_id;
 
 	int cost;
-	bool status;
-	char * tags;
+	char status[6]; // open/closed
+	char tags[256];
 	char deadLine[10];
 
 	int * comments;
@@ -55,23 +55,23 @@ typedef struct task_node {
 	struct task_node * next;
 }task_node;
 
-typedef struct comments {
-	char * title;
-	char * body;
+typedef struct comment {
+	char title[256];
+	char body[256];
 	int comment_id;
 	int user_id;
 	int task_id;
 	int porj_id;
 }comment;
 
-typedef struct comments_node {
+typedef struct comment_node {
 	struct comment * ptr;
 	struct comment_node * next;
 }comment_node;
 
-typedef struct categories {
+typedef struct category {
 	int * task;
-	char * name;
+	char name[256];
 	int proj_id;
 }category;
 
