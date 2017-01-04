@@ -15,8 +15,8 @@ typedef struct users {
 }user;
 
 typedef struct proj_node {
-	proj * ptr;
-	proj_node * next;
+	struct proj * ptr;
+	struct proj_node * next;
 }proj_node;
 
 typedef struct proj {
@@ -30,8 +30,8 @@ typedef struct proj {
 }proj;
 
 typedef struct user_node {
-	user * ptr;
-	user_node * next;
+	struct user * ptr;
+	struct user_node * next;
 }user_node;
 
 typedef struct tasks {
@@ -51,8 +51,8 @@ typedef struct tasks {
 }task;
 
 typedef struct task_node {
-	task * ptr;
-	task_node * next;
+	struct task * ptr;
+	struct task_node * next;
 }task_node;
 
 typedef struct comments {
@@ -65,8 +65,8 @@ typedef struct comments {
 }comment;
 
 typedef struct comments_node {
-	comment * ptr;
-	comment_node * next;
+	struct comment * ptr;
+	struct comment_node * next;
 }comment_node;
 
 typedef struct categories {
@@ -76,6 +76,6 @@ typedef struct categories {
 }category;
 
 typedef struct category_node {
-	category * ptr;
-	category_node * next;
+	struct category * ptr;
+	struct category_node * next;
 }category_node;

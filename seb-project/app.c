@@ -7,15 +7,15 @@
 
 /*********************/
 /*	Generic Includes */
-
 #include "lib/globals.h"
 #include "lib/structs.h"
 
+//--------------------//
 #include "lib/rw-task.h"
 
+//--------------------//
+
 #include "lib/login.h"
-
-
 /*********************/
 /*	Unit Testing	 */
 
@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 	// init()
 	// login();
 
-
+	unitTestGetTask();
 	return 0;
 }
 
