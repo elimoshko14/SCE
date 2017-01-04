@@ -11,9 +11,9 @@
 
 
 int main(int argc, char *argv[]) {
+
+	// init()
 	login();
-
-
-	return;
+	return 0;
 }
 
