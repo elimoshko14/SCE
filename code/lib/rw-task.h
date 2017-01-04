@@ -2,12 +2,12 @@ void setTaskFromLine(struct task ** node, char * line) {
 	char ch;
 	// get ID
 	do {
-		ch = getch(line);
+		ch = _getch(line);
 
 	} while (ch != '|');
 
 	// move over the next |
-	getc(line);
+	ch = _getch(line);
 
 	// get title
 }
@@ -32,4 +32,6 @@ void getTasks() {
 		setTaskFromLine(&task_node, line);
 		free(line);
 	}
+
+	fclose(tasks_file);
 }
