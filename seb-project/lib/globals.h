@@ -1,6 +1,7 @@
 typedef enum bool{
 	true = 1,
 	false
+
 }bool;
 
 // singles
