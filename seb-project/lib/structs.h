@@ -12,7 +12,7 @@ typedef struct users {
 
 	int * comments;
 
-}users;
+}user;
 
 typedef struct proj_node {
 	proj * ptr;
@@ -30,7 +30,7 @@ typedef struct proj {
 }proj;
 
 typedef struct user_node {
-	users * ptr;
+	user * ptr;
 	user_node * next;
 }user_node;
 
@@ -48,10 +48,10 @@ typedef struct tasks {
 
 	int * comments;
 
-}tasks;
+}task;
 
 typedef struct task_node {
-	tasks * ptr;
+	task * ptr;
 	task_node * next;
 }task_node;
 
@@ -62,20 +62,20 @@ typedef struct comments {
 	int user_id;
 	int task_id;
 	int porj_id;
-}comments;
+}comment;
 
-typedef struct comments {
-	comments * ptr;
-	comments_node * next;
-}comments_node;
+typedef struct comments_node {
+	comment * ptr;
+	comment_node * next;
+}comment_node;
 
-typedef struct category {
+typedef struct categories {
 	int * task;
 	char * name;
 	int proj_id;
 }category;
 
-typedef struct category {
+typedef struct category_node {
 	category * ptr;
 	category_node * next;
 }category_node;
