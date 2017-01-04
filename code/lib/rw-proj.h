@@ -14,7 +14,7 @@ void setProjFromLine(struct task ** node, char * line) {
 
 void getProjects() {
 	FILE * proj_file;
-	char filename[] = "db/tasks.txt";
+	char filename[] = "db/projects.txt";
 	proj_file = fopen(filename, "r");
 
 	if (proj_file == NULL) {
