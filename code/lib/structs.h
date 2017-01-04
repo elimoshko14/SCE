@@ -42,11 +42,11 @@ typedef struct task {
 	int category_id;
 
 	int cost;
-	char status[6]; // open/closed
+	int status; // open/closed
 	char tags[256];
 	char deadLine[10];
 
-	int * comments;
+	char comments[1000];
 
 }task;
 
