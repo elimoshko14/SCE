@@ -27,6 +27,7 @@ typedef struct user_node {
 }user_node;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 typedef struct tasks {
 	long id;
@@ -48,5 +49,14 @@ typedef struct task_node {
 	tasks * ptr;
 	task_node * next;
 }task_node;
+=======
+typedef struct comments {
+	char* head_line;
+	int comment_id;
+	int user_id;
+	int task_id;
+	int porj_id;
+}comments;
+>>>>>>> 99bec297b2545c711b27da3cc76c17dfd353172b
 =======
 >>>>>>> fe58fb9e85c84708bedaf379f2e697ec08dc6942
