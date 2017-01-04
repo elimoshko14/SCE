@@ -24,6 +24,7 @@
     <ClInclude Include="lib\structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="lib\rw-task.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -31,6 +32,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lib\includes.h">
+=======
+    <ClInclude Include="lib\rw-proj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\rw-task.h">
+>>>>>>> d7afd79695d6578bc4cced9ef7652b2bb90cf274
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
