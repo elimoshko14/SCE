@@ -8,6 +8,7 @@
 #include "lib/globals.h"
 #include "lib/structs.h"
 #include "lib/login.h"
+#include "lib/rw-proj.h"
 
 
 int main(int argc, char *argv[]) {
