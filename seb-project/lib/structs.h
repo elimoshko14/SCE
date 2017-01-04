@@ -54,12 +54,18 @@ typedef struct comments {
 	int porj_id;
 }comments;
 
+<<<<<<< HEAD
+hello arye
+=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 void func()
 {
 	printf("rg");
 }
 =======
+=======
+>>>>>>> cba3683a66ac0e847ae98ec21354cc96edced999
 Arie EDIT
 >>>>>>> a25a13e9390e972403fe11a1c944346f515227f5
