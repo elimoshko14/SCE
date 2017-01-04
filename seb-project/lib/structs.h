@@ -11,6 +11,7 @@ typedef struct users{
 	bool online;
 
 	int comments[];
+
 }users;
 
 typedef struct user_node {
