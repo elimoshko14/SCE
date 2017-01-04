@@ -15,35 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lib\login.h">
+    <ClCompile Include="..\app.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lib\globals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\globals.h">
+    <ClInclude Include="..\lib\includes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\structs.h">
+    <ClInclude Include="..\lib\login.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="lib\rw-task.h">
+    <ClInclude Include="..\lib\rw-proj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\rw-proj.h">
+    <ClInclude Include="..\lib\rw-task.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\includes.h">
-=======
-    <ClInclude Include="lib\rw-proj.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\rw-task.h">
->>>>>>> d7afd79695d6578bc4cced9ef7652b2bb90cf274
+    <ClInclude Include="..\lib\structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="app.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Text Include="..\db\projects.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\db\tasks.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\db\users.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
