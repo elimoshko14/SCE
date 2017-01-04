@@ -56,9 +56,26 @@ typedef struct task_node {
 }task_node;
 
 typedef struct comments {
-	char* head_line;
+	char * title;
+	char * body;
 	int comment_id;
 	int user_id;
 	int task_id;
 	int porj_id;
 }comments;
+
+typedef struct comments {
+	comments * ptr;
+	comments_node * next;
+}comments_node;
+
+typedef struct category {
+	int * task;
+	char * name;
+	int proj_id;
+}category;
+
+typedef struct category {
+	category * ptr;
+	category_node * next;
+}category_node;
