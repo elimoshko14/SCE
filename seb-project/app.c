@@ -5,12 +5,13 @@
 #include <string.h>
 #include <time.h>
 
-#include "lib/structs.h"
 #include "lib/globals.h"
+#include "lib/structs.h"
 #include "lib/login.h"
 
+
 int main(int argc, char *argv[]) {
-	user_id = login();
+	 = login();
 
 
 	return;
