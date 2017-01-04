@@ -2,15 +2,12 @@ typedef struct user{
 	long id;
 	char name[256];
 	int level;
-
 	int porj_id;
 	int task_id;
 	char lang[2];
-
 	int salery;
 	bool online;
-
-	int * comments;
+	char deadLine[256];
 
 }user;
 
@@ -37,16 +34,13 @@ typedef struct user_node {
 typedef struct task {
 	int id;
 	char title[256];
-
 	long user_id;
 	int category_id;
-
 	int cost;
-	int status; // open/closed
+	int status;
 	char tags[256];
-	char deadLine[10];
-
-	char comments[1000];
+	char deadLine[256];
+	char comments[256];
 
 }task;
 
