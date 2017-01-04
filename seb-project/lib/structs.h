@@ -1,3 +1,8 @@
+struct users_list {
+	struct user * ptr;
+	struct node * next;
+};
+
 struct users {
 	long id;
 	char * name;
