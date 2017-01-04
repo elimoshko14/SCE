@@ -5,8 +5,8 @@
 #include <string.h>
 #include <time.h>
 
-#include "lib/globals.h"
 #include "lib/structs.h"
+#include "lib/globals.h"
 #include "lib/login.h"
 
 
