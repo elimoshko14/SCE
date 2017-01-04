@@ -53,3 +53,9 @@ typedef struct comments {
 	int task_id;
 	int porj_id;
 }comments;
+
+
+void func()
+{
+	printf("rg");
+}
