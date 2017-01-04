@@ -53,14 +53,3 @@ typedef struct comments {
 	int task_id;
 	int porj_id;
 }comments;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-TEST EDIT
-=======
-
-Eli
->>>>>>> origin/Eli
-=======
-//hanna yair
->>>>>>> origin/hanna_branch
