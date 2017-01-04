@@ -2,7 +2,7 @@ void setNodeFromLine(struct task ** node, char * line) {
 	char ch;
 	// get ID
 	do {
-		ch = getc(line);
+		ch = getch(line);
 
 	} while (ch != '|');
 
