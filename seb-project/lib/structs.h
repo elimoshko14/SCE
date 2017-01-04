@@ -10,24 +10,24 @@ typedef struct users {
 	int salery;
 	bool online;
 
-	int comments[];
+	int * comments;
 
 }users;
 
-typedef struct proj{
-	int * users;
-	int * tasks;
-	int * cats;
+typedef struct proj_node {
+	proj * ptr;
+	proj_node * next;
+}proj_node;
+
+typedef struct proj {
+	int * users_arr;
+	int * tasks_arr;
+	int * cats_arr;
 	int manager_id;
 	time_t finish_date;
 	bool status;
 	int cost;
 }proj;
-
-typedef struct proj_node {
-	users * ptr;
-	user_node * next;
-}proj_node;
 
 typedef struct user_node {
 	users * ptr;
@@ -46,7 +46,7 @@ typedef struct tasks {
 	char * tags;
 	char * deadLine;
 
-	int comments[];
+	int * comments;
 
 }tasks;
 
