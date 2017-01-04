@@ -1,34 +1,16 @@
-void setProjFromLine(struct task ** node, char * line) {
-	char ch;
-	// get ID
-	do {
-		ch = getch(line);
-
-	} while (ch != '|');
-
-	// move over the next |
-	getch(line);
-
-	// get title
-}
 
 void getProjects() {
-	FILE * proj_file;
-	char filename[] = "db/tasks.txt";
-	proj_file = fopen(filename, "r");
-
-	if (proj_file == NULL) {
+	FILE * proj_ptr;
+	char filename[] = "db/projects.txt";
+	proj_ptr = fopen(filename, "r");
+	if (proj_ptr == NULL) {
 		perror("Error");
-		return;
+		return ;
 	}
-
-	while (!feof(proj_file)) {
-		struct task * task_node = (struct task *)malloc(sizeof(task));
-		const size_t line_size = 300;
-		char* line = malloc(line_size);
-		fgets(line, line_size, proj_file);
-		setProjFromLine(&task_node, line);
-		free(line);
+	while (!feof(proj_ptr)) {
+		struct proj * proj_node = (struct proj *)malloc(sizeof(proj));
+		
+		
 	}
-	fclose(proj_file);
+	fclose(proj_ptr);
 }
