@@ -1,4 +1,4 @@
-void setNodeFromLine(struct task ** node, char * line) {
+void setTaskFromLine(struct task ** node, char * line) {
 	char ch;
 	// get ID
 	do {
@@ -29,7 +29,7 @@ void getTasks() {
 		const size_t line_size = 300;
 		char* line = malloc(line_size);
 		fgets(line, line_size, tasks_file);
-		setNodeFromLine(&task_node, line);
+		setTaskFromLine(&task_node, line);
 		free(line);
 	}
 }
