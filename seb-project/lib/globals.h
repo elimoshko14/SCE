@@ -1,14 +1,12 @@
-typedef enum bool{
-	true = 1,
-	false
-
-}bool;
+typedef int bool;
+#define true 1
+#define false 0
 
 // singles
-user * user_ptr = NULL;
+struct user * user_ptr = NULL;
 
 // lists
-user_node * users_list = NULL;
-proj_node * projects_list = NULL;
-task_node * tasks_list = NULL;
-comment_node * comments_list = NULL;
+struct user_node * users_list = NULL;
+struct proj_node * projects_list = NULL;
+struct task_node * tasks_list = NULL;
+struct comment_node * comments_list = NULL;
