@@ -1,4 +1,4 @@
-typedef struct users{
+typedef struct users {
 	long id;
 	char * name;
 	int level;
@@ -13,6 +13,13 @@ typedef struct users{
 	int comments[];
 
 }users;
+
+typedef struct proj{
+
+
+}proj;
+
+
 
 typedef struct user_node {
 	users * ptr;
