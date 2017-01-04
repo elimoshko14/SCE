@@ -1,13 +1,9 @@
 void setTaskFromLine(struct task ** node, char * line) {
-	char ch;
+	
 	// get ID
-	do {
-		ch = _getch(line);
-
-	} while (ch != '|');
-
-	// move over the next |
-	ch = _getch(line);
+	for (unsigned int ch = 0; line[ch] != '|' && line[ch + 1] != '|' && ch < strlen(line); ch++) {
+		printf("%c", line[ch]);
+	}
 
 	// get title
 }
@@ -15,7 +11,7 @@ void setTaskFromLine(struct task ** node, char * line) {
 void getTasks() {
 
 	FILE * tasks_file;
-	char filename[] = "db/tasks.txt";
+	char filename[] = "../db/tasks.txt";
 	tasks_file = fopen(filename, "r");
 
 	if (tasks_file == NULL) {
