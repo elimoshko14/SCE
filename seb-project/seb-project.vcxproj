@@ -133,6 +133,8 @@
   <ItemGroup>
     <ClInclude Include="lib\globals.h" />
     <ClInclude Include="lib\login.h" />
+    <ClInclude Include="lib\rw-proj.h" />
+    <ClInclude Include="lib\rw-task.h" />
     <ClInclude Include="lib\structs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
