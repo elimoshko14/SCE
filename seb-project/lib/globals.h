@@ -1,7 +1,7 @@
-typedef enum boolian{
+typedef enum bool{
 	true = 1,
 	false
-} bool;
+}bool;
 
 // singles
 struct user * user_ptr = NULL;
