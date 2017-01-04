@@ -55,7 +55,11 @@ typedef struct comments {
 }comments;
 
 
+<<<<<<< HEAD
 void func()
 {
 	printf("rg");
 }
+=======
+Arie EDIT
+>>>>>>> a25a13e9390e972403fe11a1c944346f515227f5
