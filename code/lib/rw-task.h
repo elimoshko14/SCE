@@ -1,13 +1,3 @@
-void setTaskFromLine(struct task ** node, char * line) {
-	
-	// get ID
-	for (unsigned int ch = 0; line[ch] != '|' && line[ch + 1] != '|' && ch < strlen(line); ch++) {
-		printf("%c", line[ch]);
-	}
-
-	// get title
-}
-
 void getTasks() {
 
 	FILE * tasks_file;
@@ -20,13 +10,9 @@ void getTasks() {
 	}
 
 	while (!feof(tasks_file)) {
-		struct task * task_node = (struct task *)malloc(sizeof(task));
-	
-		const size_t line_size = 300;
-		char* line = malloc(line_size);
-		fgets(line, line_size, tasks_file);
-		setTaskFromLine(&task_node, line);
-		free(line);
+		struct tasks * task_node = (struct tasks *)malloc(sizeof(struct tasks));
+		fscanf(tasks_file, "%ld|%[a-zA-Z0-9 ]*|$", &(task_node->id), task_node->title);
+		printf("%ld, %s", task_node->id, task_node->title);
 	}
 
 	fclose(tasks_file);
