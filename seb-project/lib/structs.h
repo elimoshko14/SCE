@@ -18,3 +18,11 @@ typedef struct user_node {
 	users * ptr;
 	user_node * next;
 }user_node;
+
+typedef struct comments {
+	char* head_line;
+	int comment_id;
+	int user_id;
+	int task_id;
+	int porj_id;
+}comments;
