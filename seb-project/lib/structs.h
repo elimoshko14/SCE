@@ -54,4 +54,9 @@ typedef struct comments {
 	int porj_id;
 }comments;
 
+<<<<<<< HEAD
 hello arye
+=======
+
+Arie EDIT
+>>>>>>> a25a13e9390e972403fe11a1c944346f515227f5
