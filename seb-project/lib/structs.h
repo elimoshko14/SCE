@@ -14,11 +14,20 @@ typedef struct users {
 
 }users;
 
-typedef struct proj {
-
-
+typedef struct proj{
+	int * users;
+	int * tasks;
+	int * cats;
+	int manager_id;
+	time_t finish_date;
+	bool status;
+	int cost;
 }proj;
 
+typedef struct proj_node {
+	users * ptr;
+	user_node * next;
+}proj_node;
 
 typedef struct user_node {
 	users * ptr;
