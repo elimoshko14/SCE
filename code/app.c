@@ -12,6 +12,8 @@
 
 //--------------------//
 #include "lib/rw-task.h"
+<<<<<<< HEAD
+#include "lib/rw-proj.h"
 
 //--------------------//
 
