@@ -36,15 +36,15 @@ typedef struct user_node {
 
 typedef struct tasks {
 	long id;
-	char * name;
+	char * title;
 
 	int user_id;
 	int category_id;
 
-	int salary;
+	int cost;
 	bool status;
 	char * tags;
-	char * deadLine;
+	char deadLine[10];
 
 	int * comments;
 
