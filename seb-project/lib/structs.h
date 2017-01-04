@@ -14,7 +14,7 @@ typedef struct users {
 
 }users;
 
-typedef struct proj{
+typedef struct proj {
 
 
 }proj;
