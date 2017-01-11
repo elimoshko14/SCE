@@ -53,6 +53,9 @@
     <ClInclude Include="..\lib\rw-ctgry.h">
       <Filter>Header Files\rw</Filter>
     </ClInclude>
+    <ClInclude Include="..\lib\rw-cmnt.h">
+      <Filter>Header Files\rw</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">

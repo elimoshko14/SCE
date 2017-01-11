@@ -24,6 +24,7 @@
   <ItemGroup>
     <ClInclude Include="..\lib\globals.h" />
     <ClInclude Include="..\lib\login.h" />
+    <ClInclude Include="..\lib\rw-cmnt.h" />
     <ClInclude Include="..\lib\rw-ctgry.h" />
     <ClInclude Include="..\lib\rw-proj.h" />
     <ClInclude Include="..\lib\rw-task.h" />
