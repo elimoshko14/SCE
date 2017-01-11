@@ -59,13 +59,9 @@ void getUsers() {
 		// drop line
 		fgets(buffer, 256, users_file);
 
-<<<<<<< HEAD
-		// get deadLine
-		fscanf(users_file, "%s[10]", user_struct->deadLine);
-=======
+
 		// get tags array (strings)
 		fscanf(users_file, "%s[10]", user_struct->due);
->>>>>>> ade6f1d08ee9d47b2341155f2919f942087637aa
 		// drop line
 		fgets(buffer, 256, users_file);
 
