@@ -31,7 +31,7 @@ void getprojs() {
 		// drop line
 		fgets(buffer, 256, proj_file);
 		// get finish_date
-		fscanf(proj_file, "%d", &(proj_struct->finish_date));
+		fscanf(proj_file, "%s", proj_struct->due);
 		// drop line
 		fgets(buffer, 256, proj_file);
 		// get status
@@ -48,7 +48,7 @@ void getprojs() {
 		printf("task_arr %s\n", proj_struct->tasks_arr);
 		printf("cats_arr %s\n", proj_struct->cats_arr);
 		printf("manager_id %d\n", proj_struct->manager_id);
-		printf("finish_date %d\n", proj_struct->finish_date);
+		printf("finish_date %s\n", proj_struct->due);
 		printf("status %d\n", proj_struct->status);
 		printf("cost %d\n", proj_struct->cost);
 		printf("-------------\n");

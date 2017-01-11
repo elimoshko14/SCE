@@ -60,7 +60,7 @@ void getUsers() {
 		fgets(buffer, 256, users_file);
 
 		// get tags array (strings)
-		fscanf(users_file, "%s[10]", user_struct->deadLine);
+		fscanf(users_file, "%s[10]", user_struct->due);
 		// drop line
 		fgets(buffer, 256, users_file);
 
@@ -75,7 +75,7 @@ void getUsers() {
 		printf("salary %d\n", user_struct->salery);
 		printf("online %d\n", user_struct->online);
 		printf("comments %s\n", user_struct->coments);
-		printf("deadLine %s\n", user_struct->deadLine);		
+		printf("due %s\n", user_struct->due);		
 		printf("-------------\n");
 
 		/*******/
