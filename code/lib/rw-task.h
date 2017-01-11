@@ -14,51 +14,36 @@ void getTasks() {
 		struct task * task_struct = (struct task *)malloc(sizeof(struct task));
 
 		char buffer[256];
-		// get id
+
 		fscanf(tasks_file, "%d", &(task_struct->id));
-		// end line
 		fgets(buffer, 256, tasks_file);
-		// get title
+		
 		fgets(task_struct->title, '256', tasks_file);
-		// clear \n
 		strtok(task_struct->title, "\n");
 
-
-		// get user id
 		fscanf(tasks_file, "%ld", &(task_struct->user_id));
-		// drop line
 		fgets(buffer, '\n', tasks_file);
 
-		// get cat id
+
 		fscanf(tasks_file, "%d", &(task_struct->category_id));
-		// drop line
 		fgets(buffer, '\n', tasks_file);
 
-		// get cost
+
 		fscanf(tasks_file, "%d", &(task_struct->cost));
-		// drop line
 		fgets(buffer, '\n', tasks_file);
 
-		// get status
+
 		fscanf(tasks_file, "%d", &(task_struct->status));
-		// drop line
 		fgets(buffer, '\n', tasks_file);
 
-		// get tags array (strings)
 		fscanf(tasks_file, "%s", task_struct->tags);
-		// drop line
 		fgets(buffer, '\n', tasks_file);
 			
-		// get tags array (strings)
-		fscanf(tasks_file, "%s[10]", task_struct->deadLine);
-		// drop line
+		fscanf(tasks_file, "%s", task_struct->deadLine);
 		fgets(buffer, '\n', tasks_file);
 			
-		// get comments array (strings)
 		fscanf(tasks_file, "%s", task_struct->comments);
-		// drop line
 		fgets(buffer, '\n', tasks_file);
-		// clear \n
 		strtok(task_struct->comments, "\n");
 
 
