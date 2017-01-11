@@ -7,6 +7,7 @@ typedef struct user{
 	char lang[2];
 	int salery;
 	bool online;
+	char coments[256];
 	char deadLine[256];
 
 }user;
@@ -64,9 +65,10 @@ typedef struct comment_node {
 }comment_node;
 
 typedef struct category {
-	int * task;
+	int id;
 	char name[256];
 	int proj_id;
+	char comment_arr[1000];
 }category;
 
 typedef struct category_node {
@@ -74,3 +76,8 @@ typedef struct category_node {
 	struct category_node * next;
 }category_node;
 
+
+typedef struct tree_node {
+	void * ptr;
+	void * next;
+}tree_node;
