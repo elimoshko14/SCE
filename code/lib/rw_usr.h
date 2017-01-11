@@ -59,23 +59,28 @@ void getUsers() {
 		// drop line
 		fgets(buffer, 256, users_file);
 
+<<<<<<< HEAD
 		// get deadLine
 		fscanf(users_file, "%s[10]", user_struct->deadLine);
+=======
+		// get tags array (strings)
+		fscanf(users_file, "%s[10]", user_struct->due);
+>>>>>>> ade6f1d08ee9d47b2341155f2919f942087637aa
 		// drop line
 		fgets(buffer, 256, users_file);
 
 
 
-		printf("id %ld\n", user_struct->id);
-		printf("name %s\n", user_struct->name);
-		printf("level %d\n", user_struct->level);
-		printf("project_id %d\n", user_struct->porj_id);
-		printf("task_id %d\n", user_struct->task_id);
-		printf("lengauge %s\n", user_struct->lang);
-		printf("salary %d\n", user_struct->salery);
-		printf("online %d\n", user_struct->online);
-		printf("comments %s\n", user_struct->coments);
-		printf("deadLine %s\n", user_struct->deadLine);		
+		printf("ID:\t%ld\n", user_struct->id);
+		printf("Name:\t%s\n", user_struct->name);
+		printf("Level:\t%d\n", user_struct->level);
+		printf("Project ID:\t%d\n", user_struct->porj_id);
+		printf("Task ID:\t%d\n", user_struct->task_id);
+		printf("Language:\t%s\n", user_struct->lang);
+		printf("Salary:\t%d\n", user_struct->salery);
+		printf("Online:\t%d\n", user_struct->online);
+		printf("Comments:\t%s\n", user_struct->coments);
+		printf("Due:\t%s\n", user_struct->due);		
 		printf("-------------\n");
 
 		/*******/

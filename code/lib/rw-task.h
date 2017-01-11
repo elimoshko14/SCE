@@ -1,13 +1,13 @@
 void printTask(task * node) {
-	printf("id %ld\n", node->id);
-	printf("title %s\n", node->title);
-	printf("user_id %ld\n", node->user_id);
-	printf("category_id %d\n", node->category_id);
-	printf("cost %d\n", node->cost);
-	printf("status %d\n", node->status);
-	printf("tags %s\n", node->tags);
-	printf("deadLine %s\n", node->deadLine);
-	printf("comments %s\n", node->comments);
+	printf("ID:\t%ld\n", node->id);
+	printf("Title:\t%s\n", node->title);
+	printf("User ID:\t%ld\n", node->user_id);
+	printf("Category ID:\t%d\n", node->category_id);
+	printf("Cost:\t%d\n", node->cost);
+	printf("Status:\t%d\n", node->status);
+	printf("Tags:\t%s\n", node->tags);
+	printf("Due:\t%s\n", node->due);
+	printf("comments:\t%s\n", node->comments);
 	printf("-------------\n");
 }
 
@@ -41,7 +41,7 @@ void pushTask(task * node)
 
 bool deleteTask(int id)
 {
-	struct task_node * temp, * prev;
+	struct task_node * temp, * prev = NULL;
 	temp = tasks_list;
 	while (temp != NULL)
 	{
@@ -69,31 +69,15 @@ bool deleteTask(int id)
 	return false;
 }
 
-task * findTaskById(int id) {
-	struct task_node * temp, *prev;
+task_node * findTaskById(int id) {
+	struct task_node * temp;
 	temp = tasks_list;
 	while (temp != NULL)
 	{
 		if (temp->ptr->id == id)
-		{
-			if (temp == tasks_list)
-			{
-				tasks_list = temp->next;
-				free(temp);
-				return true;
-			}
-			else
-			{
-				prev->next = temp->next;
-				free(temp);
-				return true;
-			}
-		}
+			return temp;
 		else
-		{
-			prev = temp;
 			temp = temp->next;
-		}
 	}
 	return NULL;
 }
@@ -136,7 +120,7 @@ void getTasks() {
 		fscanf(tasks_file, "%s", task_struct->tags);
 		fgets(buffer, 256, tasks_file);
 			
-		fscanf(tasks_file, "%s", task_struct->deadLine);
+		fscanf(tasks_file, "%s", task_struct->due);
 		fgets(buffer, 256, tasks_file);
 			
 		fscanf(tasks_file, "%s", task_struct->comments);

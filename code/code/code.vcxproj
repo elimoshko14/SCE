@@ -30,7 +30,7 @@
     <ClInclude Include="..\lib\rw-task.h" />
     <ClInclude Include="..\lib\rw_usr.h" />
     <ClInclude Include="..\lib\structs.h" />
-    <ClInclude Include="..\unitTesting\getTasks.h" />
+    <ClInclude Include="..\unitTesting\getDbs.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt" />

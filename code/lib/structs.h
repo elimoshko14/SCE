@@ -8,7 +8,7 @@ typedef struct user{
 	int salery;
 	bool online;
 	char coments[256];
-	char deadLine[256];
+	char due[256];
 
 }user;
 
@@ -18,11 +18,11 @@ typedef struct proj_node {
 }proj_node;
 
 typedef struct proj {
-	int * users_arr;
-	int * tasks_arr;
-	int * cats_arr;
+	char users_arr[256];
+	char tasks_arr[256];
+	char cats_arr[256];
 	int manager_id;
-	time_t finish_date;
+	char due[256];
 	bool status;
 	int cost;
 }proj;
@@ -40,7 +40,7 @@ typedef struct task {
 	int cost;
 	int status;
 	char tags[256];
-	char deadLine[256];
+	char due[256];
 	char comments[256];
 
 }task;
