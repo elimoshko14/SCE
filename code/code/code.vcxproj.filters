@@ -1,73 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Header Files\UnitTest">
-      <UniqueIdentifier>{b7ada9de-8bde-4f97-a430-a08c2a067ef8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Functions">
-      <UniqueIdentifier>{8d78f114-ff2e-495e-8705-12492a130933}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\rw">
-      <UniqueIdentifier>{f162b7a9-5916-4fcf-b640-2a5b9df93190}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\app.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\lib\globals.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lib\structs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lib\login.h">
-      <Filter>Header Files\Functions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lib\rw-proj.h">
-      <Filter>Header Files\rw</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lib\rw-task.h">
-      <Filter>Header Files\rw</Filter>
-    </ClInclude>
     <ClInclude Include="..\lib\rw_usr.h">
-      <Filter>Header Files\rw</Filter>
+      <Filter>rw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\rw-cmnt.h">
+      <Filter>rw</Filter>
     </ClInclude>
     <ClInclude Include="..\lib\rw-ctgry.h">
-      <Filter>Header Files\rw</Filter>
+      <Filter>rw</Filter>
     </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="..\lib\rw-cmnt.h">
-      <Filter>Header Files\rw</Filter>
-=======
+    <ClInclude Include="..\lib\rw-proj.h">
+      <Filter>rw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\rw-task.h">
+      <Filter>rw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\structs.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\globals.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\login.h">
+      <Filter>functions</Filter>
+    </ClInclude>
     <ClInclude Include="..\unitTesting\getDbs.h">
-      <Filter>Header Files\UnitTest</Filter>
->>>>>>> ade6f1d08ee9d47b2341155f2919f942087637aa
+      <Filter>unit testing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">
-      <Filter>Resource Files</Filter>
+      <Filter>db</Filter>
     </Text>
     <Text Include="..\db\tasks.txt">
-      <Filter>Resource Files</Filter>
+      <Filter>db</Filter>
     </Text>
     <Text Include="..\db\users.txt">
-      <Filter>Resource Files</Filter>
+      <Filter>db</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="App">
+      <UniqueIdentifier>{80686630-55c0-4a41-81b4-5f753d06bfa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rw">
+      <UniqueIdentifier>{5727339c-9149-4985-873d-08f5f3290b26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db">
+      <UniqueIdentifier>{fb031c7e-6982-4e5e-8020-813dc482570a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="functions">
+      <UniqueIdentifier>{787e9b50-0ddb-4bfc-839e-721c81a7bb36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unit testing">
+      <UniqueIdentifier>{2be0f74f-6a12-4d50-a984-47ceb24e1eee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\app.c">
+      <Filter>App</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
