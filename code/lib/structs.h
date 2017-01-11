@@ -18,7 +18,7 @@ typedef struct proj_node {
 }proj_node;
 
 typedef struct proj {
-	int proj_id;
+	int id;
 	char users_arr[256];
 	char tasks_arr[256];
 	char cats_arr[256];

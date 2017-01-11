@@ -1,5 +1,5 @@
 void printProj(proj * proj_struct) {
-	printf("ID:\t%d\n", proj_struct->proj_id);
+	printf("ID:\t%d\n", proj_struct->id);
 	printf("Users Array:\t%s\n", proj_struct->users_arr);
 	printf("Tasks Array:\t%s\n", proj_struct->tasks_arr);
 	printf("Categories Array:\t%s\n", proj_struct->cats_arr);
@@ -44,7 +44,7 @@ bool deleteProj(int id)
 	temp = projects_list;
 	while (temp != NULL)
 	{
-		if (temp->ptr->proj_id == id)
+		if (temp->ptr->id == id)
 		{
 			if (temp == projects_list)
 			{
@@ -73,7 +73,7 @@ proj_node * findProjById(int id) {
 	temp = projects_list;
 	while (temp != NULL)
 	{
-		if (temp->ptr->proj_id == id)
+		if (temp->ptr->id == id)
 			return temp;
 		else
 			temp = temp->next;
@@ -97,8 +97,8 @@ void getProjs() {
 		struct proj * proj_struct = (struct proj *)malloc(sizeof(struct proj));
 
 		char buffer[256];
-		// get proj_id
-		fscanf(proj_file, "%d", &(proj_struct->proj_id));
+		// get id
+		fscanf(proj_file, "%d", &(proj_struct->id));
 		// end line
 		fgets(buffer, 256, proj_file);
 		// get user arr
