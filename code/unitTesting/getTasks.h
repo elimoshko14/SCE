@@ -1,4 +1,0 @@
-void unitTestGetTask() {
-	getTasks();
-	printTaskTree();
-}

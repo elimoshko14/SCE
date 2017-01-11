@@ -35,9 +35,6 @@
     <ClInclude Include="..\lib\structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\getTasks.h">
-      <Filter>Header Files\UnitTest</Filter>
-    </ClInclude>
     <ClInclude Include="..\lib\login.h">
       <Filter>Header Files\Functions</Filter>
     </ClInclude>
@@ -52,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="..\lib\rw-ctgry.h">
       <Filter>Header Files\rw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\getDbs.h">
+      <Filter>Header Files\UnitTest</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

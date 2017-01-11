@@ -1,4 +1,4 @@
-void getprojs() {
+void getProjs() {
 
 	FILE * proj_file;
 	char filename[] = "../db/projects.txt";
@@ -44,13 +44,13 @@ void getprojs() {
 		fgets(buffer, 256, proj_file);
 		
 
-		printf("users_arr %s\n", proj_struct->users_arr);
-		printf("task_arr %s\n", proj_struct->tasks_arr);
-		printf("cats_arr %s\n", proj_struct->cats_arr);
-		printf("manager_id %d\n", proj_struct->manager_id);
-		printf("finish_date %s\n", proj_struct->due);
-		printf("status %d\n", proj_struct->status);
-		printf("cost %d\n", proj_struct->cost);
+		printf("Users Array:\t%s\n", proj_struct->users_arr);
+		printf("Tasks Array:\t%s\n", proj_struct->tasks_arr);
+		printf("Categories Array:\t%s\n", proj_struct->cats_arr);
+		printf("Manager ID:\t%d\n", proj_struct->manager_id);
+		printf("Due:\t%s\n", proj_struct->due);
+		printf("Status\t%d\n", proj_struct->status);
+		printf("Cost:\t%d\n", proj_struct->cost);
 		printf("-------------\n");
 
 		/*******/

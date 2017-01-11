@@ -1,4 +1,4 @@
-void getCategorys() {
+void getCategories() {
 
 	FILE * categorys_file;
 	char filename[] = "../db/categorys.txt";
@@ -36,10 +36,10 @@ void getCategorys() {
 		strtok(category_struct->comment_arr, "\n");
 
 
-		printf("id %ld\n", category_struct->id);
-		printf("name %s\n", category_struct->name);
-		printf("project_id %d\n", category_struct->proj_id);
-		printf("comments %s\n", category_struct->comment_arr);
+		printf("ID:\t%ld\n", category_struct->id);
+		printf("Name:\t%s\n", category_struct->name);
+		printf("Project ID:\t%d\n", category_struct->proj_id);
+		printf("Comments:\t%s\n", category_struct->comment_arr);
 		printf("-------------\n");
 
 		/*******/
