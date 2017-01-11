@@ -76,3 +76,8 @@ typedef struct category_node {
 	struct category_node * next;
 }category_node;
 
+
+typedef struct tree_node {
+	void * ptr;
+	void * next;
+}tree_node;
