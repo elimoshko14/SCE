@@ -6,6 +6,7 @@ void unitTestGetDbs() {
 	getUsers();
 	printf("########## Categories #########\n");
 	getCategories();
+	printCatTree();
 	printf("########## Project #########\n");
 	getProjs();
 	printProjTree();
