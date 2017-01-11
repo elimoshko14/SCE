@@ -14,7 +14,8 @@
 //--------------------//
 #include "lib/rw-task.h"
 #include "lib/rw-proj.h"
-
+#include "lib/rw_usr.h"
+#include "lib/rw-ctgry.h"
 //--------------------//
 
 #include "lib/login.h"

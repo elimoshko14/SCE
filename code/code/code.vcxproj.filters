@@ -47,6 +47,12 @@
     <ClInclude Include="..\lib\rw-task.h">
       <Filter>Header Files\rw</Filter>
     </ClInclude>
+    <ClInclude Include="..\lib\rw_usr.h">
+      <Filter>Header Files\rw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\rw-ctgry.h">
+      <Filter>Header Files\rw</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">

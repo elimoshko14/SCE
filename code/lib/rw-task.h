@@ -39,6 +39,65 @@ void pushTask(task * node)
 	}
 }
 
+bool deleteTask(int id)
+{
+	struct task_node * temp, * prev;
+	temp = tasks_list;
+	while (temp != NULL)
+	{
+		if (temp->ptr->id == id)
+		{
+			if (temp == tasks_list)
+			{
+				tasks_list = temp->next;
+				free(temp);
+				return true;
+			}
+			else
+			{
+				prev->next = temp->next;
+				free(temp);
+				return true;
+			}
+		}
+		else
+		{
+			prev = temp;
+			temp = temp->next;
+		}
+	}
+	return false;
+}
+
+task * findTaskById(int id) {
+	struct task_node * temp, *prev;
+	temp = tasks_list;
+	while (temp != NULL)
+	{
+		if (temp->ptr->id == id)
+		{
+			if (temp == tasks_list)
+			{
+				tasks_list = temp->next;
+				free(temp);
+				return true;
+			}
+			else
+			{
+				prev->next = temp->next;
+				free(temp);
+				return true;
+			}
+		}
+		else
+		{
+			prev = temp;
+			temp = temp->next;
+		}
+	}
+	return NULL;
+}
+
 void getTasks() {
 
 	FILE * tasks_file;
