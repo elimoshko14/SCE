@@ -51,12 +51,12 @@ typedef struct task_node {
 }task_node;
 
 typedef struct comment {
+	int id;
 	char title[256];
 	char body[256];
-	int comment_id;
-	int user_id;
-	int task_id;
 	int porj_id;
+	int task_id;
+	int user_id;
 }comment;
 
 typedef struct comment_node {
