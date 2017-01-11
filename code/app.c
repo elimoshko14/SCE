@@ -9,11 +9,13 @@
 /*	Generic Includes */
 #include "lib/globals.h"
 #include "lib/structs.h"
+#include "lib/linked-list.h"
 
 //--------------------//
 #include "lib/rw-task.h"
 #include "lib/rw-proj.h"
-
+#include "lib/rw_usr.h"
+#include "lib/rw-ctgry.h"
 //--------------------//
 
 #include "lib/login.h"
