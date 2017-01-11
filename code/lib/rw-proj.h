@@ -1,3 +1,86 @@
+void printProj(proj * proj_struct) {
+	printf("ID:\t%d\n", proj_struct->proj_id);
+	printf("Users Array:\t%s\n", proj_struct->users_arr);
+	printf("Tasks Array:\t%s\n", proj_struct->tasks_arr);
+	printf("Categories Array:\t%s\n", proj_struct->cats_arr);
+	printf("Manager ID:\t%d\n", proj_struct->manager_id);
+	printf("Due:\t%s\n", proj_struct->due);
+	printf("Status\t%d\n", proj_struct->status);
+	printf("Cost:\t%d\n", proj_struct->cost);
+	printf("-------------\n");
+}
+
+void printProjTree() {
+	proj_node * t = projects_list;
+	if (!t)
+		return;
+	while (t)
+	{
+		printProj(t->ptr);
+		t = t->next;
+	}
+}
+
+void pushProj(proj * node)
+{
+	struct proj_node * temp;
+	temp = (struct proj_node *)malloc(sizeof(struct proj_node));
+	temp->ptr = node;
+	if (projects_list == NULL)
+	{
+		projects_list = temp;
+		projects_list->next = NULL;
+	}
+	else
+	{
+		temp->next = projects_list;
+		projects_list = temp;
+	}
+}
+
+bool deleteProj(int id)
+{
+	struct proj_node * temp, *prev = NULL;
+	temp = projects_list;
+	while (temp != NULL)
+	{
+		if (temp->ptr->proj_id == id)
+		{
+			if (temp == projects_list)
+			{
+				projects_list = temp->next;
+				free(temp);
+				return true;
+			}
+			else
+			{
+				prev->next = temp->next;
+				free(temp);
+				return true;
+			}
+		}
+		else
+		{
+			prev = temp;
+			temp = temp->next;
+		}
+	}
+	return false;
+}
+
+proj_node * findProjById(int id) {
+	struct proj_node * temp;
+	temp = projects_list;
+	while (temp != NULL)
+	{
+		if (temp->ptr->proj_id == id)
+			return temp;
+		else
+			temp = temp->next;
+	}
+	return NULL;
+}
+
 void getProjs() {
 
 	FILE * proj_file;
@@ -14,6 +97,10 @@ void getProjs() {
 		struct proj * proj_struct = (struct proj *)malloc(sizeof(struct proj));
 
 		char buffer[256];
+		// get proj_id
+		fscanf(proj_file, "%d", &(proj_struct->proj_id));
+		// end line
+		fgets(buffer, 256, proj_file);
 		// get user arr
 		fscanf(proj_file, "%s", (proj_struct->users_arr));
 		// end line
@@ -42,17 +129,8 @@ void getProjs() {
 		fscanf(proj_file, "%d", &(proj_struct->cost));
 		// drop line
 		fgets(buffer, 256, proj_file);
-		
 
-		printf("Users Array:\t%s\n", proj_struct->users_arr);
-		printf("Tasks Array:\t%s\n", proj_struct->tasks_arr);
-		printf("Categories Array:\t%s\n", proj_struct->cats_arr);
-		printf("Manager ID:\t%d\n", proj_struct->manager_id);
-		printf("Due:\t%s\n", proj_struct->due);
-		printf("Status\t%d\n", proj_struct->status);
-		printf("Cost:\t%d\n", proj_struct->cost);
-		printf("-------------\n");
-
+		pushProj(proj_struct);
 		/*******/
 		// FEOF IS BUGGED == TRUE IF END OF FILE ()
 		/*******/

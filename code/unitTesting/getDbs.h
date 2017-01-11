@@ -8,4 +8,5 @@ void unitTestGetDbs() {
 	getCategories();
 	printf("########## Project #########\n");
 	getProjs();
+	printProjTree();
 }
