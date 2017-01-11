@@ -1,3 +1,3 @@
 void unitTestGetTask() {
-	getTasks();
+	getprojs();
 }

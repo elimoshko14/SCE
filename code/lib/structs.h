@@ -17,9 +17,9 @@ typedef struct proj_node {
 }proj_node;
 
 typedef struct proj {
-	int * users_arr;
-	int * tasks_arr;
-	int * cats_arr;
+	char users_arr[256];
+	char tasks_arr[256];
+	char cats_arr[256];
 	int manager_id;
 	time_t finish_date;
 	bool status;
