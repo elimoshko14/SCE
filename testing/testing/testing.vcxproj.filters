@@ -14,6 +14,7 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+<<<<<<< HEAD:seb-project/seb-project.vcxproj.filters
   <ItemGroup>
     <ClInclude Include="lib\login.h">
       <Filter>Header Files</Filter>
@@ -33,4 +34,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+=======
+>>>>>>> 3b375aff2ea2bd350c1c8f068acd0f295080bfc4:testing/testing/testing.vcxproj.filters
 </Project>
