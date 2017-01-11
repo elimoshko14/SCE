@@ -1,3 +1,4 @@
 void unitTestGetTask() {
 	getTasks();
+	printTaskTree();
 }
