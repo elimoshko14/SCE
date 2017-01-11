@@ -134,6 +134,7 @@
     <ClInclude Include="lib\globals.h" />
     <ClInclude Include="lib\login.h" />
     <ClInclude Include="lib\structs.h" />
+    <ClInclude Include="RW_users.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
