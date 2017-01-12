@@ -14,7 +14,7 @@ void printComentTree() {
 		return;
 	while (c)
 	{
-		printTask(c->ptr);
+		printComment(c->ptr);
 		c = c->next;
 	}
 }

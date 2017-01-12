@@ -38,7 +38,7 @@ void pushUser(user * node)
 	}
 	else
 	{
-		temp->next = tasks_list;
+		temp->next = users_list;
 		users_list = temp;
 	}
 }
