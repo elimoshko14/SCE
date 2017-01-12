@@ -89,7 +89,7 @@ void getTasks() {
 	tasks_file = fopen(filename, "r");
 
 	if (tasks_file == NULL) {
-		perror("Error");
+		printf("ERROR!\nCan't find file '../db/tasks.txt'!\n");
 		return;
 	}
 	// GET DATA FROM FILE //

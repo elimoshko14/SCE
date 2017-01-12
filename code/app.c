@@ -22,14 +22,15 @@
 /*********************/
 /*	Unit Testing	 */
 
-#include "unitTesting/getDbs.h"
+#include "unitTesting/testGetDbs.h"
+#include "unitTesting/testLogin.h"
 
-int main(int argc, char *argv[]) {
-	// init()
-	// login();
+// DO NOT CHANGE BELOW
 
-	unitTestGetDbs();
+/*	Unit Testing MAIN 	 */
+#include "unitTesting/unitTest.h"
+
+int main() {
+	unitTest();
 	return 0;
 }
-
-

@@ -25,7 +25,13 @@
     <ClInclude Include="..\lib\login.h">
       <Filter>functions</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\getDbs.h">
+    <ClInclude Include="..\unitTesting\testLogin.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testGetDbs.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\unitTest.h">
       <Filter>unit testing</Filter>
     </ClInclude>
   </ItemGroup>
