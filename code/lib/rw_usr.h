@@ -1,3 +1,97 @@
+user_node * findUserById(long id) {
+	struct user_node * temp;
+	temp = users_list;
+	while (temp != NULL)
+	{
+		if (temp->ptr->id == id)
+			return temp;
+		else
+			temp = temp->next;
+	}
+	return NULL;
+}
+
+void ChangeUserId(user * node) {
+	long new_id;
+	printf("please enter ID for user\n");
+	scanf("%d", &new_id);
+	node->id = new_id;
+}
+
+void ChangeUserName(user * node) {
+	char new_name[256];
+	printf("please enter name for user\n");
+	scanf("%s", &new_name);
+	*(node->name) = new_name;
+}
+
+void ChangeUserSalary(user * node) {
+	int new_salary;
+	printf("please enter salary for user\n");
+	scanf("%d", &new_salary);
+	node->salery = new_salary;
+}
+
+void ChangeUserDue(user * node) {
+	char new_due[256];
+	printf("please enter new dead line for user\n");
+	scanf("%s", &new_due);
+	*(node->due) = new_due;
+}
+
+void UpdateUser(long id) {
+	user *node = findUserById(id);
+	if (node!=NULL) {
+		printf("User has been find!\n");
+		int choice;
+		do
+		{
+			printf("Menu\n\n");
+			printf("1. change user ID\n");
+			printf("2. change user name\n");
+			printf("3. change user salary\n");
+			printf("4. change user dead line\n");
+			printf("5. Exit\n");
+			scanf("%d", &choice);
+
+			switch (choice)
+			{
+			case 1: ChangeUserId(node);
+				break;
+			case 2: ChangeUserName(node);
+				break;
+			case 3: ChangeUserSalary(node);
+				break;
+			case 4: ChangeUserDue(node);
+				break;
+			case 5: printf("exit from menu,bye!\n");
+				exit(0);
+				break;
+			default: printf("Invalid choice!\n");
+				break;
+			}
+
+		} while (choice != 5);
+
+	}
+	else
+	{
+		printf("user has not been find,please try again!\n");
+	}
+	FILE * users_file;
+	char filename[] = "../db/users.txt";
+	users_file = fopen(filename, "w");
+	if (users_file == NULL) {
+		perror("Error");
+		return;
+	}
+	fclose(users_file);
+	
+}
+
+
+
+
 
 void printUser(user * node) {
 	printf("ID:\t%ld\n", node->id);
@@ -75,18 +169,7 @@ bool deleteUser(int id)
 }
 
 
-user_node * findUserById(int id) {
-	struct user_node * temp;
-	temp = users_list;
-	while (temp != NULL)
-	{
-		if (temp->ptr->id == id)
-			return temp;
-		else
-			temp = temp->next;
-	}
-	return NULL;
-}
+
 
 
 void getUsers() {
