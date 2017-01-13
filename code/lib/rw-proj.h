@@ -165,70 +165,32 @@ void setProjs(proj *node) {
 		node->due,
 		node->status,
 		node->cost);
-
-
-
-	//fputs(node->id, proj_file,);
-	////fgets(buffer, 256, proj_file);
-
-	//fprintf(proj_file, "%s", (node->users_arr));
-	////fgets(buffer, 256, proj_file);
-
-	//fprintf(proj_file, "%s", node->tasks_arr);
-	////fgets(buffer, 256, proj_file);
-
-	//fprintf(proj_file, "%s", node->cats_arr);
-	////fgets(buffer, 256, proj_file);
-
-	//fprintf(proj_file, "%d", &(node->manager_id));
-	////fgets(buffer, 256, proj_file);
-
-	//fprintf(proj_file, "%s", node->due);
-	////fgets(buffer, 256, proj_file);
-
-	//fprintf(proj_file, "%d", &(node->status));
-	////fgets(buffer, 256, proj_file);
-
-	//fprintf(proj_file, "%d", &(node->cost));
-	////fgets(buffer, 256, proj_file);
-
 }
 
 void addProjs() {
 
 	struct proj * proj_struct = (struct proj *)malloc(sizeof(struct proj));
-	
-	printf("Enter id:/n");
-	scanf("%d", &proj_struct->id);
+
+	printf("Enter id: ");
+	scanf("%d", &(proj_struct->id));
 	while (findProjById(proj_struct->id) != NULL) {
 		printf("Error details, try again/n");
-		scanf("%d", &proj_struct->id);
+		scanf("%d", &(proj_struct->id));
 	}
-	/*printf("Enter: manager id: /n");
-	scanf("%d", &proj_struct->manager_id);
-	user *tmp = findUserById(proj_struct->manager_id);
-	while (true) {
-		if ((tmp != NULL) && (tmp->level == 2))
-			break;
-		else {
-			printf("Error manager id incorrect/n");
-			scanf("%d", &proj_struct->manager_id);
-			tmp = findUserById(proj_struct->manager_id);
-		}
-	}*/
 
 	printf("Enter deadline and cost of project:/n");
-	scanf("%s%d", &proj_struct->due, &proj_struct->cost);
-	
+	scanf("%s%d", proj_struct->due, &(proj_struct->cost));
+
 	//just for test
 	proj_struct->manager_id = 305327223;
 	// project information is empty for  new project
-	proj_struct->users_arr[256]="-1";
-	proj_struct->tasks_arr[256] = "-1";
-	proj_struct->cats_arr[256] = "-1";
+	strcpy(proj_struct->users_arr, "-1");
+	strcpy(proj_struct->tasks_arr, "-1");
+	strcpy(proj_struct->cats_arr, "-1");
 	proj_struct->status = 0;
-	
+
 	pushProj(proj_struct);
 	setProjs(proj_struct);
+
 }
 
