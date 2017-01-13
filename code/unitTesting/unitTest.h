@@ -14,5 +14,6 @@
 void unitTest(){
 	unitTestGetDbs();
     unitTestLogin();
+	unitTestUserUpdate();
 	unitTestAddProj();
 }

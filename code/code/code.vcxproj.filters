@@ -34,6 +34,9 @@
     <ClInclude Include="..\unitTesting\unitTest.h">
       <Filter>unit testing</Filter>
     </ClInclude>
+    <ClInclude Include="..\unitTesting\testUpdateUser.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">

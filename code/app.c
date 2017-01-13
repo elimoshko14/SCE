@@ -25,6 +25,7 @@
 #include "unitTesting/testGetDbs.h"
 #include "unitTesting/testLogin.h"
 #include "unitTesting/testAddProj.h"
+#include "unitTesting/testUpdateUser.h"
 
 // DO NOT CHANGE BELOW
 

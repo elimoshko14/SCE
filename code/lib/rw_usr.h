@@ -1,3 +1,33 @@
+void SetUser(user *node) {
+
+	FILE * user_file;
+	char filename[] = "../db/users.txt";
+	user_file = fopen(filename, "a");
+
+	if (user_file == NULL) {
+		perror("Error");
+		return;
+	}
+
+	char buffer[256];
+
+	fprintf(user_file, "\n%ld\n %s\n %d\n %d\n %d\n %s\n %d\n %d %s\n %s\n",
+		node->id,
+		node->name,
+		node->level,
+		node->porj_id,
+		node->task_id,
+		node->lang,
+		node->salery,
+		node->online,
+		node->coments,
+		node->due);
+
+	fclose(user_file);
+}
+
+
+
 user_node * findUserById(long id) {
 	struct user_node * temp;
 	temp = users_list;
@@ -65,7 +95,6 @@ void UpdateUser(long id) {
 			case 4: ChangeUserDue(node);
 				break;
 			case 5: printf("exit from menu,bye!\n");
-				exit(0);
 				break;
 			default: printf("Invalid choice!\n");
 				break;
@@ -86,7 +115,12 @@ void UpdateUser(long id) {
 		return;
 	}
 	fclose(users_file);
-	
+
+	user_node * u = users_list;
+	while (u) {
+		SetUser(u->ptr);
+		u = u->next;
+	}
 }
 
 
