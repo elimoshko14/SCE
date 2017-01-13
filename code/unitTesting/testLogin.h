@@ -2,7 +2,7 @@ bool unitTestLogin() {
 	// Every module should be independent as posible
 	// that means we need to provide all the data it needs, without counting on any 
 	// "state" the program is in
-	int user_id = 456;
+
 	// We dont have a db to count on?
 	if (!users_list) {
 		// create a user list
@@ -13,11 +13,11 @@ bool unitTestLogin() {
 		// copy pase to create a user
 		struct user * tmp_user = (struct user *)malloc(sizeof(struct user));
 		// copy past only the fields we actually need
-		tmp_user->id = 123;
+		tmp_user->id = 1;
 		// http://stackoverflow.com/questions/16645583/how-to-copy-char-array-to-another-char-array-in-c
-		strcpy("Arie Katz", tmp_user->name);
+		strcpy(tmp_user->name,"Arie Katz");
 		tmp_user->level = 1;
-		strcpy("EN", tmp_user->lang);
+		strcpy(tmp_user->lang, "EN");
 		// not online, yet
 		tmp_user->online = 0;
 
@@ -28,13 +28,12 @@ bool unitTestLogin() {
 		// copy pase to create a user
 		tmp_user = (struct user *)malloc(sizeof(struct user));
 		// copy past only the fields we actually need
-		tmp_user->id = 456;
+		tmp_user->id = 2;
 		// http://stackoverflow.com/questions/16645583/how-to-copy-char-array-to-another-char-array-in-c
-		strcpy("Roma we need you!", tmp_user->name);
+		strcpy(tmp_user->name,"Roma");
 		tmp_user->level = 3;
-		strcpy("RU", tmp_user->lang);
-		// Ye, sure ;)
-		tmp_user->online = 1;
+		strcpy(tmp_user->lang, "RU");
+		tmp_user->online = 0;
 
 
 		// add it to the list
@@ -44,10 +43,13 @@ bool unitTestLogin() {
 		// all the data is here! the rest is done by the login function!
 	}
 	// login doent realy need's an input var, we need it for testing
-	user_ptr = login(user_id);
-	if (user_ptr)
+	user_ptr = login(123456789);
+	if (user_ptr) {
+		printf("\n----------- Logged in user -----------\n");
+		printUser(user_ptr);
 		return true;
-	printf("ERROR!\n user_ptr is NULL!");
+	}
+	printf("ERROR!\nuser_ptr is NULL!\n");
 	return false;
 }
 

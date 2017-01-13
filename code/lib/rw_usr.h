@@ -10,7 +10,7 @@ void printUser(user * node) {
 	printf("Online:\t%d\n", node->online);
 	printf("Comments:\t%s\n", node->coments);
 	printf("Due:\t%s\n", node->due);
-	printf("-------------\n");
+	printf("\n\n");
 }
 
 

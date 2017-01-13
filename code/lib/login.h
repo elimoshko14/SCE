@@ -3,7 +3,7 @@
 
 user * login(int user_id) {
 	// if not testing, we need to get input from user
-	if (user_id != -1) {
+	if (user_id == -1) {
 		// get input from user
 	}
 	else {
@@ -16,8 +16,9 @@ user * login(int user_id) {
 			// show error
 		}
 		else {
+			tmp_user_node->ptr->online = true;
 			// return it
-			tmp_user_node->ptr;
+			return tmp_user_node->ptr;
 		}
 	}
 

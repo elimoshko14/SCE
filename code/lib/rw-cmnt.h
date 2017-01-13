@@ -5,7 +5,7 @@ void printComment(comment * node) {
 	printf("project_id %d\n", node->porj_id);
 	printf("task_id %d\n", node->task_id);
 	printf("user_id %d\n", node->user_id);
-	printf("-------------\n");
+	printf("\n\n");
 }
 
 void printComentTree() {

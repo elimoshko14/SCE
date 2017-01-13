@@ -3,7 +3,7 @@ void printCat(category * node) {
 	printf("Name:\t%s\n", node->name);
 	printf("Project ID:\t%d\n", node->proj_id);
 	printf("Comments:\t%s\n", node->comment_arr);
-	printf("-------------\n");
+	printf("\n\n");
 }
 
 

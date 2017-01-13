@@ -7,7 +7,7 @@ void printProj(proj * proj_struct) {
 	printf("Due:\t%s\n", proj_struct->due);
 	printf("Status\t%d\n", proj_struct->status);
 	printf("Cost:\t%d\n", proj_struct->cost);
-	printf("-------------\n");
+	printf("\n\n");
 }
 
 void printProjTree() {

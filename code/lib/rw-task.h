@@ -8,7 +8,7 @@ void printTask(task * node) {
 	printf("Tags:\t%s\n", node->tags);
 	printf("Due:\t%s\n", node->due);
 	printf("comments:\t%s\n", node->comments);
-	printf("-------------\n");
+	printf("\n\n");
 }
 
 void printTaskTree() {
