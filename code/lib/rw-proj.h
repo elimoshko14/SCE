@@ -167,7 +167,7 @@ void setProjs(proj *node) {
 		node->cost);
 }
 
-void addProjs() {
+void addProj() {
 
 	// project information is empty for  new project
 
