@@ -157,7 +157,7 @@ void setTask(task *node) {
 void addTask() {
 
 	// task information 
-	struct user * newTask = (struct task *)malloc(sizeof(struct task));
+	struct task * newTask = (struct task *)malloc(sizeof(struct task));
 
 	newTask->id = 11;
 	strcpy(newTask->title, "New Task");
