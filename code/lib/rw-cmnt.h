@@ -148,3 +148,19 @@ void setComment(comment *node) {
 	fprintf(comment_file, "\n%d\n%s\n%s\n%d\n%d\n%d",
 		node->id, node->title, node->body, node->porj_id, node->task_id, node->user_id);
 }
+
+void addComment() {
+
+	// comment information 
+	struct comment * newComment = (struct comment *)malloc(sizeof(struct category));
+
+	newComment->id = 1;
+	strcpy(newComment->title, "New Comment");
+	strcpy(newComment->body, "This is simple comment");
+	newComment->porj_id = 1;
+	newComment->task_id = 1;
+	newComment->user_id = 1;
+
+	pushComent(newComment);
+	setComment(newComment);
+}

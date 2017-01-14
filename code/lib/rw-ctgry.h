@@ -145,3 +145,17 @@ void setCat(category *node) {
 	fprintf(cat_file, "\n%d\n%s\n%d\n%s",
 		node->id, node->name, node->proj_id, node->comment_arr);
 }
+
+void addCat() {
+
+	// category information 
+	struct category * newCat = (struct category *)malloc(sizeof(struct category));
+
+	newCat->id = 1;
+	strcpy(newCat->name, "Test Category");
+	newCat->proj_id = 1;
+	strcpy(newCat->comment_arr, "-1");
+
+	pushCat(newCat);
+	setCat(newCat);
+}
