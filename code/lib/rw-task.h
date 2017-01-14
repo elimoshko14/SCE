@@ -136,3 +136,20 @@ void getTasks() {
 	} while (!feof(tasks_file) && ch != EOF);
 	fclose(tasks_file);
 }
+
+void setTask(task *node) {
+
+	FILE * task_file;
+	char filename[] = "../db/tasks.txt";
+	task_file = fopen(filename, "a");
+
+	if (task_file == NULL) {
+		perror("Error");
+		return;
+	}
+
+	char buffer[256];
+
+	fprintf(task_file, "\n%d\n %s\n %ld\n %d\n %d\n %d\n %s\n %s\n %s",
+		node->id, node->title, node->user_id, node->category_id, node->cost, node->status, node->tags, node->due, node->coments);
+}
