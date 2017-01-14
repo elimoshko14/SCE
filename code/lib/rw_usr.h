@@ -265,7 +265,7 @@ void addUser() {
 	// user information 
 	struct user * newUser = (struct proj *)malloc(sizeof(struct user));
 
-	newUser->id;
+	newUser->id = 33;
 	strcpy(newUser->name, "Test User");
 	newUser->level = 1;
 	newUser->porj_id = 1;
