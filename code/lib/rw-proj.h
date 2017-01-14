@@ -169,23 +169,12 @@ void setProjs(proj *node) {
 
 void addProjs() {
 
+	// project information is empty for  new project
+
 	struct proj * proj_struct = (struct proj *)malloc(sizeof(struct proj));
 
-	/*printf("Enter id: ");
-	scanf("%d", &(proj_struct->id));
-	while (findProjById(proj_struct->id) != NULL) {
-		printf("Error details, try again/n");
-		scanf("%d", &(proj_struct->id));
-	}
-
-	printf("Enter deadline and cost of project:/n");
-	scanf("%s%d", proj_struct->due, &(proj_struct->cost));*/
-
-
-	// project information is empty for  new project
 	proj_struct->id = 3; // id  have to be auto generate (len(projects_list)+1)
 	proj_struct->manager_id = 305327223;
-	
 	strcpy(proj_struct->due, "21.01.2017");
 	proj_struct->cost = 1000;
 	strcpy(proj_struct->users_arr, "-1");
