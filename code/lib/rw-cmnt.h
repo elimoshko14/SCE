@@ -145,6 +145,6 @@ void setComment(comment *node) {
 
 	char buffer[256];
 
-	fprintf(comment_file, "\n%d\n %s\n %s\n %d\n %d\n %d",
+	fprintf(comment_file, "\n%d\n%s\n%s\n%d\n%d\n%d",
 		node->id, node->title, node->body, node->porj_id, node->task_id, node->user_id);
 }

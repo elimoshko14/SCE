@@ -256,7 +256,7 @@ void setUser(user *node) {
 
 	char buffer[256];
 
-	fprintf(user_file, "\n%ld\n %s\n %d\n %d\n %d\n %s\n %d\n %d\n %s\n %s",
+	fprintf(user_file, "\n%ld\n%s\n%d\n%d\n%d\n%s\n%d\n%d\n%s\n%s",
 		node->id, node->name, node->level, node->porj_id, node->task_id, node->lang, node->salery, node->online, node->coments, node->due);
 }
 
@@ -276,7 +276,7 @@ void addUser() {
 	strcpy(newUser->coments, "-1");
 	strcpy(newUser->due, "1.1.2017");
 
-	pushUser(proj_struct);
-	setUser(proj_struct);
+	pushUser(newUser);
+	setUser(newUser);
 
 }

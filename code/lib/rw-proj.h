@@ -156,7 +156,7 @@ void setProjs(proj *node) {
 
 	char buffer[256];
 
-	fprintf(proj_file, "\n%d\n %s\n %s\n %s\n %d\n %s\n %d\n %d",
+	fprintf(proj_file, "\n%d\n%s\n%s\n%s\n%d\n%s\n%d\n%d",
 		node->id,
 		node->users_arr,
 		node->tasks_arr,
