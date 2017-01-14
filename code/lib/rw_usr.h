@@ -243,3 +243,19 @@ void getUsers() {
 	fclose(users_file);
 }
 
+void setUsers(user *node) {
+
+	FILE * user_file;
+	char filename[] = "../db/users.txt";
+	user_file = fopen(filename, "a");
+
+	if (user_file == NULL) {
+		perror("Error");
+		return;
+	}
+
+	char buffer[256];
+
+	fprintf(user_file, "\n%ld\n %s\n %d\n %d\n %d\n %s\n %d\n %d\n %s\n %s",
+		node->id, node->name, node->level, node->porj_id, node->task_id, node->lang, node->salery, node->online, node->coments, node->due);
+}
