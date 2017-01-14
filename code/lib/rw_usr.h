@@ -243,7 +243,7 @@ void getUsers() {
 	fclose(users_file);
 }
 
-void setUsers(user *node) {
+void setUser(user *node) {
 
 	FILE * user_file;
 	char filename[] = "../db/users.txt";
@@ -258,4 +258,25 @@ void setUsers(user *node) {
 
 	fprintf(user_file, "\n%ld\n %s\n %d\n %d\n %d\n %s\n %d\n %d\n %s\n %s",
 		node->id, node->name, node->level, node->porj_id, node->task_id, node->lang, node->salery, node->online, node->coments, node->due);
+}
+
+void addUser() {
+
+	// user information 
+	struct user * newUser = (struct proj *)malloc(sizeof(struct user));
+
+	newUser->id;
+	strcpy(newUser->name, "Test User");
+	newUser->level = 1;
+	newUser->porj_id = 1;
+	newUser->task_id = 1;
+	strcpy(newUser->lang, "EN");
+	newUser->salery = 1000;
+	newUser->online = 0;
+	strcpy(newUser->coments, "-1");
+	strcpy(newUser->due, "1.1.2017");
+
+	pushUser(proj_struct);
+	setUser(proj_struct);
+
 }
