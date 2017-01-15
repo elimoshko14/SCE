@@ -243,6 +243,24 @@ void getUsers() {
 	fclose(users_file);
 }
 
+bool isEmptyFile(FILE *file) {
+	long savedOffset = ftell(file);
+	fseek(file, 0, SEEK_END);
+
+	if (ftell(file) == 0) {
+		return true;
+	}
+
+	fseek(file, savedOffset, SEEK_SET);
+	return false;
+}
+
+void clearFile(char fileName[]) {
+	FILE * file;
+	file = fopen(fileName, "w");
+	fclose(file);
+}
+
 void setUser(user *node) {
 
 	FILE * user_file;
@@ -255,28 +273,55 @@ void setUser(user *node) {
 	}
 
 	char buffer[256];
+	if (isEmptyFile(user_file))
+		strcpy(buffer, "%ld\n%s\n%d\n%d\n%d\n%s\n%d\n%d\n%s\n%s");
+	else 
+		strcpy(buffer, "\n%ld\n%s\n%d\n%d\n%d\n%s\n%d\n%d\n%s\n%s");
+	
 
-	fprintf(user_file, "\n%ld\n%s\n%d\n%d\n%d\n%s\n%d\n%d\n%s\n%s",
+	fprintf(user_file, buffer,
 		node->id, node->name, node->level, node->porj_id, node->task_id, node->lang, node->salery, node->online, node->coments, node->due);
+
+	fclose(user_file);
 }
 
-void addUser() {
+void addUser(int id, char name[], char lang[], char due[]) {
 
 	// user information 
 	struct user * newUser = (struct proj *)malloc(sizeof(struct user));
 
-	newUser->id = 33;
-	strcpy(newUser->name, "Test User");
+	newUser->id = id;
+	strcpy(newUser->name, name);
 	newUser->level = 1;
 	newUser->porj_id = 1;
 	newUser->task_id = 1;
-	strcpy(newUser->lang, "EN");
+	strcpy(newUser->lang, lang);
 	newUser->salery = 1000;
 	newUser->online = 0;
 	strcpy(newUser->coments, "-1");
-	strcpy(newUser->due, "1.1.2017");
+	strcpy(newUser->due, due);
 
 	pushUser(newUser);
 	setUser(newUser);
 
+}
+
+// This function rewrite users.txt after deleting specific node
+// prototype of function delete with more functionality
+void unSetUser(int id) {
+
+	// only if previous delete from users_list
+	if (deleteUser(id)) {
+
+		user_node * new_list = users_list;
+		if (!new_list) return;
+
+		clearFile("../db/users.txt");
+
+		// rewrite new list without deleting node
+		while (new_list) {
+			setUser(new_list->ptr);
+			new_list = new_list->next;
+		}
+	}
 }

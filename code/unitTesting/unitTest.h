@@ -12,7 +12,7 @@
 
 /*********************/
 void unitTest(){
-	unitTestGetDbs();
-    unitTestLogin();
+	//unitTestGetDbs();
+    //unitTestLogin();
 	unitTestAdd();
 }
