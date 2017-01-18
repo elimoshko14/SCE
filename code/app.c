@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include <time.h>
 
 /*********************/
@@ -18,7 +19,7 @@
 #include "lib/rw-cmnt.h"
 //--------------------//
 
-#include "lib/login.h"
+#include "modules/login.h"
 
 /*********************/
 /*	Unit Testing	 */

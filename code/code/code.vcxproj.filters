@@ -22,25 +22,10 @@
     <ClInclude Include="..\lib\globals.h">
       <Filter>App</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\login.h">
-      <Filter>functions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unitTesting\testLogin.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unitTesting\testGetDbs.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
     <ClInclude Include="..\unitTesting\unitTest.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\testTask.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
     <ClInclude Include="..\unitTesting\testUser.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unitTesting\testComm.h">
       <Filter>unit testing</Filter>
     </ClInclude>
     <ClInclude Include="..\unitTesting\testProj.h">
@@ -49,11 +34,11 @@
     <ClInclude Include="..\unitTesting\testtask.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\testcat.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
     <ClInclude Include="..\unitTesting\testcomm.h">
       <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\login.h">
+      <Filter>modules</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -71,17 +56,17 @@
     <Filter Include="App">
       <UniqueIdentifier>{80686630-55c0-4a41-81b4-5f753d06bfa8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="rw">
-      <UniqueIdentifier>{5727339c-9149-4985-873d-08f5f3290b26}</UniqueIdentifier>
-    </Filter>
     <Filter Include="db">
       <UniqueIdentifier>{fb031c7e-6982-4e5e-8020-813dc482570a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="functions">
-      <UniqueIdentifier>{787e9b50-0ddb-4bfc-839e-721c81a7bb36}</UniqueIdentifier>
-    </Filter>
     <Filter Include="unit testing">
       <UniqueIdentifier>{2be0f74f-6a12-4d50-a984-47ceb24e1eee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules">
+      <UniqueIdentifier>{fd08a6f2-3012-427a-bee0-866024e1782f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rw">
+      <UniqueIdentifier>{5727339c-9149-4985-873d-08f5f3290b26}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
