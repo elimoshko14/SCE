@@ -7,4 +7,5 @@ bool unitTestProj() {
 	getProjs();
 	unSetProj(2);
 	printProjTree();
+	return true;
 }
