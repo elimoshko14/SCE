@@ -1,10 +1,10 @@
-proj_node * findProjById(int id) {
+proj * findProjById(int id) {
 	struct proj_node * temp;
 	temp = projects_list;
 	while (temp != NULL)
 	{
 		if (temp->ptr->id == id)
-			return temp;
+			return temp->ptr;
 		else
 			temp = temp->next;
 	}

@@ -1,10 +1,10 @@
-user_node * findUserById(long id) {
+user * findUserById(long id) {
 	struct user_node * temp;
 	temp = users_list;
 	while (temp != NULL)
 	{
 		if (temp->ptr->id == id)
-			return temp;
+			return temp->ptr;
 		else
 			temp = temp->next;
 	}
@@ -181,7 +181,7 @@ void setUser(user *node) {
 void addUser(int id, char name[], char lang[], char due[]) {
 
 	// user information 
-	struct user * newUser = (struct proj *)malloc(sizeof(struct user));
+	struct user * newUser = (struct user *)malloc(sizeof(struct user));
 
 	newUser->id = id;
 	strcpy(newUser->name, name);
