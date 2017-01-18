@@ -146,16 +146,47 @@ void setCat(category *node) {
 		node->id, node->name, node->proj_id, node->comment_arr);
 }
 
-void addCat() {
+void addCat(int id, char name[], int proj_id, char comment_arr[]) {
 
 	// category information 
 	struct category * newCat = (struct category *)malloc(sizeof(struct category));
 
-	newCat->id = 1;
-	strcpy(newCat->name, "Test Category");
-	newCat->proj_id = 1;
-	strcpy(newCat->comment_arr, "-1");
+	newCat->id = id;
+	strcpy(newCat->name, name);
+	newCat->proj_id = proj_id;
+	strcpy(newCat->comment_arr, comment_arr);
 
 	pushCat(newCat);
 	setCat(newCat);
+}
+
+category_node * findCatById(int id) {
+	struct category_node * temp;
+	temp = categories_list;
+	while (temp != NULL)
+	{
+		if (temp->ptr->id == id)
+			return temp;
+		else
+			temp = temp->next;
+	}
+	return NULL;
+}
+
+void UpdateCat(int id, char name[], int proj_id, char comment_arr[]) {
+	category *node = findCatById(id);
+	if (node != NULL) {
+		printf("Category has been find!\n");
+		node->id = id;
+		strcpy(node->name, name);
+		node->proj_id = proj_id;
+		strcpy(node->comment_arr, comment_arr);
+	}
+	clearFile("../db/categorys.txt");
+
+	category_node * u = categories_list;
+	while (u) {
+		setUser(u->ptr);
+		u = u->next;
+	}
 }
