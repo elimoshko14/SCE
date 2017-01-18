@@ -1,3 +1,16 @@
+comment * findcomentById(int id) {
+	struct comment_node * temp;
+	temp = comments_list;
+	while (temp != NULL)
+	{
+		if (temp->ptr->id == id)
+			return temp->ptr;
+		else
+			temp = temp->next;
+	}
+	return NULL;
+}
+
 void printComment(comment * node) {
 	printf("id %ld\n", node->id);
 	printf("title %s\n", node->title);
@@ -66,19 +79,6 @@ bool deleteComent(int id)
 	return false;
 }
 
-comment_node * findcomentById(int id) {
-	struct comment_node * temp;
-	temp = comments_list;
-	while (temp != NULL)
-	{
-		if (temp->ptr->id == id)
-			return temp;
-		else
-			temp = temp->next;
-	}
-	return NULL;
-}
-
 void getComments() {
 
 	FILE * coments_file;
@@ -143,24 +143,65 @@ void setComment(comment *node) {
 		return;
 	}
 
-	char buffer[256];
 
 	fprintf(comment_file, "\n%d\n%s\n%s\n%d\n%d\n%d",
 		node->id, node->title, node->body, node->porj_id, node->task_id, node->user_id);
+	fclose(comment_file);
 }
 
-void addComment() {
+void addComment(int id,char title[],char body[],int porj_id,int task_id ,int user_id) {
 
 	// comment information 
 	struct comment * newComment = (struct comment *)malloc(sizeof(struct category));
 
-	newComment->id = 1;
-	strcpy(newComment->title, "New Comment");
-	strcpy(newComment->body, "This is simple comment");
-	newComment->porj_id = 1;
-	newComment->task_id = 1;
-	newComment->user_id = 1;
+	newComment->id = id;
+	strcpy(newComment->title, title);
+	strcpy(newComment->body, body);
+	newComment->porj_id = porj_id;
+	newComment->task_id = task_id;
+	newComment->user_id = user_id;
 
 	pushComent(newComment);
 	setComment(newComment);
+}
+
+void updateComment(int id, char title[], char body[], int porj_id, int task_id, int user_id) {
+	comment *node = findcomentById(id);
+	if (node != NULL) {
+		printf("comment has been find!\n");
+		node->id = id;
+		strcpy(node->title, title);
+		node->porj_id = porj_id;
+		node->task_id = task_id;
+		node->user_id = user_id;
+	}
+	else
+	{
+		printf("comment not find\n");
+	}
+	clearFile("../db/users.txt");
+
+	comment_node * c = comments_list;
+	while (c) {
+		setComment(c->ptr);
+		c = c->next;
+	}
+}
+
+void unSetComment(int id) {
+
+	// only if previous delete from users_list
+	if (deleteComent(id)) {
+
+		comment_node * new_list = comments_list;
+		if (!new_list) return;
+
+		clearFile("../db/comments.txt");
+
+		// rewrite new list without deleting node
+		while (new_list) {
+			setComment(new_list->ptr);
+			new_list = new_list->next;
+		}
+	}
 }

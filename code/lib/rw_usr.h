@@ -199,7 +199,7 @@ void addUser(int id, char name[], char lang[], char due[]) {
 
 }
 
-void UpdateUser(int id, char name[], char lang[], char due[], int level) {
+void updateUser(int id, char name[], char lang[], char due[], int level) {
 	user *node = findUserById(id);
 	if (node != NULL) {
 		printf("User has been find!\n");
@@ -213,6 +213,10 @@ void UpdateUser(int id, char name[], char lang[], char due[], int level) {
 		node->online = 0;
 		strcpy(node->coments, "-1");
 		strcpy(node->due, due);
+	}
+	else
+	{
+		printf("user not find\n");
 	}
 	clearFile("../db/users.txt");
 

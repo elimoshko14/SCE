@@ -49,6 +49,15 @@
     <ClInclude Include="..\unitTesting\testProj.h">
       <Filter>unit testing</Filter>
     </ClInclude>
+    <ClInclude Include="..\unitTesting\testtask.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testcat.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testcomm.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">
