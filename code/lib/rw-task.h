@@ -198,7 +198,7 @@ void updateTask(int id, char title[], int user_id, int cat_id, int cost, int sta
 	}
 	clearFile("../db/tasks.txt");
 
-	user_node * u = users_list;
+	task_node * u = tasks_list;
 	while (u) {
 		setTask(u->ptr);
 		u = u->next;
@@ -211,7 +211,7 @@ void unSetTask(int id) {
 	
 	if (deleteTask(id)) {
 
-		user_node * new_list = tasks_list;
+		task_node * new_list = tasks_list;
 		if (!new_list) return;
 
 		clearFile("../db/tasks.txt");

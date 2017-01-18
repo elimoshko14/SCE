@@ -16,9 +16,6 @@
     <ClInclude Include="..\lib\rw-task.h">
       <Filter>rw</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\structs.h">
-      <Filter>db</Filter>
-    </ClInclude>
     <ClInclude Include="..\lib\globals.h">
       <Filter>App</Filter>
     </ClInclude>
@@ -31,14 +28,11 @@
     <ClInclude Include="..\unitTesting\testProj.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\testtask.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unitTesting\testcomm.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
     <ClInclude Include="..\lib\login.h">
       <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\structs.h">
+      <Filter>lib</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +61,9 @@
     </Filter>
     <Filter Include="rw">
       <UniqueIdentifier>{5727339c-9149-4985-873d-08f5f3290b26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{760a9b1f-172b-4a78-b7e6-5940c5c4ddcd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
