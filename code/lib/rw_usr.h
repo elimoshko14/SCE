@@ -1,5 +1,3 @@
-
-
 user_node * findUserById(long id) {
 	struct user_node * temp;
 	temp = users_list;
@@ -12,13 +10,6 @@ user_node * findUserById(long id) {
 	}
 	return NULL;
 }
-
-
-
-
-
-
-
 
 void printUser(user * node) {
 	printf("ID:\t%ld\n", node->id);
@@ -34,7 +25,6 @@ void printUser(user * node) {
 	printf("\n\n");
 }
 
-
 void printUserTree() {
 	user_node * u = users_list;
 	if (!u)
@@ -45,7 +35,6 @@ void printUserTree() {
 		u = u->next;
 	}
 }
-
 
 void pushUser(user * node)
 {
@@ -63,7 +52,6 @@ void pushUser(user * node)
 		users_list = temp;
 	}
 }
-
 
 bool deleteUser(int id)
 {
@@ -94,10 +82,6 @@ bool deleteUser(int id)
 	}
 	return false;
 }
-
-
-
-
 
 void getUsers() {
 
@@ -168,24 +152,6 @@ void getUsers() {
 	} while (!feof(users_file) && ch != EOF);
 
 	fclose(users_file);
-}
-
-bool isEmptyFile(FILE *file) {
-	long savedOffset = ftell(file);
-	fseek(file, 0, SEEK_END);
-
-	if (ftell(file) == 0) {
-		return true;
-	}
-
-	fseek(file, savedOffset, SEEK_SET);
-	return false;
-}
-
-void clearFile(char fileName[]) {
-	FILE * file;
-	file = fopen(fileName, "w");
-	fclose(file);
 }
 
 void setUser(user *node) {
