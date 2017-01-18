@@ -26,7 +26,7 @@
 
 void unitTest(){
 
-	unitTestGetDbs();
+	//unitTestGetDbs();
     unitTestLogin();
 	
 	// unitTestCat();
