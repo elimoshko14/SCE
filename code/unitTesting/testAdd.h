@@ -1,11 +1,11 @@
 bool unitTestAddProj() {
-	printf("----------- Add Project -----------\n\n");
+	printf("----------- Add,delete, update, Project -----------\n\n");
 	addProj(); 
 	printProjTree();
 }
 
 bool unitTestAddUser() {
-	printf("----------- Add, delete User -----------\n\n");
+	printf("----------- Add, delete, update User -----------\n\n");
 	
 	for (int i=2; i<=4; i++) 
 		addUser(i,"User", "EN", "12.01.2017");
@@ -22,7 +22,7 @@ bool unitTestAddCat() {
 }
 
 bool unitTestAddTask() {
-	printf("----------- Add Task -----------\n\n");
+	printf("----------- Add, delete, update Task -----------\n\n");
 	addTask();
 	printTaskTree();
 }
