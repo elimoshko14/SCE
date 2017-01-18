@@ -14,15 +14,15 @@
 /*********************/
 /*	Unit Testing	 */
 
-#include "unitTesting/testGetDbs.h"
-#include "unitTesting/testLogin.h"
+#include "../unitTesting/testGetDbs.h"
+#include "../unitTesting/testLogin.h"
 
 // module unit test
-#include "unitTesting/testUser.h";
-#include "unitTesting/testProj.h";
-#include "unitTesting/testTask.h";
-#include "unitTesting/testCat.h";
-#include "unitTesting/testComm.h";
+#include "../unitTesting/testUser.h"
+#include "../unitTesting/testProj.h"
+#include "../unitTesting/testTask.h"
+#include "../unitTesting/testCat.h"
+#include "../unitTesting/testComm.h"
 
 void unitTest(){
 
