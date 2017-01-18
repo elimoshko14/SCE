@@ -1,4 +1,4 @@
-user * findUserById(long id) {
+user * findUserById(long id) {         //find user
 	struct user_node * temp;
 	temp = users_list;
 	while (temp != NULL)
