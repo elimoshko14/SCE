@@ -25,6 +25,7 @@ void printUser(user * node) {
 	printf("\n\n");
 }
 
+
 void printUserTree() {
 	user_node * u = users_list;
 	if (!u)
