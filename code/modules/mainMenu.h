@@ -1,6 +1,5 @@
 // director menu
-void menu_1()
-{
+void menu_1() {
 	int i = 0;
 	printf("enter %d for provide tastks of workers:\n", ++i);
 	printf("enter %d for management projetcts:\n", ++i);
