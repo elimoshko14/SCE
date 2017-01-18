@@ -140,7 +140,6 @@ void setCat(category *node) {
 		return;
 	}
 
-	char buffer[256];
 
 	fprintf(cat_file, "\n%d\n%s\n%d\n%s",
 		node->id, node->name, node->proj_id, node->comment_arr);
