@@ -160,13 +160,13 @@ void addCat(int id, char name[], int proj_id, char comment_arr[]) {
 	setCat(newCat);
 }
 
-category_node * findCatById(int id) {
+category * findCatById(long id) {
 	struct category_node * temp;
 	temp = categories_list;
 	while (temp != NULL)
 	{
 		if (temp->ptr->id == id)
-			return temp;
+			return temp->ptr;
 		else
 			temp = temp->next;
 	}
@@ -182,11 +182,32 @@ void UpdateCat(int id, char name[], int proj_id, char comment_arr[]) {
 		node->proj_id = proj_id;
 		strcpy(node->comment_arr, comment_arr);
 	}
+	else
+	{
+		printf("category not find!\n");
+	}
 	clearFile("../db/categorys.txt");
 
 	category_node * u = categories_list;
 	while (u) {
 		setUser(u->ptr);
 		u = u->next;
+	}
+}
+
+void unSetCat(int id) {
+
+	// only if previous delete from cat_list
+	if (deleteCat(id)) {
+		category_node * new_list = categories_list;
+		if (!new_list) return;
+
+		clearFile("../db/categorys.txt");
+
+		// rewrite new list without deleting node
+		while (new_list) {
+			setCat(new_list->ptr);
+			new_list = new_list->next;
+		}
 	}
 }
