@@ -1,31 +1,3 @@
-void SetUser(user *node) {
-
-	FILE * user_file;
-	char filename[] = "../db/users.txt";
-	user_file = fopen(filename, "a");
-
-	if (user_file == NULL) {
-		perror("Error");
-		return;
-	}
-
-	char buffer[256];
-
-	fprintf(user_file, "\n%ld\n %s\n %d\n %d\n %d\n %s\n %d\n %d %s\n %s\n",
-		node->id,
-		node->name,
-		node->level,
-		node->porj_id,
-		node->task_id,
-		node->lang,
-		node->salery,
-		node->online,
-		node->coments,
-		node->due);
-
-	fclose(user_file);
-}
-
 
 
 user_node * findUserById(long id) {
@@ -41,87 +13,8 @@ user_node * findUserById(long id) {
 	return NULL;
 }
 
-void ChangeUserId(user * node) {
-	long new_id;
-	printf("please enter ID for user\n");
-	scanf("%d", &new_id);
-	node->id = new_id;
-}
 
-void ChangeUserName(user * node) {
-	char new_name[256];
-	printf("please enter name for user\n");
-	scanf("%s", &new_name);
-	*(node->name) = new_name;
-}
 
-void ChangeUserSalary(user * node) {
-	int new_salary;
-	printf("please enter salary for user\n");
-	scanf("%d", &new_salary);
-	node->salery = new_salary;
-}
-
-void ChangeUserDue(user * node) {
-	char new_due[256];
-	printf("please enter new dead line for user\n");
-	scanf("%s", &new_due);
-	*(node->due) = new_due;
-}
-
-void UpdateUser(long id) {
-	user *node = findUserById(id);
-	if (node!=NULL) {
-		printf("User has been find!\n");
-		int choice;
-		do
-		{
-			printf("Menu\n\n");
-			printf("1. change user ID\n");
-			printf("2. change user name\n");
-			printf("3. change user salary\n");
-			printf("4. change user dead line\n");
-			printf("5. Exit\n");
-			scanf("%d", &choice);
-
-			switch (choice)
-			{
-			case 1: ChangeUserId(node);
-				break;
-			case 2: ChangeUserName(node);
-				break;
-			case 3: ChangeUserSalary(node);
-				break;
-			case 4: ChangeUserDue(node);
-				break;
-			case 5: printf("exit from menu,bye!\n");
-				break;
-			default: printf("Invalid choice!\n");
-				break;
-			}
-
-		} while (choice != 5);
-
-	}
-	else
-	{
-		printf("user has not been find,please try again!\n");
-	}
-	FILE * users_file;
-	char filename[] = "../db/users.txt";
-	users_file = fopen(filename, "w");
-	if (users_file == NULL) {
-		perror("Error");
-		return;
-	}
-	fclose(users_file);
-
-	user_node * u = users_list;
-	while (u) {
-		SetUser(u->ptr);
-		u = u->next;
-	}
-}
 
 
 
@@ -338,6 +231,30 @@ void addUser(int id, char name[], char lang[], char due[]) {
 	pushUser(newUser);
 	setUser(newUser);
 
+}
+
+void UpdateUser(int id, char name[], char lang[], char due[], int level) {
+	user *node = findUserById(id);
+	if (node != NULL) {
+		printf("User has been find!\n");
+		node->id = id;
+		strcpy(node->name, name);
+		node->level = level;
+		node->porj_id = 1;
+		node->task_id = 1;
+		strcpy(node->lang, lang);
+		node->salery = 1000;
+		node->online = 0;
+		strcpy(node->coments, "-1");
+		strcpy(node->due, due);
+	}
+	clearFile("../db/users.txt");
+
+	user_node * u = users_list;
+	while (u) {
+		SetUser(u->ptr);
+		u = u->next;
+	}
 }
 
 // This function rewrite users.txt after deleting specific node
