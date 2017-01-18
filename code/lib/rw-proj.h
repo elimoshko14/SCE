@@ -200,10 +200,10 @@ void updateProj(int id,int manager_id , char due[],bool status,int cost) {
 	}
 	clearFile("../db/projects.txt");
 
-	proj_node * t = projects_list;
-	while (t) {
-		setProjs(t->ptr);
-		t = t->next;
+	proj_node * p = projects_list;
+	while (p) {
+		setProjs(p->ptr);
+		p = p->next;
 
 	}
 }
