@@ -21,7 +21,9 @@ void menu_1() {
 	int choose;
 	scanf("%d", &choose);
 	switch (choose) {
-	case 1: { updateTaskStatus(); break; }
+	case 1: { printf("You choose %d, and its right choise... \n", choose); 
+		updateTaskStatus();
+		break; }
 	case 2: { management_projets(); break; }
 	
 	default: break;

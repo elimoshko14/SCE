@@ -6,10 +6,10 @@ bool unitTestLogin() {
 	// We dont have a db to count on?
 	if (!users_list) {
 		//
-		addUser(1, "Arie Katz", "EN", "String");
-		addUser(2, "Eli", "EN", "String");
-		addUser(3, "Chen", "EN", "String");
-		addUser(4, "Roma", "EN", "String");
+		addUser(1, "Bendjamin ", "EN", "String", 1,1,1,10000,1,"-1");
+		addUser(2, "Ruzvelt", "EN", "String", 2, 1, 1, 10000, 1, "-1");
+		addUser(3, "Stalone", "EN", "String", 2, 1, 1, 10000, 1, "-1");
+		addUser(4, "Dikaprio", "EN", "String", 3, 1, 1, 10000, 1, "-1");
 	
 	}
 	// login doent realy need's an input var, we need it for testing
@@ -17,6 +17,12 @@ bool unitTestLogin() {
 	if (user_ptr) {
 		printf("\n----------- Logged in user -----------\n");
 		printUser(user_ptr);
+
+		// temp test
+		mainMenu();
+		getTasks();
+		// end test
+
 		return true;
 	}
 	printf("ERROR!\nuser_ptr is NULL!\n");
