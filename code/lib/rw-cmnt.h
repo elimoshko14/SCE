@@ -149,7 +149,7 @@ void setComment(comment *node) {
 	fclose(comment_file);
 }
 
-void addComment(int id,char* title[],char *body[],int porj_id,int task_id ,int user_id) {
+void addComment(int id,char title[],char body[],int porj_id,int task_id ,int user_id) {
 
 	// comment information 
 	struct comment * newComment = (struct comment *)malloc(sizeof(struct category));
@@ -165,7 +165,7 @@ void addComment(int id,char* title[],char *body[],int porj_id,int task_id ,int u
 	setComment(newComment);
 }
 
-void updateComment(int id, char* title[], char *body[], int porj_id, int task_id, int user_id) {
+void updateComment(int id, char title[], char body[], int porj_id, int task_id, int user_id) {
 	comment *node = findcomentById(id);
 	if (node != NULL) {
 		printf("comment has been find!\n");
