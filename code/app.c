@@ -18,7 +18,7 @@
 #include "lib/rw-ctgry.h"
 #include "lib/rw-cmnt.h"
 //--------------------//
-#include "lib/mainMenu.h"
+#include "modules/mainMenu.h"
 #include "modules/login.h"
 #include "modules/bonus_EEO.h"
 // DO NOT CHANGE BELOW
