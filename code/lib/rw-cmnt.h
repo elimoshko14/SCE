@@ -80,7 +80,6 @@ bool deleteComent(int id)
 }
 
 void getComments() {
-	printf("dfdsf\n");
 	FILE * coments_file;
 	char filename[] = "../db/comments.txt";
 	coments_file = fopen(filename, "r");
