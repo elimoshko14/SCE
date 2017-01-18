@@ -65,18 +65,6 @@ bool deleteCat(int id)
 	return false;
 }
 
-category_node * findCatById(int id) {
-	struct category_node * temp;
-	temp = categories_list;
-	while (temp != NULL)
-	{
-		if (temp->ptr->id == id)
-			return temp;
-		else
-			temp = temp->next;
-	}
-	return NULL;
-}
 
 void getCategories() {
 
