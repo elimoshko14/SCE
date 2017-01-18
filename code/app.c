@@ -18,9 +18,12 @@
 #include "lib/rw-ctgry.h"
 #include "lib/rw-cmnt.h"
 //--------------------//
+#include "modules/updateTaskStatus.h"
+#include "modules/managmentProjects.h"
+#include "modules/bonus_EEO.h"
 #include "modules/mainMenu.h"
 #include "modules/login.h"
-#include "modules/bonus_EEO.h"
+
 // DO NOT CHANGE BELOW
 
 /*	Unit Testing MAIN 	 */
