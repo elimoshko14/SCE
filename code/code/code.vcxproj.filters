@@ -40,9 +40,6 @@
     <ClInclude Include="..\unitTesting\testUser.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\testCat.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
     <ClInclude Include="..\unitTesting\testComm.h">
       <Filter>unit testing</Filter>
     </ClInclude>
