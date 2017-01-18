@@ -11,27 +11,39 @@
 #include "lib/globals.h"
 #include "lib/structs.h"
 
-//--------------------//
-#include "lib/rw-task.h"
-#include "lib/rw-proj.h"
-#include "lib/rw_usr.h"
-#include "lib/rw-ctgry.h"
-#include "lib/rw-cmnt.h"
-//--------------------//
-#include "modules/updateTaskStatus.h"
-#include "modules/managmentProjects.h"
-#include "modules/bonus_EEO.h"
-#include "modules/mainMenu.h"
-#include "modules/login.h"
+//api methods//
+#include "lib/api.h"
 
-// DO NOT CHANGE BELOW
+//system functions//
+#include "modules/functions.h"
+
+// init functions to bild all dinamic structures
+void init() {
+	getUsers();
+	getProjs();
+	getCategories();
+	getTasks();
+	getComments();
+}
 
 /*	Unit Testing MAIN 	 */
-#include "unitTesting/unitTest.h"
+/* #include "unitTesting/unitTest.h" */
 
 int main() {
+	// initialization of system
+	init();
 
-	unitTest();
 
+	// main loop
+	while (true) {
+		
+		// start if user not login
+		if (user_ptr == NULL) { startMode(); }
+
+		// user session with all functions of system
+		else { userSession(); }
+	}
+
+	printf("\n");
 	return 0;
 }

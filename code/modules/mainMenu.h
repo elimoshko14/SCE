@@ -1,33 +1,28 @@
 // director menu
 void menu_1() {
 	int i = 0;
-	printf("enter %d for provide tastks of workers:\n", ++i);
-	printf("enter %d for management projetcts:\n", ++i);
-	printf("enter %d for management tasks:\n", ++i);
-	printf("enter %d for management users:\n", ++i);
-	printf("enter %d for management comments:\n", ++i);
+	printf("[%d] Manage projects:\n", ++i);
+	printf("[%d] Display all projects:\n", ++i);
+	printf("[%d] Manage category:\n", ++i);
+	printf("[%d] Display all categorys by specific project:\n", ++i);
+	printf("[%d] Manage tasks:\n", ++i);
+	printf("[%d] Display all tasks by specific category:\n", ++i);
+	printf("[%d] Display all completed tasks by specific project:\n", ++i);
+	printf("[%d] Display all uncompleted tasks by specific project:\n", ++i);
+	printf("[%d] Manage comments:\n", ++i);
+	printf("[%d] Display all comments by specific taks:\n", ++i);
+	printf("[%d] Display all comments by specific user:\n", ++i);
 	printf("enter %d for management categories:\n", ++i);
-	printf("enter %d to get projects list:\n", ++i);
-	printf("enter %d to get users list:\n", ++i);
-	printf("enter %d to get tasks list:\n", ++i);
-	printf("enter %d  to get categories list:\n", ++i);
-	printf("enter %d to get comments list:\n", ++i);
-	printf("enter %d for changeing associate task:\n", ++i);
-	printf("enter %d for changeing associate project:\n", ++i);
-	printf("enter %d for replication task:\n", ++i);
-	printf("enter %d for replication project:\n", ++i);
-	printf("enter 16 for changing the interface language to Russian:\n", ++i);
+	printf("[%d] Manage users:\n", ++i);
+	printf("[%d] Display all workers:\n", ++i);
+	printf("[%d] Display all managers:\n", ++i);
+	printf("[%d] Display all users by specific project:\n", ++i);
+
+	printf("[%d] Copy Specific Task", ++i);
+	printf("[%d] Switch language to Russian:\n", ++i);
+	printf("[%d] Exit", ++i);
 	
-	int choose;
-	scanf("%d", &choose);
-	switch (choose) {
-	case 1: { printf("You choose %d, and its right choise... \n", choose); 
-		updateTaskStatus();
-		break; }
-	case 2: { management_projets(); break; }
-	
-	default: break;
-	}
+	printf("\n\n Please make your choise: ");
 }
 
 // manager menu

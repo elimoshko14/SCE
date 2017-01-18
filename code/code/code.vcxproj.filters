@@ -52,6 +52,30 @@
     <ClInclude Include="..\unitTesting\unitTest.h">
       <Filter>unit testing</Filter>
     </ClInclude>
+    <ClInclude Include="..\modules\mainMenu.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\updateTaskStatus.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\managmentProjects.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\functions.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\api.h">
+      <Filter>rw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\mainChoose.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\Hello.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\Session.h">
+      <Filter>modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">
@@ -61,6 +85,12 @@
       <Filter>db</Filter>
     </Text>
     <Text Include="..\db\users.txt">
+      <Filter>db</Filter>
+    </Text>
+    <Text Include="..\db\categorys.txt">
+      <Filter>db</Filter>
+    </Text>
+    <Text Include="..\db\comments.txt">
       <Filter>db</Filter>
     </Text>
   </ItemGroup>
