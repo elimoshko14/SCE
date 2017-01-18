@@ -136,3 +136,40 @@ void getTasks() {
 	} while (!feof(tasks_file) && ch != EOF);
 	fclose(tasks_file);
 }
+
+void setTask(task *node) {
+
+	FILE * task_file;
+	char filename[] = "../db/tasks.txt";
+	task_file = fopen(filename, "a");
+
+	if (task_file == NULL) {
+		perror("Error");
+		return;
+	}
+
+	char buffer[256];
+
+	fprintf(task_file, "\n%d\n%s\n%ld\n%d\n%d\n%d\n%s\n%s\n%s",
+		node->id, node->title, node->user_id, node->category_id, node->cost, node->status, node->tags, node->due, node->comments);
+}
+
+void addTask() {
+
+	// task information 
+	struct task * newTask = (struct task *)malloc(sizeof(struct task));
+
+	newTask->id = 11;
+	strcpy(newTask->title, "New Task");
+	newTask->user_id = 1;
+	newTask->category_id = 1;
+	newTask->cost = 100;
+	newTask->status = 1;
+	strcpy(newTask->tags, "Tag1, Tag2, Tag3");
+	strcpy(newTask->due, "12.01.2017");
+	strcpy(newTask->comments, "-1");
+
+	pushTask(newTask);
+	setTask(newTask);
+
+}
