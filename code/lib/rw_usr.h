@@ -179,20 +179,20 @@ void setUser(user *node) {
 	fclose(user_file);
 }
 
-void addUser(int id, char name[], char lang[], char due[]) {
+void addUser(int id, char name[], char lang[], char due[], int level, int proj_id, int  task_id, int salery, int online, char comments[]) {
 
 	// user information 
 	struct user * newUser = (struct user *)malloc(sizeof(struct user));
 
 	newUser->id = id;
 	strcpy(newUser->name, name);
-	newUser->level = 1;
-	newUser->porj_id = 1;
-	newUser->task_id = 1;
+	newUser->level = level;
+	newUser->porj_id = proj_id;
+	newUser->task_id = task_id;
 	strcpy(newUser->lang, lang);
-	newUser->salery = 1000;
-	newUser->online = 0;
-	strcpy(newUser->coments, "-1");
+	newUser->salery = salery;
+	newUser->online = online;
+	strcpy(newUser->coments, comments);
 	strcpy(newUser->due, due);
 
 	pushUser(newUser);
@@ -200,19 +200,19 @@ void addUser(int id, char name[], char lang[], char due[]) {
 
 }
 
-void updateUser(int id, char name[], char lang[], char due[], int level) {
+void updateUser(int id, char name[], char lang[], char due[], int level, int proj_id, int  task_id, int salery, int online, char comments[]) {
 	user *node = findUserById(id);
 	if (node != NULL) {
 		printf("User has been find!\n");
 		node->id = id;
 		strcpy(node->name, name);
 		node->level = level;
-		node->porj_id = 1;
-		node->task_id = 1;
+		node->porj_id = proj_id;
+		node->task_id = task_id;
 		strcpy(node->lang, lang);
-		node->salery = 1000;
-		node->online = 0;
-		strcpy(node->coments, "-1");
+		node->salery = salery;
+		node->online = online;
+		strcpy(node->coments, comments);
 		strcpy(node->due, due);
 	}
 	else
