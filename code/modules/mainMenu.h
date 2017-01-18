@@ -1,3 +1,4 @@
+// director menu
 void menu_1()
 {
 	int i = 0;
@@ -28,31 +29,18 @@ void menu_1()
 	}
 }
 
-void menu_3(){}
-
+// manager menu
 void menu_2(){}
 
+// worker menu
+void menu_3() {}
 
-void mainMenu() 
-{
-	switch (user_ptr->level)
-	{
-	case 1:
-	{
-		menu_1();
-		break;
-	}
-	case 2:
-	{
-		menu_2();
-		break;
-	}
-	case 3:
-	{
-		menu_3();
-		break;
-	}
-	default:
-		break;
+
+void mainMenu()  {
+	switch (user_ptr->level) {
+	case 1: { menu_1(); break; }
+	case 2: { menu_2(); break; }
+	case 3: { menu_3(); break; }
+	default: break;
 	}
 }
