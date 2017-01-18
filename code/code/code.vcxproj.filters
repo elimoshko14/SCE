@@ -31,12 +31,6 @@
     <ClInclude Include="..\unitTesting\testProj.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\testtask.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unitTesting\testcomm.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
     <ClInclude Include="..\lib\login.h">
       <Filter>modules</Filter>
     </ClInclude>

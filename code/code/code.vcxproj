@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="..\app.c">
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Program Database (/Ze)</DebugInformationFormat>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">None</DebugInformationFormat>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
