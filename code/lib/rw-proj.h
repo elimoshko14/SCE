@@ -146,7 +146,6 @@ void setProjs(proj *node) {
 		return;
 	}
 
-	char buffer[256];
 
 	fprintf(proj_file, "\n%d\n%s\n%s\n%s\n%d\n%s\n%d\n%d",
 		node->id,

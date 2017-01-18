@@ -7,4 +7,6 @@ bool unitTestUser() {
 	getUsers();
 	unSetUser(2);
 	printUserTree();
+
+	return true;
 }

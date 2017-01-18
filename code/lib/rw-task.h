@@ -148,8 +148,6 @@ void setTask(task *node) {
 		return;
 	}
 
-	char buffer[256];
-
 	fprintf(task_file, "\n%d\n%s\n%ld\n%d\n%d\n%d\n%s\n%s\n%s",
 		node->id, node->title, node->user_id, node->category_id, node->cost, node->status, node->tags, node->due, node->comments);
 }
