@@ -20,7 +20,7 @@
 //--------------------//
 
 #include "modules/login.h"
-
+#include "modules/bonus_EEO.h"
 // DO NOT CHANGE BELOW
 
 /*	Unit Testing MAIN 	 */

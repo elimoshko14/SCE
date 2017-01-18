@@ -36,6 +36,7 @@
     <ClInclude Include="..\unitTesting\testProj.h" />
     <ClInclude Include="..\unitTesting\testUser.h" />
     <ClInclude Include="..\unitTesting\unitTest.h" />
+    <ClInclude Include="bonus_EEO.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt" />
