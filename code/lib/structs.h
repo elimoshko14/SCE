@@ -1,5 +1,5 @@
 typedef struct user{
-	char id[10];
+	long id;
 	char name[256];
 	int level;
 	int porj_id;
