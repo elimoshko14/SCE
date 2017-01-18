@@ -69,13 +69,13 @@ bool deleteTask(int id)
 	return false;
 }
 
-task_node * findTaskById(int id) {
+task * findTaskById(int id) {
 	struct task_node * temp;
 	temp = tasks_list;
 	while (temp != NULL)
 	{
 		if (temp->ptr->id == id)
-			return temp;
+			return temp->ptr;
 		else
 			temp = temp->next;
 	}
@@ -148,7 +148,13 @@ void setTask(task *node) {
 		return;
 	}
 
-	fprintf(task_file, "\n%d\n%s\n%ld\n%d\n%d\n%d\n%s\n%s\n%s",
+	char buffer[256];
+	if (isEmptyFile(task_file))
+		strcpy(buffer, "%d\n%s\n%ld\n%d\n%d\n%d\n%s\n%s\n%s");
+	else
+		strcpy(buffer, "\n%d\n%s\n%ld\n%d\n%d\n%d\n%s\n%s\n%s");
+
+	fprintf(task_file, buffer,
 		node->id, node->title, node->user_id, node->category_id, node->cost, node->status, node->tags, node->due, node->comments);
 }
 
@@ -170,4 +176,50 @@ void addTask(int id, char title[], int user_id, int cat_id, int cost, int status
 	pushTask(newTask);
 	setTask(newTask);
 
+}
+
+void updateTask(int id, char title[], int user_id, int cat_id, int cost, int status, char tags[], char due[], char comments[]) {
+	task *newTask = findTaskById(id);
+	if (newTask != NULL) {
+		printf("Task has been find!\n");
+		newTask->id = id;
+		strcpy(newTask->title, title);
+		newTask->user_id = user_id;
+		newTask->category_id = cat_id;
+		newTask->cost = cost;
+		newTask->status = status;
+		strcpy(newTask->tags, tags);
+		strcpy(newTask->due, due);
+		strcpy(newTask->comments, comments);
+	}
+	else
+	{
+		printf("task not find\n");
+	}
+	clearFile("../db/tasks.txt");
+
+	user_node * u = users_list;
+	while (u) {
+		setTask(u->ptr);
+		u = u->next;
+	}
+}
+
+// This function rewrite tasks.txt after deleting specific node
+// prototype of function delete with more functionality
+void unSetTask(int id) {
+	
+	if (deleteTask(id)) {
+
+		user_node * new_list = tasks_list;
+		if (!new_list) return;
+
+		clearFile("../db/tasks.txt");
+
+		// rewrite new list without deleting node
+		while (new_list) {
+			setTask(new_list->ptr);
+			new_list = new_list->next;
+		}
+	}
 }
