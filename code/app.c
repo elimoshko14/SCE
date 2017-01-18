@@ -25,8 +25,13 @@
 
 #include "unitTesting/testGetDbs.h"
 #include "unitTesting/testLogin.h"
-#include "unitTesting/testUpdateUser.h"
-#include "unitTesting/testAdd.h"
+
+// module unit test
+#include "unitTesting/testUser.h";
+#include "unitTesting/testProj.h";
+#include "unitTesting/testTask.h";
+#include "unitTesting/testCat.h";
+#include "unitTesting/testComm.h";
 
 // DO NOT CHANGE BELOW
 

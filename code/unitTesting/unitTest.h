@@ -15,5 +15,10 @@ void unitTest(){
 
 	//unitTestGetDbs();
     //unitTestLogin();
-	unitTestAdd();
+	
+	unitTestCat();
+	unitTestComment();
+	unitTestProj();
+	unitTestUser();
+	unitTestTask();
 }

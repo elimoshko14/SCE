@@ -252,7 +252,7 @@ void UpdateUser(int id, char name[], char lang[], char due[], int level) {
 
 	user_node * u = users_list;
 	while (u) {
-		SetUser(u->ptr);
+		setUser(u->ptr);
 		u = u->next;
 	}
 }

@@ -154,20 +154,20 @@ void setTask(task *node) {
 		node->id, node->title, node->user_id, node->category_id, node->cost, node->status, node->tags, node->due, node->comments);
 }
 
-void addTask() {
+void addTask(int id, char title[], int user_id, int cat_id, int cost, int status, char tags[], char due[], char comments[]) {
 
 	// task information 
 	struct task * newTask = (struct task *)malloc(sizeof(struct task));
 
-	newTask->id = 11;
-	strcpy(newTask->title, "New Task");
-	newTask->user_id = 1;
-	newTask->category_id = 1;
-	newTask->cost = 100;
-	newTask->status = 1;
-	strcpy(newTask->tags, "Tag1, Tag2, Tag3");
-	strcpy(newTask->due, "12.01.2017");
-	strcpy(newTask->comments, "-1");
+	newTask->id = id;
+	strcpy(newTask->title, title);
+	newTask->user_id = user_id;
+	newTask->category_id = cat_id;
+	newTask->cost = cost;
+	newTask->status = status;
+	strcpy(newTask->tags, tags);
+	strcpy(newTask->due, due);
+	strcpy(newTask->comments, comments);
 
 	pushTask(newTask);
 	setTask(newTask);
