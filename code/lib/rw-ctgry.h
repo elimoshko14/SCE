@@ -177,7 +177,7 @@ void UpdateCat(int id, char name[], int proj_id, char comment_arr[]) {
 
 	category_node * u = categories_list;
 	while (u) {
-		setUser(u->ptr);
+		setCat(u->ptr);
 		u = u->next;
 	}
 }
