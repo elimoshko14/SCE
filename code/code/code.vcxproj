@@ -20,7 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\app.c">
-      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Program Database (/Ze)</DebugInformationFormat>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">None</DebugInformationFormat>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -32,9 +33,15 @@
     <ClInclude Include="..\lib\rw-task.h" />
     <ClInclude Include="..\lib\rw_usr.h" />
     <ClInclude Include="..\lib\structs.h" />
+    <ClInclude Include="..\unitTesting\testCat.h" />
+    <ClInclude Include="..\unitTesting\testComm.h" />
+    <ClInclude Include="..\unitTesting\testGetDbs.h" />
+    <ClInclude Include="..\unitTesting\testLogin.h" />
     <ClInclude Include="..\unitTesting\testProj.h" />
+    <ClInclude Include="..\unitTesting\testTask.h" />
     <ClInclude Include="..\unitTesting\testUser.h" />
     <ClInclude Include="..\unitTesting\unitTest.h" />
+    <ClInclude Include="bonus_EEO.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt" />

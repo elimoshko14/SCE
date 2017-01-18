@@ -20,26 +20,15 @@
 //--------------------//
 #include "lib/mainMenu.h"
 #include "modules/login.h"
-
-/*********************/
-/*	Unit Testing	 */
-
-#include "unitTesting/testGetDbs.h"
-#include "unitTesting/testLogin.h"
-
-// module unit test
-#include "unitTesting/testUser.h";
-#include "unitTesting/testProj.h";
-#include "unitTesting/testTask.h";
-#include "unitTesting/testCat.h";
-#include "unitTesting/testComm.h";
-
+#include "modules/bonus_EEO.h"
 // DO NOT CHANGE BELOW
 
 /*	Unit Testing MAIN 	 */
 #include "unitTesting/unitTest.h"
 
 int main() {
+
 	unitTest();
+
 	return 0;
 }

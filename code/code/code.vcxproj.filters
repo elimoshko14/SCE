@@ -22,23 +22,35 @@
     <ClInclude Include="..\lib\globals.h">
       <Filter>App</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\unitTest.h">
+    <ClInclude Include="..\lib\login.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="bonus_EEO.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testCat.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\testUser.h">
+    <ClInclude Include="..\unitTesting\testComm.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testGetDbs.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testLogin.h">
       <Filter>unit testing</Filter>
     </ClInclude>
     <ClInclude Include="..\unitTesting\testProj.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\testtask.h">
+    <ClInclude Include="..\unitTesting\testTask.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\testcomm.h">
+    <ClInclude Include="..\unitTesting\testUser.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\login.h">
-      <Filter>modules</Filter>
+    <ClInclude Include="..\unitTesting\unitTest.h">
+      <Filter>unit testing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
