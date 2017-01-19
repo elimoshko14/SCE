@@ -84,10 +84,8 @@ void getComments() {
 	char filename[] = "../db/comments.txt";
 	coments_file = fopen(filename, "r");
 
-	if (coments_file == NULL) {
-		perror("Error");
-		return;
-	}
+	if (isEmptyFile(coments_file)) return;
+
 	// GET DATA FROM FILE //
 	char ch; // See end of loop
 	do {
@@ -193,7 +191,7 @@ void unSetComment(int id) {
 	if (deleteComent(id)) {
 
 		comment_node * new_list = comments_list;
-		if (!new_list) return;
+		if (!new_list) { clearFile("../db/users.txt"); return; }
 
 		clearFile("../db/comments.txt");
 

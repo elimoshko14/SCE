@@ -13,9 +13,10 @@ proj * findProjById(int id) {
 
 void printProj(proj * proj_struct) {
 	printf("ID:\t%d\n", proj_struct->id);
-	printf("Users Array:\t%s\n", proj_struct->users_arr);
-	printf("Tasks Array:\t%s\n", proj_struct->tasks_arr);
-	printf("Categories Array:\t%s\n", proj_struct->cats_arr);
+	printf("Name:\t%s\n", proj_struct->name);
+	//printf("Users Array:\t%s\n", proj_struct->users_arr);
+	//printf("Tasks Array:\t%s\n", proj_struct->tasks_arr);
+	//printf("Categories Array:\t%s\n", proj_struct->cats_arr);
 	printf("Manager ID:\t%d\n", proj_struct->manager_id);
 	printf("Due:\t%s\n", proj_struct->due);
 	printf("Status\t%d\n", proj_struct->status);
@@ -87,10 +88,8 @@ void getProjs() {
 	char filename[] = "../db/projects.txt";
 	proj_file = fopen(filename, "r");
 
-	if (proj_file == NULL) {
-		perror("Error");
-		return;
-	}
+	if (isEmptyFile(proj_file)) return;
+
 	// GET DATA FROM FILE //
 	char ch; // See end of loop
 	do {
@@ -99,6 +98,9 @@ void getProjs() {
 		char buffer[256];
 		// get id
 		fscanf(proj_file, "%d", &(proj_struct->id));
+		fgets(buffer, 256, proj_file);
+		// get proj name
+		fscanf(proj_file, "%s", &(proj_struct->name));
 		fgets(buffer, 256, proj_file);
 		// get user arr
 		fscanf(proj_file, "%s", (proj_struct->users_arr));
@@ -146,9 +148,15 @@ void setProjs(proj *node) {
 		return;
 	}
 
+	char buffer[256];
+	if (isEmptyFile(proj_file))
+		strcpy(buffer, "%d\n%s\n%s\n%s\n%s\n%d\n%s\n%d\n%d");
+	else
+		strcpy(buffer, "\n%d\n%s\n%s\n%s\n%s\n%d\n%s\n%d\n%d");
 
-	fprintf(proj_file, "\n%d\n%s\n%s\n%s\n%d\n%s\n%d\n%d",
+	fprintf(proj_file, buffer,
 		node->id,
+		node->name,
 		node->users_arr,
 		node->tasks_arr,
 		node->cats_arr,
@@ -160,13 +168,13 @@ void setProjs(proj *node) {
 	fclose(proj_file);
 }
 
-void addProj(int id, int manager_id,int cost,char due[]) {
+void addProj(int id, char name[],  int manager_id,int cost,char due[]) {
 
 	// project information is empty for  new project
 
 	struct proj * proj_struct = (struct proj *)malloc(sizeof(struct proj));
-
-	proj_struct->id = id; // id  have to be auto generate (len(projects_list)+1)
+	proj_struct->id = id; 
+	strcpy(proj_struct->name, name);
 	proj_struct->manager_id = manager_id;
 	strcpy(proj_struct->due, due);
 	proj_struct->cost = cost;
@@ -180,11 +188,12 @@ void addProj(int id, int manager_id,int cost,char due[]) {
 
 }
 
-void updateProj(int id,int manager_id , char due[],bool status,int cost) {
+void updateProj(int id, char name[], int manager_id , char due[],bool status,int cost) {
 	proj *node = findProjById(id);
 	if (node != NULL) {
 		printf("Proj has been find!\n");
 		node->id = id;
+		strcpy(node->name, name);
 		node->manager_id = manager_id;
 		strcpy(node->users_arr, "-1");
 		strcpy(node->tasks_arr, "-1");
@@ -213,7 +222,7 @@ void unSetProj(int id) {
 	if (deleteProj(id)) {
 
 		proj_node * new_list = projects_list;
-		if (!new_list) return;
+		if (!new_list) { clearFile("../db/projects.txt"); return; }
 
 		clearFile("../db/projects.txt");
 

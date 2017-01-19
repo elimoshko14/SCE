@@ -1,8 +1,8 @@
 void mainChoose(int ch) {
 
 	switch (ch) {
-	case 1: {  break; }
-	case 2: {  break; }
+	case 1: { management_projets();  break; }
+	case 2: { displayProjects();  break; }
 	case 3: {  break; }
 	case 4: {  break; }
 	case 5: {  break; }
@@ -18,8 +18,7 @@ void mainChoose(int ch) {
 	case 15: {  break; }
 	case 16: {  break; }
 	case 17: {  break; }
-	case 18: {  break; }
-	case 19: {  printf("\n\n Bye Bye \n\n"); exit(0); break; }
+	case 18: {  printf("\n\n Bye Bye \n\n"); exit(0); break; }
 
 
 	default: break;

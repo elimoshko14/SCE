@@ -19,6 +19,7 @@ typedef struct proj_node {
 
 typedef struct proj {
 	int id;
+	char name[256];
 	char users_arr[256];
 	char tasks_arr[256];
 	char cats_arr[256];

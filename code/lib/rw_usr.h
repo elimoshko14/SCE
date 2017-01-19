@@ -90,10 +90,8 @@ void getUsers() {
 	char filename[] = "../db/users.txt";
 	users_file = fopen(filename, "r");
 
-	if (users_file == NULL) {
-		perror("Error");
-		return;
-	}
+	if (isEmptyFile(users_file)) return;
+
 	// GET DATA FROM FILE //
 	char ch; // See end of loop
 	do {
@@ -236,7 +234,7 @@ void unSetUser(int id) {
 	if (deleteUser(id)) {
 
 		user_node * new_list = users_list;
-		if (!new_list) return;
+		if (!new_list) { clearFile("../db/users.txt"); return; }
 
 		clearFile("../db/users.txt");
 

@@ -30,12 +30,12 @@ void init() {
 /* #include "unitTesting/unitTest.h" */
 
 int main() {
+
 	// initialization of system
 	init();
 
-
 	// main loop
-	while (true) {
+	while (1) {
 		
 		// start if user not login
 		if (user_ptr == NULL) { startMode(); }

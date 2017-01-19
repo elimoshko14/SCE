@@ -72,10 +72,8 @@ void getCategories() {
 	char filename[] = "../db/categorys.txt";
 	categorys_file = fopen(filename, "r");
 
-	if (categorys_file == NULL) {
-		perror("Error");
-		return;
-	}
+	if (isEmptyFile(categorys_file)) return;
+
 	// GET DATA FROM FILE //
 	char ch; // See end of loop
 	do {
@@ -187,7 +185,7 @@ void unSetCat(int id) {
 	// only if previous delete from cat_list
 	if (deleteCat(id)) {
 		category_node * new_list = categories_list;
-		if (!new_list) return;
+		if (!new_list) { clearFile("../db/categorys.txt"); return; }
 
 		clearFile("../db/categorys.txt");
 

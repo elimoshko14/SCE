@@ -13,9 +13,25 @@ struct comment_node * comments_list = NULL;
 struct category_node * categories_list = NULL;
 
 // array of errors 
-char errors[5][10][100] = {
-	{"Error this projects is not exist"},  { "error this projects is not exist" } 
-}
+char errors[6][10][100] = {
+	// projects errors [0]
+{ "Not found projects with this id", "Projects is allready exist", "Projects List is empty", "Project status incorrect"   },
+
+	// category errors [1]
+{  "Not found category with this id"  },
+
+	// tasks errors [2]
+{  "Not found task with this id"  },
+
+	// comments errors [3]
+{  "Not found comments with this id"  },
+
+	// user errors [4]
+{  "Not found user with this id", "Level of this user is not appropriate"  }, 
+
+	// main errors [5]
+{ "This options is disabled" }
+};
 
 //global technic functions
 int isEmptyFile(FILE *file) {

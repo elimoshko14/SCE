@@ -11,7 +11,7 @@ void startMode() {
 
 	if (auth == NULL) {
 		system("cls");
-		printf("ERROR: user with id [%d] is not register in system\n", identificator);
+		printf("%s\n", errors[4][0]);
 	}
 	else { user_ptr = auth;  }
 }

@@ -88,10 +88,8 @@ void getTasks() {
 	char filename[] = "../db/tasks.txt";
 	tasks_file = fopen(filename, "r");
 
-	if (tasks_file == NULL) {
-		printf("ERROR!\nCan't find file '../db/tasks.txt'!\n");
-		return;
-	}
+	if (isEmptyFile(tasks_file)) return;
+
 	// GET DATA FROM FILE //
 	char ch; // See end of loop
 	do {
@@ -212,7 +210,7 @@ void unSetTask(int id) {
 	if (deleteTask(id)) {
 
 		task_node * new_list = tasks_list;
-		if (!new_list) return;
+		if (!new_list) { clearFile("../db/tasks.txt"); return; }
 
 		clearFile("../db/tasks.txt");
 
