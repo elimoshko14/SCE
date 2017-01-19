@@ -97,6 +97,12 @@
     <ClInclude Include="..\modules\DisplayComments.h">
       <Filter>modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\modules\menageUsers.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\DisplayUsers.h">
+      <Filter>modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">

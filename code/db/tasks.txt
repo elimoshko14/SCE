@@ -1,6 +1,6 @@
 1
 Create simple start menu
-0
+5
 1
 100
 0

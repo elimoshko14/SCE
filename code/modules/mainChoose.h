@@ -11,10 +11,10 @@ void mainChoose(int ch) {
 	case 8: {  menageComments(); break; }
 	case 9: {  displayCommentsByTask(); break; }
 	case 10: { displayCommentsByUser(); break; }
-	case 11: {  break; }
-	case 12: {  break; }
-	case 13: {  break; }
-	case 14: {  break; }
+	case 11: {  management_users();  break; }
+	case 12: {  displayUsersbyProject();  break; }
+	case 13: {  displayWorkers(); break; }
+	case 14: {  displayManagers();  break; }
 	case 15: {  break; }
 	case 16: {  break; }
 	case 17: {  printf("\n\n Bye Bye \n\n"); exit(0); break; }

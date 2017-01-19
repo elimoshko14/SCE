@@ -14,14 +14,20 @@ user * findUserById(long id) {         //find user
 void printUser(user * node) {
 	printf("ID:\t%ld\n", node->id);
 	printf("Name:\t%s\n", node->name);
-	printf("Level:\t%d\n", node->level);
+	//printf("Level:\t%d\n", node->level);
+	if (node->level == 2)
+		printf("\t[Manager]\n");
+	if (node->level == 3)
+		printf("\t[Worker]\n");
+	if (node->level == 1)
+		printf("\t[Director]\n");
 	printf("Project ID:\t%d\n", node->porj_id);
 	printf("Task ID:\t%d\n", node->task_id);
-	printf("Language:\t%s\n", node->lang);
+	//printf("Language:\t%s\n", node->lang);
 	printf("Salary:\t%d\n", node->salery);
 	printf("Online:\t%d\n", node->online);
-	printf("Comments:\t%s\n", node->coments);
-	printf("Due:\t%s\n", node->due);
+	//printf("Comments:\t%s\n", node->coments);
+	//printf("Due:\t%s\n", node->due);
 	printf("\n\n");
 }
 

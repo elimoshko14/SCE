@@ -23,7 +23,7 @@ char errors[6][10][100] = {
 { "Not found comments with this id", "Comment is allready exist", "Comments List is empty" },
 
 	// user errors [4]
-{  "Not found user with this id", "Level of this user is not appropriate"  }, 
+{  "Not found user with this id", "User is allready exist", "Level of this user is not appropriate", "Another user is allready do it"  }, 
 
 	// main errors [5]
 { "This options is disabled" }

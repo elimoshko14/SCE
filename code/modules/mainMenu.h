@@ -12,9 +12,9 @@ void menu_1() {
 	printf("[%d] Display all comments by specific task:\n", ++i);
 	printf("[%d] Display all comments by specific user:\n", ++i);
 	printf("[%d] Manage users:\n", ++i);
+	printf("[%d] Display all users by specific project:\n", ++i);
 	printf("[%d] Display all workers:\n", ++i);
 	printf("[%d] Display all managers:\n", ++i);
-	printf("[%d] Display all users by specific project:\n", ++i);
 
 	printf("[%d] Copy Specific Task\n", ++i);
 	printf("[%d] Switch language to Russian:\n", ++i);

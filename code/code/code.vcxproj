@@ -38,6 +38,7 @@
     <ClInclude Include="..\modules\DisplayComments.h" />
     <ClInclude Include="..\modules\DisplayProjects.h" />
     <ClInclude Include="..\modules\DisplayTasks.h" />
+    <ClInclude Include="..\modules\DisplayUsers.h" />
     <ClInclude Include="..\modules\functions.h" />
     <ClInclude Include="..\modules\Hello.h" />
     <ClInclude Include="..\modules\mainChoose.h" />
@@ -46,6 +47,7 @@
     <ClInclude Include="..\modules\menageComments.h" />
     <ClInclude Include="..\modules\menageProjects.h" />
     <ClInclude Include="..\modules\menageTask.h" />
+    <ClInclude Include="..\modules\menageUsers.h" />
     <ClInclude Include="..\modules\Session.h" />
     <ClInclude Include="..\modules\updateTaskStatus.h" />
     <ClInclude Include="..\unitTesting\testCat.h" />
