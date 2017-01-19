@@ -6,7 +6,8 @@ void displayTask(int status) {
 
 	else {
 		if (tasks_list) {
-			task_node *t = tasks_list;
+			task_node *t = NULL;
+
 			printf("Enter ID of exist project: ");
 			int pId = getInt();
 			proj *tmpP = findProjById(pId);
@@ -18,9 +19,12 @@ void displayTask(int status) {
 					printf("Category : %s\n", tmpC->ptr->name);
 					printf("TASKS\n\n");
 					// tasks print
+					t = tasks_list;
 					while (t) {
+						
+						// category filter
 						if (t->ptr->category_id == tmpC->ptr->id) {
-							// print tasks by status (1 or 0)
+							// status filter
 							if (t->ptr->status == status) {
 								printTask(t->ptr);
 							}

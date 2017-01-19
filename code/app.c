@@ -8,8 +8,8 @@
 
 /*********************/
 /*	Generic Includes */
-#include "lib/structs.h"
 #include "lib/globals.h"
+#include "lib/structs.h"
 
 //api methods//
 #include "lib/api.h"
@@ -30,7 +30,6 @@ void init() {
 /* #include "unitTesting/unitTest.h" */
 
 int main() {
-
 	// initialization of system
 	init();
 

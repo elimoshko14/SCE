@@ -1,5 +1,6 @@
 void management_tasks() {
 	while (1) {
+		getTasks();
 		int i = 0;
 		printf("-----------------------------------\n\n");
 		printf("[%d] Add new task:\n", ++i);
