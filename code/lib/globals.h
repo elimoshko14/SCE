@@ -1,16 +1,12 @@
-typedef int bool;
-#define true 1
-#define false 0
-
 // singles
-extern struct user * user_ptr = NULL;
+struct user * user_ptr = NULL;
 
 // lists
-extern struct user_node * users_list = NULL;
-extern struct proj_node * projects_list = NULL;
-extern struct task_node * tasks_list = NULL;
-extern struct comment_node * comments_list = NULL;
-extern struct category_node * categories_list = NULL;
+struct user_node * users_list = NULL;
+struct proj_node * projects_list = NULL;
+struct task_node * tasks_list = NULL;
+struct comment_node * comments_list = NULL;
+struct category_node * categories_list = NULL;
 
 // array of errors 
 char errors[6][10][100] = {

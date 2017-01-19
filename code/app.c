@@ -8,8 +8,8 @@
 
 /*********************/
 /*	Generic Includes */
-#include "lib/globals.h"
 #include "lib/structs.h"
+#include "lib/globals.h"
 
 //api methods//
 #include "lib/api.h"
