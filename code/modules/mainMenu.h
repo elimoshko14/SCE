@@ -10,7 +10,7 @@ void menu_1() {
 	printf("[%d] Display all completed tasks by specific project:\n", ++i);
 	printf("[%d] Display all uncompleted tasks by specific project:\n", ++i);
 	printf("[%d] Manage comments:\n", ++i);
-	printf("[%d] Display all comments by specific taks:\n", ++i);
+	printf("[%d] Display all comments by specific task:\n", ++i);
 	printf("[%d] Display all comments by specific user:\n", ++i);
 	printf("[%d] Manage users:\n", ++i);
 	printf("[%d] Display all workers:\n", ++i);
