@@ -103,6 +103,9 @@
     <ClInclude Include="..\modules\DisplayUsers.h">
       <Filter>modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\modules\workerFunctions.h">
+      <Filter>modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">

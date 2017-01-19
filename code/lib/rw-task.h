@@ -4,7 +4,10 @@ void printTask(task * node) {
 	printf("User ID:\t%ld\n", node->user_id);
 	//printf("Category ID:\t%d\n", node->category_id);
 	printf("Cost:\t%d\n", node->cost);
-	printf("Status:\t%d\n", node->status);
+	if (node->status == 1)
+		printf("Status:\tComplete\n");
+	else 
+		printf("Status:\tWorking on\n");
 	printf("Tags:\t%s\n", node->tags);
 	printf("Due:\t%s\n", node->due);
 	//printf("comments:\t%s\n", node->comments);

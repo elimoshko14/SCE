@@ -5,5 +5,10 @@ void userSession() {
 	mainMenu();
 
 	int choose = getInt();
-	mainChoose(choose);
+	switch (user_ptr->level) {
+	case 1: { directorChoose(choose); break; }
+	case 2: { managerChoose(choose); break; }
+	case 3: { workerChoose(choose); break; }
+	default: break;
+	}
 }

@@ -8,6 +8,7 @@
 #include "modules/DisplayCategories.h"
 #include "modules/DisplayTasks.h"
 #include "modules/DisplayComments.h"
+#include "modules/workerFunctions.h"
 #include "modules/bonus_EEO.h"
 #include "modules/updateTaskStatus.h"
 

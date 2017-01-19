@@ -24,10 +24,53 @@ void menu_1() {
 }
 
 // manager menu
-void menu_2(){}
+void menu_2(){
+	// check if this manager has project
+	if (user_ptr->porj_id == 0 || findProjById(user_ptr->porj_id) == NULL) {
+		printf("%s\n", errors[4][4]);
+		exit(0);
+	}
+
+	else {
+		int i = 0;
+		printf("[%d] Manage category:\n", ++i);
+		printf("[%d] Display all categorys by specific project:\n", ++i);
+		printf("[%d] Manage tasks:\n", ++i);
+		printf("[%d] Display all completed tasks by specific project:\n", ++i);
+		printf("[%d] Display all uncompleted tasks by specific project:\n", ++i);
+		printf("[%d] Manage comments:\n", ++i);
+		printf("[%d] Display all comments by specific task:\n", ++i);
+		printf("[%d] Display all comments by specific user:\n", ++i);
+		printf("[%d] Manage users:\n", ++i);
+		printf("[%d] Display all users by specific project:\n", ++i);
+		printf("[%d] Display all workers:\n", ++i);
+		printf("[%d] Display all managers:\n", ++i);
+		printf("[%d] Exit", ++i);
+
+		printf("\n\n Please make your choise: ");
+	}
+}
 
 // worker menu
-void menu_3() {}
+void menu_3() {
+	// check if this manager has project
+	if (user_ptr->porj_id == 0 || findProjById(user_ptr->porj_id) == NULL) {
+		printf("%s\n", errors[4][4]);
+		exit(0);
+	}
+	else {
+		int i = 0;
+		printf("[%d] Project info:\n", ++i);
+		printf("[%d] My Task:\n", ++i);
+		printf("[%d] Complete Task:\n", ++i);
+		printf("[%d] Manage comments:\n", ++i);
+		printf("[%d] Display all comments:\n", ++i);
+		printf("[%d] Display all workers:\n", ++i);
+		printf("[%d] Exit", ++i);
+
+		printf("\n\n Please make your choise: ");
+	}
+}
 
 
 void mainMenu()  {
