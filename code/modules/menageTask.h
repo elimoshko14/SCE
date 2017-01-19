@@ -1,6 +1,5 @@
 void management_tasks() {
 	while (1) {
-		getTasks();
 		int i = 0;
 		printf("-----------------------------------\n\n");
 		printf("[%d] Add new task:\n", ++i);
@@ -58,8 +57,8 @@ void management_tasks() {
 			// it is possible update all fields except ID's
 			system("cls");
 
-			// if task exist
-			if (tasks_list) {
+			// if categories exist
+			if (categories_list) {
 				printf("Enter ID of exist project: ");
 				pId = getInt();
 				proj *tmpP = findProjById(pId);
@@ -137,15 +136,15 @@ void management_tasks() {
 					printf("%s\n", errors[2][0]);
 				}
 			}
-			// arise error
+			// no categoryies no tasks
 			else {
-				printf("%s\n", errors[2][2]);
+				printf("%s\n", errors[1][2]);
 			}
 		}
 
 		// delete
 		else if (x == 3) {
-			// if category exist
+			// if task exist
 			if (tasks_list) {
 				printf("Enter ID of exist project: ");
 				int pId = getInt();

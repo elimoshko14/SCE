@@ -35,6 +35,7 @@
     <ClInclude Include="..\lib\rw_usr.h" />
     <ClInclude Include="..\lib\structs.h" />
     <ClInclude Include="..\modules\DisplayCategories.h" />
+    <ClInclude Include="..\modules\DisplayComments.h" />
     <ClInclude Include="..\modules\DisplayProjects.h" />
     <ClInclude Include="..\modules\DisplayTasks.h" />
     <ClInclude Include="..\modules\functions.h" />
@@ -42,6 +43,7 @@
     <ClInclude Include="..\modules\mainChoose.h" />
     <ClInclude Include="..\modules\mainMenu.h" />
     <ClInclude Include="..\modules\menageCategory.h" />
+    <ClInclude Include="..\modules\menageComments.h" />
     <ClInclude Include="..\modules\menageProjects.h" />
     <ClInclude Include="..\modules\menageTask.h" />
     <ClInclude Include="..\modules\Session.h" />

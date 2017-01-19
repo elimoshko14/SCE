@@ -13,12 +13,11 @@ comment * findcomentById(int id) {
 
 void printComment(comment * node) {
 	printf("id %ld\n", node->id);
-	printf("title %s\n", node->title);
-	printf("body %s\n", node->body);
-	printf("project_id %d\n", node->porj_id);
-	printf("task_id %d\n", node->task_id);
-	printf("user_id %d\n", node->user_id);
-	printf("\n\n");
+	printf("Title: %s\n", node->title);
+	printf("%s\n", node->body);
+	//printf("project_id %d\n", node->porj_id);
+	//printf("task_id %d\n", node->task_id);
+	//printf("user_id %d\n", node->user_id);
 }
 
 void printComentTree() {
@@ -140,8 +139,13 @@ void setComment(comment *node) {
 		return;
 	}
 
+	char buffer[256];
+	if (isEmptyFile(comment_file))
+		strcpy(buffer, "%d\n%s\n%s\n%d\n%d\n%d");
+	else
+		strcpy(buffer, "\n%d\n%s\n%s\n%d\n%d\n%d");
 
-	fprintf(comment_file, "\n%d\n%s\n%s\n%d\n%d\n%d",
+	fprintf(comment_file, buffer,
 		node->id, node->title, node->body, node->porj_id, node->task_id, node->user_id);
 	fclose(comment_file);
 }
@@ -176,7 +180,7 @@ void updateComment(int id, char title[], char body[], int porj_id, int task_id, 
 	{
 		printf("comment not find\n");
 	}
-	clearFile("../db/users.txt");
+	clearFile("../db/comments.txt");
 
 	comment_node * c = comments_list;
 	while (c) {

@@ -8,9 +8,9 @@ void mainChoose(int ch) {
 	case 5: {  management_tasks(); break; }
 	case 6: {  displayTask(1);  break; }
 	case 7: {  displayTask(0); break; }
-	case 8: {  break; }
-	case 9: {  break; }
-	case 10: {  break; }
+	case 8: {  menageComments(); break; }
+	case 9: {  displayCommentsByTask(); break; }
+	case 10: { displayCommentsByUser(); break; }
 	case 11: {  break; }
 	case 12: {  break; }
 	case 13: {  break; }

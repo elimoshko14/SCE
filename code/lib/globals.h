@@ -14,13 +14,13 @@ char errors[6][10][100] = {
 { "Not found projects with this id", "Projects is allready exist", "Projects List is empty", "Project status incorrect"   },
 
 	// category errors [1]
-{ "Not found category with this id", "Category is allready exist", "Categories List is empty", },
+{ "Not found category with this id", "Category is allready exist", "Categories List is empty" },
 
 	// tasks errors [2]
 { "Not found task with this id", "Task is allready exist", "Tasks List is empty", "Task status incorrect" },
 
 	// comments errors [3]
-{  "Not found comments with this id"  },
+{ "Not found comments with this id", "Comment is allready exist", "Comments List is empty" },
 
 	// user errors [4]
 {  "Not found user with this id", "Level of this user is not appropriate"  }, 

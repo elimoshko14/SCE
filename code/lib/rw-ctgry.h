@@ -121,7 +121,10 @@ void setCat(category *node) {
 	char filename[] = "../db/categorys.txt";
 	cat_file = fopen(filename, "a");
 
-	if (isEmptyFile(cat_file)) return;
+	if (cat_file == NULL) {
+		perror("Error");
+		return;
+	}
 
 	char buffer[256];
 	if (isEmptyFile(cat_file))

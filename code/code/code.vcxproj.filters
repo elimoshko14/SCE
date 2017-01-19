@@ -91,6 +91,12 @@
     <ClInclude Include="..\modules\DisplayTasks.h">
       <Filter>modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\modules\menageComments.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\DisplayComments.h">
+      <Filter>modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">
