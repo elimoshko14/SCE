@@ -79,6 +79,12 @@
     <ClInclude Include="..\modules\DisplayProjects.h">
       <Filter>modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\modules\menageCategory.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\DisplayCategories.h">
+      <Filter>modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">

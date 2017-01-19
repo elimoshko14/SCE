@@ -1,7 +1,9 @@
 #include "modules/updateTaskStatus.h"
+#include "modules/menageCategory.h";
 #include "modules/menageProjects.h"
 #include "modules/bonus_EEO.h"
 #include "modules/DisplayProjects.h"
+#include "modules/DisplayCategories.h"
 
 #include "modules/mainMenu.h"
 #include "modules/mainChoose.h"

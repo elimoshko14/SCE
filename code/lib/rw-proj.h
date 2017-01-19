@@ -143,10 +143,7 @@ void setProjs(proj *node) {
 	char filename[] = "../db/projects.txt";
 	proj_file = fopen(filename, "a");
 
-	if (proj_file == NULL) {
-		perror("Error");
-		return;
-	}
+	if (isEmptyFile(proj_file)) return;
 
 	char buffer[256];
 	if (isEmptyFile(proj_file))

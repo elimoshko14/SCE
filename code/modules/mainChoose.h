@@ -3,8 +3,8 @@ void mainChoose(int ch) {
 	switch (ch) {
 	case 1: { management_projets();  break; }
 	case 2: { displayProjects();  break; }
-	case 3: {  break; }
-	case 4: {  break; }
+	case 3: {  management_category();  break; }
+	case 4: {  displayCategories();  break; }
 	case 5: {  break; }
 	case 6: {  break; }
 	case 7: {  break; }

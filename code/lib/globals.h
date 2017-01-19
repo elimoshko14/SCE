@@ -18,7 +18,7 @@ char errors[6][10][100] = {
 { "Not found projects with this id", "Projects is allready exist", "Projects List is empty", "Project status incorrect"   },
 
 	// category errors [1]
-{  "Not found category with this id"  },
+{ "Not found category with this id", "Category is allready exist", "Categories List is empty", },
 
 	// tasks errors [2]
 {  "Not found task with this id"  },

@@ -34,11 +34,13 @@
     <ClInclude Include="..\lib\rw-task.h" />
     <ClInclude Include="..\lib\rw_usr.h" />
     <ClInclude Include="..\lib\structs.h" />
+    <ClInclude Include="..\modules\DisplayCategories.h" />
     <ClInclude Include="..\modules\DisplayProjects.h" />
     <ClInclude Include="..\modules\functions.h" />
     <ClInclude Include="..\modules\Hello.h" />
     <ClInclude Include="..\modules\mainChoose.h" />
     <ClInclude Include="..\modules\mainMenu.h" />
+    <ClInclude Include="..\modules\menageCategory.h" />
     <ClInclude Include="..\modules\menageProjects.h" />
     <ClInclude Include="..\modules\Session.h" />
     <ClInclude Include="..\modules\updateTaskStatus.h" />

@@ -1,8 +1,8 @@
 void printCat(category * node) {
 	printf("ID:\t%ld\n", node->id);
 	printf("Name:\t%s\n", node->name);
-	printf("Project ID:\t%d\n", node->proj_id);
-	printf("Comments:\t%s\n", node->comment_arr);
+	//printf("Project ID:\t%d\n", node->proj_id);
+	//printf("Comments:\t%s\n", node->comment_arr);
 	printf("\n\n");
 }
 
@@ -121,21 +121,23 @@ void setCat(category *node) {
 	char filename[] = "../db/categorys.txt";
 	cat_file = fopen(filename, "a");
 
-	if (cat_file == NULL) {
-		perror("Error");
-		return;
-	}
+	if (isEmptyFile(cat_file)) return;
 
+	char buffer[256];
+	if (isEmptyFile(cat_file))
+		strcpy(buffer, "%d\n%s\n%d\n%s");
+	else
+		strcpy(buffer, "\n%d\n%s\n%d\n%s");
 
-	fprintf(cat_file, "\n%d\n%s\n%d\n%s",
+	fprintf(cat_file, buffer,
 		node->id, node->name, node->proj_id, node->comment_arr);
+	fclose(cat_file);
 }
 
 void addCat(int id, char name[], int proj_id, char comment_arr[]) {
 
 	// category information 
 	struct category * newCat = (struct category *)malloc(sizeof(struct category));
-
 	newCat->id = id;
 	strcpy(newCat->name, name);
 	newCat->proj_id = proj_id;
