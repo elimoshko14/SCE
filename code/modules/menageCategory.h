@@ -26,9 +26,14 @@ void management_category() {
 			else {
 				printf("Enter unique id of new category: ");
 				id = getInt();
-				printf("Enter name of new category: ");
+				if (findCatById(id) != NULL)
+					printf("%s\n", errors[1][1]);
+				else {
+					printf("Enter name of new category: ");
+
 					getchar();  gets(name);
-					addCat(id, name, pId, "-1");				
+					addCat(id, name, pId, "-1");
+				}
 			}
 		}
 

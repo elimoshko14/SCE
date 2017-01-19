@@ -2,12 +2,12 @@ void printTask(task * node) {
 	printf("ID:\t%ld\n", node->id);
 	printf("Title:\t%s\n", node->title);
 	printf("User ID:\t%ld\n", node->user_id);
-	printf("Category ID:\t%d\n", node->category_id);
+	//printf("Category ID:\t%d\n", node->category_id);
 	printf("Cost:\t%d\n", node->cost);
 	printf("Status:\t%d\n", node->status);
 	printf("Tags:\t%s\n", node->tags);
 	printf("Due:\t%s\n", node->due);
-	printf("comments:\t%s\n", node->comments);
+	//printf("comments:\t%s\n", node->comments);
 	printf("\n\n");
 }
 
@@ -154,6 +154,7 @@ void setTask(task *node) {
 
 	fprintf(task_file, buffer,
 		node->id, node->title, node->user_id, node->category_id, node->cost, node->status, node->tags, node->due, node->comments);
+	fclose(task_file);
 }
 
 void addTask(int id, char title[], int user_id, int cat_id, int cost, int status, char tags[], char due[], char comments[]) {

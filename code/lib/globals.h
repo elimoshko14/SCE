@@ -3,14 +3,14 @@ typedef int bool;
 #define false 0
 
 // singles
-struct user * user_ptr = NULL;
+extern struct user * user_ptr = NULL;
 
 // lists
-struct user_node * users_list = NULL;
-struct proj_node * projects_list = NULL;
-struct task_node * tasks_list = NULL;
-struct comment_node * comments_list = NULL;
-struct category_node * categories_list = NULL;
+extern struct user_node * users_list = NULL;
+extern struct proj_node * projects_list = NULL;
+extern struct task_node * tasks_list = NULL;
+extern struct comment_node * comments_list = NULL;
+extern struct category_node * categories_list = NULL;
 
 // array of errors 
 char errors[6][10][100] = {
@@ -21,7 +21,7 @@ char errors[6][10][100] = {
 { "Not found category with this id", "Category is allready exist", "Categories List is empty", },
 
 	// tasks errors [2]
-{  "Not found task with this id"  },
+{ "Not found task with this id", "Task is allready exist", "Tasks List is empty", "Task status incorrect" },
 
 	// comments errors [3]
 {  "Not found comments with this id"  },

@@ -6,7 +6,6 @@ void menu_1() {
 	printf("[%d] Manage category:\n", ++i);
 	printf("[%d] Display all categorys by specific project:\n", ++i);
 	printf("[%d] Manage tasks:\n", ++i);
-	printf("[%d] Display all tasks by specific category:\n", ++i);
 	printf("[%d] Display all completed tasks by specific project:\n", ++i);
 	printf("[%d] Display all uncompleted tasks by specific project:\n", ++i);
 	printf("[%d] Manage comments:\n", ++i);
