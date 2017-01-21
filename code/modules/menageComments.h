@@ -18,16 +18,30 @@ void menageComments() {
 			char body[256];
 
 			system("cls");
-			printf("Enter ID of exist project: ");
-			pId = getInt();
+
+			// by user level
+			// director all project
+			// manager and worker only current project
+			if (user_ptr->level == 1) {
+				printf("Enter ID of exist project: ");
+				pId = getInt();
+			}
+			else {
+				pId = user_ptr->porj_id;
+			}
 
 			// if project is not exist arise error
 			if (findProjById(pId) == NULL)
 				printf("%s\n", errors[0][0]);
 
 			else {
-				printf("Enter ID of exist task: ");
-				tId = getInt();
+				if (user_ptr->level == 3)
+					tId = user_ptr->task_id;
+				else {
+					printf("Enter ID of exist task: ");
+					tId = getInt();
+				}
+				
 				if (findTaskById(tId) == NULL)
 					printf("%s\n", errors[2][0]);
 				else {
@@ -53,12 +67,22 @@ void menageComments() {
 
 			// if task exist
 			if (tasks_list) {
-				printf("Enter ID of exist project: ");
-				pId = getInt();
+				if (user_ptr->level == 1) {
+					printf("Enter ID of exist project: ");
+					pId = getInt();
+				}
+				else {
+					pId = user_ptr->porj_id;
+				}
 				proj *tmpP = findProjById(pId);
 				
-				printf("Enter ID of exist task: ");
-				tId = getInt();
+				if (user_ptr->level == 3) {
+					tId = user_ptr->task_id;
+				}
+				else {
+					printf("Enter ID of exist task: ");
+					tId = getInt();
+				}
 				task *tmpT = findTaskById(tId);
 
 
@@ -117,22 +141,33 @@ void menageComments() {
 
 		// delete
 		else if (x == 3) {
+			int pId, tId;
 			// if comment exist
 			if (comments_list) {
-				printf("Enter ID of exist project: ");
-				int pId = getInt();
+				if (user_ptr->level == 1) {
+					printf("Enter ID of exist project: ");
+					pId = getInt();
+				}
+				else {
+					pId = user_ptr->porj_id;
+				}
 				proj *tmpP = findProjById(pId);
 
-				printf("Enter ID of exist task: ");
-				int tId = getInt();
-				task *tmpT = findCatById(tId);
+				if (user_ptr->level == 3) {
+					tId = user_ptr->task_id;
+				}
+				else {
+					printf("Enter ID of exist task: ");
+					tId = getInt();
+				}
+				task *tmpT = findTaskById(tId);
 
 
 				printf("All Comments by project %s in task %s:\n", tmpP->name, tmpT->title);
 				comment_node * t = comments_list;
 				while (t) {
 					if (t->ptr->task_id == tId)
-						printTask(t->ptr);
+						printComment(t->ptr);
 					t = t->next;
 				}
 				

@@ -8,13 +8,26 @@ void displayCommentsByTask() {
 		if (comments_list) {
 			comment_node *t = NULL;
 			user *tmpU = NULL;
+			int pId, tId;
 
-			printf("Enter ID of exist project: ");
-			int pId = getInt();
+			// by user level
+			// director all project
+			// manager and worker only current project
+			if (user_ptr->level == 1) {
+				printf("Enter ID of exist project: ");
+				 pId = getInt();
+			}
+
+			else { pId = user_ptr->porj_id; }
 			proj *tmpP = findProjById(pId);
 
-			printf("Enter ID of exist task: ");
-			int tId = getInt();
+			// for worker only his task
+			// for manager and director all tasks
+			if (user_ptr->level == 3) { tId = user_ptr->task_id;  }
+			else {
+				printf("Enter ID of exist task: ");
+				tId = getInt();
+			}
 			task *tmpT = findTaskById(tId);
 
 			printf("All Comments from project %s, to task ::%s:: \n", tmpP->name, tmpT->title);
