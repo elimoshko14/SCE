@@ -1,6 +1,13 @@
 // singles
 struct user * user_ptr = NULL;
 
+// global unique keys 
+int unique_project_key = 0;
+int unique_category_key = 0;
+int unique_task_key = 0;
+int unique_comment_key = 0;
+int unique_user_key = 0;
+
 // lists
 struct user_node * users_list = NULL;
 struct proj_node * projects_list = NULL;
