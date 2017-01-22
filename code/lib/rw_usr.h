@@ -1,16 +1,3 @@
-user * findUserById(long id) {         //find user
-	struct user_node * temp;
-	temp = users_list;
-	while (temp != NULL)
-	{
-		if (temp->ptr->id == id)
-			return temp->ptr;
-		else
-			temp = temp->next;
-	}
-	return NULL;
-}
-
 void printUser(user * node) {
 	printf("ID:\t%ld\n", node->id);
 	printf("Name:\t%s\n", node->name);
@@ -59,6 +46,21 @@ void pushUser(user * node)
 		users_list = temp;
 	}
 }
+
+
+user * findUserById(long id) {         //find user
+	struct user_node * temp;
+	temp = users_list;
+	while (temp != NULL)
+	{
+		if (temp->ptr->id == id)
+			return temp->ptr;
+		else
+			temp = temp->next;
+	}
+	return NULL;
+}
+
 
 bool deleteUser(int id)
 {
