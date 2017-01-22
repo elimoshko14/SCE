@@ -33,6 +33,7 @@
     <ClInclude Include="..\lib\rw-task.h" />
     <ClInclude Include="..\lib\rw_usr.h" />
     <ClInclude Include="..\lib\structs.h" />
+    <ClInclude Include="..\modules\copyTask.h" />
     <ClInclude Include="..\modules\DisplayCategories.h" />
     <ClInclude Include="..\modules\DisplayComments.h" />
     <ClInclude Include="..\modules\DisplayProjects.h" />

@@ -106,6 +106,9 @@
     <ClInclude Include="..\modules\Session.h">
       <Filter>modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\modules\copyTask.h">
+      <Filter>modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">
