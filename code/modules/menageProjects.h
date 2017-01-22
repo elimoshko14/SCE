@@ -73,6 +73,7 @@ void management_projets() {
 						printf("[%d] Change Cost:\n", ++i);
 						printf("[%d] Change Due:\n", ++i);
 						printf("[%d] Change Status\n", ++i);
+						printf("[%d] Change Manager\n", ++i);
 						printf("[%d] Back to previous menu\n", ++i);
 						int a = getInt();
 
@@ -103,7 +104,19 @@ void management_projets() {
 							else updateProj(tmp->id, tmp->name, tmp->manager_id, tmp->due, newStatus, tmp->cost);
 							}
 
-						else if (a == 5) { break; }
+						else if (a == 5) {
+							printf("Enter id of new Manager: ");
+							int newMan = getInt();
+							user * tmpU = findUserById(newMan);
+							if ((tmpU != NULL) && (tmpU->level == 2) && (tmpU->porj_id == 0)) {
+								updateProj(tmp->id, tmp->name, newMan, tmp->due, tmp->status, tmp->cost);
+							}
+							else {
+								printf("error:NULL-%d level-%d porj_id-%d", tmpU != NULL, tmpU->level == 2, tmpU->porj_id == 0);
+							}
+						}
+
+						else if (a == 6) { break; }
 
 						else { break; }
 					}	
