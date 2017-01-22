@@ -239,7 +239,16 @@ void updateUser(int id, char name[], char lang[], char due[], int level, int pro
 // This function rewrite users.txt after deleting specific node
 // prototype of function delete with more functionality
 void unSetUser(int id) {
+	
+	// set user task status to 0
+	user * user_ptr = findUserById(id);
+	int task_id = user_ptr->task_id;
 
+	if (task_id != 0) {
+		task * task_ptr = findTaskById(task_id);
+		task_ptr->user_id = 0;
+		setTask(task_ptr);
+	}
 	// only if previous delete from users_list
 	if (deleteUser(id)) {
 

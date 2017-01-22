@@ -141,7 +141,7 @@ void management_users() {
 
 		// delete
 		else if (x == 3) {
-			// if category exist
+			// if user exists
 			if (users_list) {
 				int pId;
 				if (user_ptr->level == 1) {
@@ -167,29 +167,11 @@ void management_users() {
 				else {
 					int task_id = tmpU->task_id;
 					int porj_id = tmpU->porj_id;
-
-					// delete current user
 					unSetUser(id);
-
-					//// if it was worker update his task with  = 0
-					//task *tmpT = findTaskById(task_id);
-					//if (tmpT) 
-					//	updateTask(tmpT->id, tmpT->title, 0, tmpT->category_id, tmpT->cost, tmpT->status, tmpT->tags, tmpT->due, tmpT->comments);
-
-					//// if it was manager update his project with  = 0
-					//tmpP = findProjById(porj_id);
-					//if (tmpP)
-					//	updateProj(tmpP->id, tmpP->name, 0, tmpP->due, tmpP->status, tmpP->cost);
-
-					//// delete all comments of this user
-					//comment_node *c = comments_list;
-					//if (c) {
-					//	while (c) {
-					//		if (c->ptr->user_id == id)
-					//			unSetComment(c->ptr->id);
-					//	}
-					//}
 				}
+			}
+			else {
+				printf("User list empty\n");
 			}
 		}
 
