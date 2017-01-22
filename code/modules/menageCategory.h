@@ -115,8 +115,11 @@ void management_category() {
 					printf("%s\n", errors[1][0]);
 				
 				else {
-					// delete current category
-					unSetCat(id);
+					printf("Warning! Deleting a Category will delete all it's tasks\n");
+					printf("Are you sure? [1 / 0]\n");
+					int checker = getInt();
+					if (checker == 1)
+						unSetCat(id);
 				}
 			}
 		}
