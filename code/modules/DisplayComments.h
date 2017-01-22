@@ -23,7 +23,8 @@ void displayCommentsByTask() {
 
 			// for worker only his task
 			// for manager and director all tasks
-			if (user_ptr->level == 3) { tId = user_ptr->task_id;  }
+			if (user_ptr->level == 3) { tId = user_ptr->task_id;  
+			}
 			else {
 				printf("Enter ID of exist task: ");
 				tId = getInt();

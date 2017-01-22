@@ -19,8 +19,11 @@ void management_users() {
 			char comments[256];
 			char due[256];
 			system("cls");
-			printf("Enter ID of exist project: ");
-			pId = getInt();
+			if (user_ptr->level == 1) {
+				printf("Enter ID of exist project: ");
+				pId = getInt();
+			}
+			else { pId = user_ptr->porj_id; }
 
 			// if project is not exist arise error
 			if (findProjById(pId) == NULL)
@@ -55,8 +58,12 @@ void management_users() {
 
 			// if projects exist
 			if (projects_list) {
-				printf("Enter ID of exist project: ");
-				int pId = getInt();
+				int pId;
+				if (user_ptr->level == 1) {
+					printf("Enter ID of exist project: ");
+					pId = getInt();
+				}
+				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
 				
 				printf("All Users in project [%s]:\n", tmpP->name);
@@ -141,8 +148,12 @@ void management_users() {
 		else if (x == 3) {
 			// if category exist
 			if (users_list) {
-				printf("Enter ID of exist project: ");
-				int pId = getInt();
+				int pId;
+				if (user_ptr->level == 1) {
+					printf("Enter ID of exist project: ");
+					pId = getInt();
+				}
+				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
 
 				printf("All Users in project [%s]:\n", tmpP->name);
