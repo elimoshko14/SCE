@@ -49,7 +49,6 @@
     <ClInclude Include="..\modules\menageTask.h" />
     <ClInclude Include="..\modules\menageUsers.h" />
     <ClInclude Include="..\modules\Session.h" />
-    <ClInclude Include="..\modules\updateTaskStatus.h" />
     <ClInclude Include="..\modules\workerFunctions.h" />
     <ClInclude Include="..\unitTesting\testCat.h" />
     <ClInclude Include="..\unitTesting\testComm.h" />

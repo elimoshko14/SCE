@@ -28,7 +28,7 @@ void init() {
 }
 
 /*	Unit Testing MAIN 	 */
-/* #include "unitTesting/unitTest.h" */
+ #include "unitTesting/unitTest.h" 
 
 int main() {
 	// initialization of system

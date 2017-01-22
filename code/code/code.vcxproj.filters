@@ -55,9 +55,6 @@
     <ClInclude Include="..\modules\mainMenu.h">
       <Filter>modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\modules\updateTaskStatus.h">
-      <Filter>modules</Filter>
-    </ClInclude>
     <ClInclude Include="..\modules\functions.h">
       <Filter>modules</Filter>
     </ClInclude>
