@@ -48,7 +48,8 @@ void workerChoose(int ch) {
 	case 4: {  menageComments();  break; }
 	case 5: {  displayCommentsByTask(); break; }
 	case 6: {  displayWorkers();  break; }
-	case 7: {  printf("\n\n Bye Bye \n\n"); exit(0); break; }
+	case 7: {  rejectTask();  break; }
+	case 8: {  printf("\n\n Bye Bye \n\n"); exit(0); break; }
 	default: break;
 	}
 }

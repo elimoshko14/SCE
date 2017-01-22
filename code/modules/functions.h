@@ -8,9 +8,9 @@
 #include "modules/DisplayCategories.h"
 #include "modules/DisplayTasks.h"
 #include "modules/DisplayComments.h"
+#include "modules/manager_bonus.h"
 #include "modules/workerFunctions.h"
-#include "modules/bonus_EEO.h"
-#include "modules/updateTaskStatus.h"
+
 
 #include "modules/mainMenu.h"
 #include "modules/mainChoose.h"

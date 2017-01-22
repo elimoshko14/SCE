@@ -44,7 +44,17 @@ void management_tasks() {
 					getchar();  gets_s(tags,256);
 					printf("Enter due of new task in format(d/m/y): ");
 					getchar();  gets_s(due,256);
-					addTask(id, title, 0, cId, cost, 0, tags, due, "-1");
+
+					printf("Enter id of user which will do this task: ");
+					int uId = getInt();
+					user *tmpU;				
+					tmpU = findUserById(uId);
+					if ((tmpU != NULL) && (tmpU->task_id == 0)) {
+						addTask(id, title, uId, cId, cost, 0, tags, due, "-1");
+						updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->due, tmpU->level, tmpU->porj_id, id, tmpU->salery, tmpU->online, tmpU->coments);
+					}
+					else
+						addTask(id, title, 0, cId, cost, 0, tags, due, "-1");
 				}
 			}
 		}
@@ -97,6 +107,7 @@ void management_tasks() {
 						printf("[%d] Change Status\n", ++i);
 						printf("[%d] Change Tags\n", ++i);
 						printf("[%d] Change Task Category\n", ++i);
+						printf("[%d] Change Task User\n", ++i);
 						printf("[%d] Back to previous menu\n", ++i);
 						int a = getInt();
 
@@ -140,7 +151,19 @@ void management_tasks() {
 							else 
 								updateTask(tmp->id, tmp->title, tmp->user_id, cId, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments);
 						}
-						else if (a == 7) { break; }
+						else if (a == 7) {
+							printf("Enter id of exist user: ");
+							int uId = getInt();
+							user *tmpU = findUserById(uId);
+							if (tmpU == NULL)
+								printf("%s\n", errors[4][0]);
+							else
+							{
+								updateTask(tmp->id, tmp->title, uId, tmp->category_id, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments);
+								updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->due, tmpU->level, tmpU->porj_id,tmp->id , tmpU->salery, tmpU->online, tmpU->coments);
+							}
+						}
+						else if (a == 8) { break; }
 
 						else { break; }
 					}
