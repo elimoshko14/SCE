@@ -59,12 +59,17 @@ void displayCommentsByUser() {
 	}
 
 	else {
+		int pId;
 		if (comments_list) {
+			
 			comment_node *t = NULL;
 			task *tmpT = NULL;
 
-			printf("Enter ID of exist project: ");
-			int pId = getInt();
+			if (user_ptr->level == 1) {
+				printf("Enter ID of exist project: ");
+				pId = getInt();
+			}
+			else { pId = user_ptr->porj_id; }
 			proj *tmpP = findProjById(pId);
 
 			printf("Enter ID of exist user: ");
