@@ -23,5 +23,5 @@ void manager_bonus(proj * p) {
 		tmpU = findUserById(p->manager_id);
 		tmpU->salery = floor(tmpU->salery * 1.5);
 		setUser(tmpU);
-	}
+	} 
 }

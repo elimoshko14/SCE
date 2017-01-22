@@ -10,7 +10,6 @@
 #include "modules/DisplayComments.h"
 #include "modules/manager_bonus.h"
 #include "modules/workerFunctions.h"
-#include "modules/bonus_EEO.h"
 #include "modules/copyTask.h"
 
 #include "modules/mainMenu.h"
