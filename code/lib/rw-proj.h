@@ -222,6 +222,16 @@ void updateProj(int id, char name[], int manager_id , char due[],bool status,int
 }
 
 void unSetProj(int id) {
+	// delete all categories in the project
+	category_node * cat = categories_list;
+	category_node * tmp_c = cat;
+	while (cat != NULL) {
+		tmp_c = cat;
+		cat = cat->next;
+		if (tmp_c->ptr->proj_id == id) {
+			unSetCat(tmp_c->ptr->id);
+		}
+	}
 
 	// only if previous delete from users_list
 	if (deleteProj(id)) {
