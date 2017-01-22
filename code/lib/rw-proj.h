@@ -99,6 +99,11 @@ void getProjs() {
 		// get id
 		fscanf(proj_file, "%d", &(proj_struct->id));
 		fgets(buffer, 256, proj_file);
+
+		// set unique_project_id (when we add new project unique_project_key++)
+		// it has to be a maximum a value
+		if (proj_struct->id > unique_project_key) { unique_project_key = proj_struct->id; }
+
 		// get proj name
 		fscanf(proj_file, "%s", &(proj_struct->name));
 		fgets(buffer, 256, proj_file);

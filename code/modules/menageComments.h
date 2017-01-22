@@ -13,7 +13,7 @@ void menageComments() {
 
 		// add
 		if (x == 1) {
-			int id, pId, tId, uId;
+			int id, pId, tId;
 			char title[256];
 			char body[256];
 
@@ -45,12 +45,11 @@ void menageComments() {
 				if (findTaskById(tId) == NULL)
 					printf("%s\n", errors[2][0]);
 				else {
-					printf("Enter unique id of new comment: ");
-					id = getInt();
+					id = ++unique_comment_key;
 					printf("Enter title of new comment: ");
-					getchar();  gets(title);
+					getchar();  gets_s(title,256);
 					printf("Enter your comment: ");
-					getchar();  gets(body);
+					getchar();  gets_s(body,256);
 					addComment(id, title, body, pId, tId, user_ptr->id);
 				}
 			}
@@ -58,7 +57,7 @@ void menageComments() {
 
 		// update
 		else if (x == 2) {
-			int id, pId, tId;
+			int pId, tId;
 			char newTitle[256];
 			char newBody[256];
 
@@ -112,13 +111,13 @@ void menageComments() {
 
 						if (a == 1) {
 							printf("Enter New title: ");
-							getchar(); gets(newTitle);
+							getchar(); gets_s(newTitle,256);
 							updateComment(tmp->id, newTitle, tmp->body, tmp->porj_id, tmp->task_id, tmp->user_id);
 						}
 
 						else if (a == 2) {
 							printf("Enter New Comment: ");
-							getchar(); gets(newBody);
+							getchar(); gets_s(newBody,256);
 							updateComment(tmp->id, tmp->title, newBody, tmp->porj_id, tmp->task_id, tmp->user_id);
 						}
 

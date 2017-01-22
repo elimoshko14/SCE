@@ -13,7 +13,7 @@ void management_tasks() {
 
 		// add
 		if (x == 1) {
-			int id, pId, cId, cost, status;
+			int id, pId, cId, cost;
 			char title[256];
 			char tags[256];
 			char due[256];
@@ -35,16 +35,15 @@ void management_tasks() {
 				if (findCatById(cId) == NULL)
 					printf("%s\n", errors[1][0]);
 				else {
-					printf("Enter unique id of new task: ");
-					id = getInt();
+					id = ++unique_task_key;
 					printf("Enter title of new task: ");
-					getchar();  gets(title);
+					getchar();  gets_s(title,256);
 					printf("Enter cost of new task: ");
 					cost = getInt();
 					printf("Enter tags for new task: ");
-					getchar();  gets(tags);
+					getchar();  gets_s(tags,256);
 					printf("Enter due of new task in format(d/m/y): ");
-					getchar();  gets(due);
+					getchar();  gets_s(due,256);
 					addTask(id, title, 0, cId, cost, 0, tags, due, "-1");
 				}
 			}
@@ -52,7 +51,7 @@ void management_tasks() {
 
 		// update
 		else if (x == 2) {
-			int id, pId, cId, newCost, newStatus;
+			int pId, cId, newCost, newStatus;
 			char newTitle[256];
 			char newTags[256];
 			char newDue[256];
@@ -105,7 +104,7 @@ void management_tasks() {
 						if (a == 1) {
 							printf("Enter New title: ");
 							getchar(); gets(newTitle);
-							updateTask(tmp->id, newTitle, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments);
+							updateTask(tmp->id, newTitle, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments); 
 						}
 
 						else if (a == 2) {

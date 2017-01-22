@@ -17,8 +17,7 @@ void management_projets() {
 			char due[256];
 			char name[256];
 			system("cls");
-			printf("Enter unique ID of new project: ");
-			id = getInt();
+			id = ++unique_project_key;
 
 			// if project is allready exist arise error
 			if (findProjById(id) != NULL) 

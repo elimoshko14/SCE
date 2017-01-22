@@ -1,7 +1,7 @@
 #include "modules/menageUsers.h"
 #include "modules/menageComments.h"
 #include "modules/menageTask.h"
-#include "modules/menageCategory.h";
+#include "modules/menageCategory.h"
 #include "modules/menageProjects.h"
 #include "modules/DisplayUsers.h"
 #include "modules/DisplayProjects.h"

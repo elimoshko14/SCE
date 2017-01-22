@@ -102,6 +102,10 @@ void getTasks() {
 
 		fscanf(tasks_file, "%d", &(task_struct->id));
 		fgets(buffer, 256, tasks_file);
+
+		// set unique_task_key (when we add new task unique_task_key++)
+		// it has to be a maximum a value
+		if (task_struct->id > unique_task_key) { unique_task_key = task_struct->id; }
 		
 		fgets(task_struct->title, 256, tasks_file);
 		strtok(task_struct->title, "\n");

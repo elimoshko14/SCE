@@ -85,6 +85,10 @@ void getCategories() {
 		// drop line
 		fgets(buffer, 256, categorys_file);
 
+		// set unique_category_key (when we add new project unique_category_key++)
+		// it has to be a maximum a value
+		if (category_struct->id > unique_category_key) { unique_category_key = category_struct->id; }
+
 		// get name
 		fgets(category_struct->name, '256', categorys_file);
 		// clear \n

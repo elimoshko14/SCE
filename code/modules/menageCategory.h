@@ -13,7 +13,7 @@ void management_category() {
 
 		// add
 		if (x == 1) {
-			int id, pId, cost;
+			int id, pId;
 			char name[256];
 			system("cls");
 			if (user_ptr->level == 1) {
@@ -28,8 +28,7 @@ void management_category() {
 				printf("%s\n", errors[0][0]);
 
 			else {
-				printf("Enter unique id of new category: ");
-				id = getInt();
+				id = ++unique_category_key;
 				if (findCatById(id) != NULL)
 					printf("%s\n", errors[1][1]);
 				else {

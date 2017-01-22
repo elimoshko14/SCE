@@ -95,6 +95,10 @@ void getComments() {
 		fscanf(coments_file, "%ld", &(coment_struct->id));
 		fgets(buffer, 256, coments_file);
 
+		// set unique_comment_key (when we add new comment unique_comment_key++)
+		// it has to be a maximum a value
+		if (coment_struct->id > unique_comment_key) { unique_comment_key = coment_struct->id; }
+
 		// get title
 		fgets(coment_struct->title, '256', coments_file);
 		strtok(coment_struct->title, "\n");

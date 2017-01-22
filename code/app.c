@@ -23,6 +23,7 @@ void init() {
 	getProjs();
 	getCategories();
 	getTasks();
+
 	getComments();
 }
 

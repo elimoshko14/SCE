@@ -108,6 +108,10 @@ void getUsers() {
 		fscanf(users_file, "%ld", &(user_struct->id));
 		fgets(buffer, 256, users_file);
 
+		// set unique_user_key (when we add new user unique_user_key++)
+		// it has to be a maximum a value
+		if (user_struct->id > unique_user_key) { unique_user_key = user_struct->id; }
+
 		// get name
 		fgets(user_struct->name, '256', users_file);
 		strtok(user_struct->name, "\n");

@@ -15,9 +15,6 @@ void management_users() {
 		if (x == 1) {
 			int id, pId, salery, level;
 			char name[256];
-			char lang[2];
-			char comments[256];
-			char due[256];
 			system("cls");
 			if (user_ptr->level == 1) {
 				printf("Enter ID of exist project: ");
@@ -36,11 +33,11 @@ void management_users() {
 					printf("%s\n", errors[4][1]);
 				else {
 					printf("Enter name of user: ");
-					getchar();  gets(name);
+					getchar();  gets_s(name,256);
 					printf("Enter level of user\n[2] Manager\n[3] Worker\n ");
 					level = getInt();
 					printf("Enter salery of new user (in $): ");
-					salery = getInt();
+					salery = getInt(); 
 
 					addUser(id, name, "EN", "String", level, pId, 0, salery, 0, "-1");
 				}
@@ -51,8 +48,6 @@ void management_users() {
 		else if (x == 2) {
 			int  newSalery, newLevel;
 			char newName[256];
-			char newLang[2];
-			char newDue[256];
 			// it is possible update all fields except ID's
 			system("cls");
 
@@ -92,7 +87,7 @@ void management_users() {
 
 						if (a == 1) {
 							printf("Enter New name: ");
-							getchar(); gets(newName);
+							getchar(); gets_s(newName,256);
 							updateUser(tmp->id, newName, tmp->lang, tmp->due, tmp->level, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
 						}
 
