@@ -51,7 +51,7 @@ void management_tasks() {
 					tmpU = findUserById(uId);
 					if ((tmpU != NULL) && (tmpU->task_id == 0)) {
 						addTask(id, title, uId, cId, cost, 0, tags, due, "-1");
-						updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->due, tmpU->level, tmpU->porj_id, id, tmpU->salery, tmpU->online, tmpU->coments);
+						updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->password, tmpU->level, tmpU->porj_id, id, tmpU->salery, tmpU->online, tmpU->coments);
 					}
 					else
 						addTask(id, title, 0, cId, cost, 0, tags, due, "-1");
@@ -124,7 +124,7 @@ void management_tasks() {
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, newCost, tmp->status, tmp->tags, tmp->due, tmp->comments);
 						}
 						else if (a == 3) {
-							printf("Enter New due: ");
+							printf("Enter New password: ");
 							getchar(); gets_s(newDue, 256);
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, tmp->tags, newDue, tmp->comments);
 						}
@@ -159,7 +159,7 @@ void management_tasks() {
 							else
 							{
 								updateTask(tmp->id, tmp->title, uId, tmp->category_id, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments);
-								updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->due, tmpU->level, tmpU->porj_id,tmp->id , tmpU->salery, tmpU->online, tmpU->coments);
+								updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->password, tmpU->level, tmpU->porj_id,tmp->id , tmpU->salery, tmpU->online, tmpU->coments);
 							}
 						}
 						else if (a == 8) { break; }

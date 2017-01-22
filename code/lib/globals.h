@@ -30,7 +30,7 @@ char errors[6][10][100] = {
 { "Not found comments with this id", "Comment is allready exist", "Comments List is empty" },
 
 // user errors [4]
-{  "Not found user with this id",
+{  "User not found!",
 "User is allready exist",
 "Level of this user is not appropriate", "Another user is allready do it",
 "You don't have a project to work for a while"

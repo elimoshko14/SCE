@@ -88,13 +88,13 @@ void management_users() {
 						if (a == 1) {
 							printf("Enter New name: ");
 							getchar(); gets_s(newName,256);
-							updateUser(tmp->id, newName, tmp->lang, tmp->due, tmp->level, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
+							updateUser(tmp->id, newName, tmp->lang, tmp->password, tmp->level, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
 						}
 
 						else if (a == 2) {
 							printf("Enter New salery in ($): ");
 							newSalery = getInt();
-							updateUser(tmp->id, tmp->name, tmp->lang, tmp->due, tmp->level, tmp->porj_id, tmp->task_id, newSalery, tmp->online, tmp->coments);
+							updateUser(tmp->id, tmp->name, tmp->lang, tmp->password, tmp->level, tmp->porj_id, tmp->task_id, newSalery, tmp->online, tmp->coments);
 						}
 						else if (a == 3) {
 							printf("Enter task id: ");
@@ -108,7 +108,7 @@ void management_users() {
 							}
 							else {
 								// first set new task to user
-								updateUser(tmp->id, tmp->name, tmp->lang, tmp->due, tmp->level, tmp->porj_id, tId, tmp->salery, tmp->online, tmp->coments);
+								updateUser(tmp->id, tmp->name, tmp->lang, tmp->password, tmp->level, tmp->porj_id, tId, tmp->salery, tmp->online, tmp->coments);
 								//second set user to this task
 								// attention tmp->id => user id
 								updateTask(tmpT->id, tmpT->title, tmp->id, tmpT->category_id, tmpT->cost, tmpT->status, tmpT->tags, tmpT->due, tmpT->comments);
@@ -119,7 +119,7 @@ void management_users() {
 							printf("Enter New level\n[2] Manager\n[3] Worker\n: ");
 							newLevel = getInt();
 							if (newLevel > 3 || newLevel < 2)  printf("%s\n", errors[4][2]);
-							else updateUser(tmp->id, tmp->name, tmp->lang, tmp->due, newLevel, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
+							else updateUser(tmp->id, tmp->name, tmp->lang, tmp->password, newLevel, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
 						}
 
 						else if (a == 5) { break; }

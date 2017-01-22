@@ -43,8 +43,8 @@ void pushUser(user * node);
 bool deleteUser(int id);
 void getUsers();
 void setUser(user *node);
-void addUser(int id, char name[], char lang[], char due[], int level, int proj_id, int  task_id, int salery, int online, char comments[]);
-void updateUser(int id, char name[], char lang[], char due[], int level, int proj_id, int  task_id, int salery, int online, char comments[]);
+void addUser(int id, char name[], char lang[], char password[], int level, int proj_id, int  task_id, int salery, int online, char comments[]);
+void updateUser(int id, char name[], char lang[], char password[], int level, int proj_id, int  task_id, int salery, int online, char comments[]);
 void unSetUser(int id);
 
 #include "lib/rw-task.h"
