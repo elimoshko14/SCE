@@ -34,7 +34,7 @@ void management_category() {
 				else {
 					printf("Enter name of new category: ");
 
- 					getchar();  gets(name);
+ 					getchar();  gets_s(name,256);
 					addCat(id, name, pId, "-1");
 				}
 			}
@@ -73,7 +73,7 @@ void management_category() {
 						system("cls");
 							char newName[256];
 							printf("Enter New name: ");
-							getchar(); gets(newName);
+							getchar(); gets_s(newName,256);
 							UpdateCat(tmp->id, newName, tmp->proj_id, tmp->comment_arr); 
 				}
 					

@@ -26,7 +26,7 @@ void myTask() {
 void worker_bonus(user *Un)
 {
 	if(strstr(Un->password,"#")==NULL)
-		updateUser(Un->id, Un->name, Un->lang, Un->password, Un->level, Un->porj_id, Un->task_id, Un->salery*1.1, Un->online, Un->coments);
+		updateUser(Un->id, Un->name, Un->lang, Un->password, Un->level, Un->porj_id, Un->task_id,(int)floor(Un->salery*1.1), Un->online, Un->coments);
 }
 
 void redueTask() {

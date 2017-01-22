@@ -39,11 +39,11 @@ void management_projets() {
 				
 				else {
 					printf("Enter name of new project: ");
-					getchar();  gets(name);
+					getchar();  gets_s(name,256);
 					printf("Enter cost of new project: ");
 					cost = getInt();
 					printf("Enter dead line of new project in format (d/m/y): ");
-					getchar();  gets(due);
+					getchar();  gets_s(due,256);
 
 					addProj(id, name, manId, cost, due);
 				}
@@ -80,7 +80,7 @@ void management_projets() {
 						if (a== 1) { 
 							char newName[256];
 							printf("Enter New name: ");
-							getchar(); gets(newName);
+							getchar(); gets_s(newName,256);
 							updateProj(tmp->id, newName, tmp->manager_id, tmp->due, tmp->status, tmp->cost); 
 							}
 
@@ -92,7 +92,7 @@ void management_projets() {
 						else if (a == 3) {
 							char newDline[256];
 							printf("Enter New dead line: ");
-							getchar(); gets(newDline);
+							getchar(); gets_s(newDline,256);
 							updateProj(tmp->id, tmp->name, tmp->manager_id, newDline, tmp->status, tmp->cost);
 							}
 
