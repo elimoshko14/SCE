@@ -1,5 +1,5 @@
-void manager_bonus(proj* p) {
-	task_node* tmp = tasks_list;
+void manager_bonus(proj * p) {
+	task_node * tmp = tasks_list;
 	int count = 0,sum=0;
 	while (tmp!=NULL)
 	{
@@ -21,6 +21,7 @@ void manager_bonus(proj* p) {
 	if (count >= sum / 2)
 	{
 		tmpU = findUserById(p->manager_id);
-		updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->due, tmpU->level, tmpU->porj_id, tmpU->task_id, tmpU->salery*1.5, tmpU->online, tmpU->coments);
+		tmpU->salery = floor(tmpU->salery * 1.5);
+		setUser(tmpU);
 	}
 }

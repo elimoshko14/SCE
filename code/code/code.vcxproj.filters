@@ -22,12 +22,6 @@
     <ClInclude Include="..\lib\globals.h">
       <Filter>App</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\login.h">
-      <Filter>modules</Filter>
-    </ClInclude>
-    <ClInclude Include="bonus_EEO.h">
-      <Filter>modules</Filter>
-    </ClInclude>
     <ClInclude Include="..\unitTesting\testCat.h">
       <Filter>unit testing</Filter>
     </ClInclude>
@@ -52,55 +46,64 @@
     <ClInclude Include="..\unitTesting\unitTest.h">
       <Filter>unit testing</Filter>
     </ClInclude>
-    <ClInclude Include="..\modules\mainMenu.h">
-      <Filter>modules</Filter>
-    </ClInclude>
-    <ClInclude Include="..\modules\functions.h">
-      <Filter>modules</Filter>
-    </ClInclude>
     <ClInclude Include="..\lib\api.h">
       <Filter>rw</Filter>
     </ClInclude>
-    <ClInclude Include="..\modules\mainChoose.h">
+    <ClInclude Include="..\modules\updateTaskStatus.h">
       <Filter>modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\modules\Hello.h">
-      <Filter>modules</Filter>
-    </ClInclude>
-    <ClInclude Include="..\modules\Session.h">
-      <Filter>modules</Filter>
-    </ClInclude>
-    <ClInclude Include="..\modules\menageProjects.h">
-      <Filter>modules</Filter>
-    </ClInclude>
-    <ClInclude Include="..\modules\DisplayProjects.h">
-      <Filter>modules</Filter>
-    </ClInclude>
-    <ClInclude Include="..\modules\menageCategory.h">
+    <ClInclude Include="..\modules\workerFunctions.h">
       <Filter>modules</Filter>
     </ClInclude>
     <ClInclude Include="..\modules\DisplayCategories.h">
       <Filter>modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\modules\menageTask.h">
+    <ClInclude Include="..\modules\DisplayComments.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\DisplayProjects.h">
       <Filter>modules</Filter>
     </ClInclude>
     <ClInclude Include="..\modules\DisplayTasks.h">
       <Filter>modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\modules\DisplayUsers.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\functions.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\Hello.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\login.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\mainChoose.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\mainMenu.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\manager_bonus.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\menageCategory.h">
+      <Filter>modules</Filter>
+    </ClInclude>
     <ClInclude Include="..\modules\menageComments.h">
       <Filter>modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\modules\DisplayComments.h">
+    <ClInclude Include="..\modules\menageProjects.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\menageTask.h">
       <Filter>modules</Filter>
     </ClInclude>
     <ClInclude Include="..\modules\menageUsers.h">
       <Filter>modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\modules\DisplayUsers.h">
-      <Filter>modules</Filter>
-    </ClInclude>
-    <ClInclude Include="..\modules\workerFunctions.h">
+    <ClInclude Include="..\modules\Session.h">
       <Filter>modules</Filter>
     </ClInclude>
   </ItemGroup>

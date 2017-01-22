@@ -27,7 +27,6 @@
   <ItemGroup>
     <ClInclude Include="..\lib\api.h" />
     <ClInclude Include="..\lib\globals.h" />
-    <ClInclude Include="..\lib\login.h" />
     <ClInclude Include="..\lib\rw-cmnt.h" />
     <ClInclude Include="..\lib\rw-ctgry.h" />
     <ClInclude Include="..\lib\rw-proj.h" />
@@ -41,14 +40,17 @@
     <ClInclude Include="..\modules\DisplayUsers.h" />
     <ClInclude Include="..\modules\functions.h" />
     <ClInclude Include="..\modules\Hello.h" />
+    <ClInclude Include="..\modules\login.h" />
     <ClInclude Include="..\modules\mainChoose.h" />
     <ClInclude Include="..\modules\mainMenu.h" />
+    <ClInclude Include="..\modules\manager_bonus.h" />
     <ClInclude Include="..\modules\menageCategory.h" />
     <ClInclude Include="..\modules\menageComments.h" />
     <ClInclude Include="..\modules\menageProjects.h" />
     <ClInclude Include="..\modules\menageTask.h" />
     <ClInclude Include="..\modules\menageUsers.h" />
     <ClInclude Include="..\modules\Session.h" />
+    <ClInclude Include="..\modules\updateTaskStatus.h" />
     <ClInclude Include="..\modules\workerFunctions.h" />
     <ClInclude Include="..\unitTesting\testCat.h" />
     <ClInclude Include="..\unitTesting\testComm.h" />
@@ -58,7 +60,6 @@
     <ClInclude Include="..\unitTesting\testTask.h" />
     <ClInclude Include="..\unitTesting\testUser.h" />
     <ClInclude Include="..\unitTesting\unitTest.h" />
-    <ClInclude Include="bonus_EEO.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\categorys.txt" />

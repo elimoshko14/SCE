@@ -114,7 +114,7 @@ void management_tasks() {
 
 						if (a == 1) {
 							printf("Enter New title: ");
-							getchar(); gets(newTitle);
+							getchar(); gets_s(newTitle,256);
 							updateTask(tmp->id, newTitle, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments); 
 						}
 
@@ -125,7 +125,7 @@ void management_tasks() {
 						}
 						else if (a == 3) {
 							printf("Enter New dead line: ");
-							getchar(); gets(newDue);
+							getchar(); gets_s(newDue, 256);
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, tmp->tags, newDue, tmp->comments);
 						}
 
@@ -138,7 +138,7 @@ void management_tasks() {
 
 						else if (a == 5) {
 							printf("Enter New tags: ");
-							getchar(); gets(newTags);
+							getchar(); gets_s(newTags,256);
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, newTags, tmp->due, tmp->comments);
 						}
 
