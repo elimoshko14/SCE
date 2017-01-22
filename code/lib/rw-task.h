@@ -217,9 +217,10 @@ void unSetTask(int id) {
 	// update user task id
 	task * task_ptr = findTaskById(id);
 	user * user_ptr = findUserById(task_ptr->user_id);
-
-	user_ptr->task_id = 0;
-	setUser(user_ptr);
+	if (user_ptr != NULL) {
+		user_ptr->task_id = 0;
+		setUser(user_ptr);
+	}
 
 	if (deleteTask(id)) {
 

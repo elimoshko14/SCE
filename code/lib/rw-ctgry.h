@@ -191,25 +191,29 @@ void UpdateCat(int id, char name[], int proj_id, char comment_arr[]) {
 
 void unSetCat(int id) {
 	// remove it's tasks
-	task_node * task = tasks_list;
+	task_node * task = tasks_list, * tmp_t;
 	while (task != NULL) {
-		if (task->ptr->category_id == id) {
+		tmp_t = task;
+		task = task->next;
+		if (tmp_t->ptr->category_id == id) {
 			// rem task comments
-			comment_node * comment = comments_list;
-			while (comment != NULL) {
-				if (comment->ptr->task_id)
-					unSetComment(comment->ptr->id);
-				comment = comment->next;
+			comment_node * cmnt = comments_list, *tmp;
+			while (cmnt != NULL) {
+				tmp = cmnt;
+				cmnt = cmnt->next;
+				if (tmp->ptr->task_id == tmp_t->ptr->id)
+					unSetComment(tmp->ptr->id);
 			}
 			// update user task id
-			user * user_tmp = findUserById(task->ptr->user_id);
-			user_tmp->task_id = 0;
-			setUser(user_tmp);
+			user * user_tmp = findUserById(tmp_t->ptr->user_id);
+			if (user_tmp != NULL){
+				user_tmp->task_id = 0;
+				setUser(user_tmp);
+			}
 
-
-			unSetTask(task->ptr->id);
+			unSetTask(tmp_t->ptr->id);
 		}
-		task = task->next;
+
 	}
 
 	// only if previous delete from cat_list
