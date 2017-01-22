@@ -14,8 +14,8 @@ void directorChoose(int ch) {
 	case 12: {  displayUsersbyProject();  break; }
 	case 13: {  displayWorkers(); break; }
 	case 14: {  displayManagers();  break; }
-	case 15: { copyTask();  break; }
-	case 16: {  break; }
+	case 15: { CopyTask();  break; }
+	case 16: {  CopyProj(); break; }
 	case 17: {  printf("\n\n Bye Bye \n\n"); exit(0); break; }
 	default: break;
 	}
