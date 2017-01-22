@@ -34,7 +34,7 @@ void menu_2(){
 	else {
 		int i = 0;
 		printf("[%d] Manage category:\n", ++i);
-		printf("[%d] Display all categorys by specific project:\n", ++i);
+		printf("[%d] Display categoreis:\n", ++i);
 		printf("[%d] Manage tasks:\n", ++i);
 		printf("[%d] Display all completed tasks by specific project:\n", ++i);
 		printf("[%d] Display all uncompleted tasks by specific project:\n", ++i);

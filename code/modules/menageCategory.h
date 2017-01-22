@@ -16,9 +16,13 @@ void management_category() {
 			int id, pId, cost;
 			char name[256];
 			system("cls");
-			printf("Enter ID of exist project: ");
-			pId = getInt();
-
+			if (user_ptr->level == 1) {
+				printf("Enter ID of exist project: ");
+				pId = getInt();
+			}
+			else {
+				pId = user_ptr->porj_id;
+			}
 			// if project is not exist arise error
 			if (findProjById(pId) == NULL)
 				printf("%s\n", errors[0][0]);
@@ -39,13 +43,19 @@ void management_category() {
 
 		// update
 		else if (x == 2) {
+			int pId;
 			// it is possible update all fields except ID
 			system("cls");
 
 			// if categories exist
 			if (categories_list) {
-				printf("Enter ID of exist project: ");
-				int pId = getInt();
+				if (user_ptr->level == 1) {
+					printf("Enter ID of exist project: ");
+					pId = getInt();
+				}
+				else {
+					pId = user_ptr->porj_id;
+				}
 				proj *tmpP = findProjById(pId);
 				
 				printf("All Categories by project %s:\n", tmpP->name);
@@ -81,10 +91,16 @@ void management_category() {
 
 		// delete
 		else if (x == 3) {
+			int pId;
 			// if category exist
 			if (categories_list) {
-				printf("Enter ID of exist project: ");
-				int pId = getInt();
+				if (user_ptr->level == 1) {
+					printf("Enter ID of exist project: ");
+					pId = getInt();
+				}
+				else {
+					pId = user_ptr->porj_id;
+				}
 				proj *tmpP = findProjById(pId);
 
 				printf("All Categories by project %s:\n", tmpP->name);
