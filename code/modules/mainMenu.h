@@ -45,6 +45,7 @@ void menu_2(){
 		printf("[%d] Display all users by specific project:\n", ++i);
 		printf("[%d] Display all workers:\n", ++i);
 		printf("[%d] Display all managers:\n", ++i);
+		printf("[%d] Copy Specific Task\n", ++i);
 		printf("[%d] Exit", ++i);
 
 		printf("\n\n Please make your choise: ");

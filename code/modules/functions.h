@@ -11,6 +11,7 @@
 #include "modules/workerFunctions.h"
 #include "modules/bonus_EEO.h"
 #include "modules/updateTaskStatus.h"
+#include "modules/copyTask.h"
 
 #include "modules/mainMenu.h"
 #include "modules/mainChoose.h"
