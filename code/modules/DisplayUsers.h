@@ -38,21 +38,25 @@ void displayWorkers() {
 		else {
 			if (users_list) {
 				if (user_ptr->level == 1) {
-					printf("Enter ID of exist project: ");
-					 pId = getInt();
+					user_node * tmp = users_list;
+					while (tmp != NULL) {
+						if (tmp->ptr->level == 3)
+							printUser(tmp->ptr);
+						tmp = tmp->next;
+					}
 				}
 				else {
 					pId = user_ptr->porj_id;
-				}
-				proj *tmpP = findProjById(pId);
+					proj *tmpP = findProjById(pId);
 
-				printf("All Workers in project %s:\n", tmpP->name);
-				user_node * t = users_list;
-				while (t) {
-					if (t->ptr->porj_id == pId)
-						if (t->ptr->level == 3)
-							printUser(t->ptr);
-					t = t->next;
+					printf("All Workers in project %s:\n", tmpP->name);
+					user_node * t = users_list;
+					while (t) {
+						if (t->ptr->porj_id == pId)
+							if (t->ptr->level == 3)
+								printUser(t->ptr);
+						t = t->next;
+					}
 				}
 			}
 		}
@@ -69,22 +73,13 @@ void displayManagers() {
 
 	else {
 		if (users_list) {
-			int pId;
-			if (user_ptr->level == 1) {
-				printf("Enter ID of exist project: ");
-				 pId = getInt();
+			user_node * tmp = users_list;
+			while (tmp != NULL) {
+				if (tmp->ptr->level == 2)
+					printUser(tmp->ptr);
+				tmp = tmp->next;
 			}
-			else { pId = user_ptr->porj_id; }
-			proj *tmpP = findProjById(pId);
-
-			printf("All Managers in project %s:\n", tmpP->name);
-			user_node * t = users_list;
-			while (t) {
-				if (t->ptr->porj_id == pId)
-					if (t->ptr->level == 2)
-						printUser(t->ptr);
-				t = t->next;
-			}
+			
 		}
 	}
 

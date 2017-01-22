@@ -6,8 +6,10 @@ void printTask(task * node) {
 	printf("Cost:\t%d\n", node->cost);
 	if (node->status == 1)
 		printf("Status:\tComplete\n");
-	else 
+	else  if (node->status == 0)
 		printf("Status:\tWorking on\n");
+	else  if (node->status == -1)
+		printf("Status:\tWaiting approval\n");
 	printf("Tags:\t%s\n", node->tags);
 	printf("Due:\t%s\n", node->due);
 	//printf("comments:\t%s\n", node->comments);
@@ -197,6 +199,8 @@ void updateTask(int id, char title[], int user_id, int cat_id, int cost, int sta
 		strcpy(newTask->tags, tags);
 		strcpy(newTask->due, due);
 		strcpy(newTask->comments, comments);
+		printf("Update Complited!\n"); 
+		system("pause");
 	}
 	else
 	{

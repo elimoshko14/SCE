@@ -29,9 +29,11 @@ void displayTask(int status) {
 						// category filter
 						if (t->ptr->category_id == tmpC->ptr->id) {
 							// status filter
-							if (t->ptr->status == status) {
+							if (t->ptr->status == status || t->ptr->status == 1) {
 								printTask(t->ptr);
 							}
+							if (status == -2)
+								printTask(t->ptr);
 						}
 						t = t->next;
 					}
