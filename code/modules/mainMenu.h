@@ -25,6 +25,7 @@ void menu_1() {
 	
 
 	printf("[%d] Copy Specific Task\n", ++i);
+	printf("[%d] Copy Specific project\n", ++i);
 	printf("[%d] Switch language to Russian:\n", ++i);
 	printf("[%d] Exit", ++i);
 	
