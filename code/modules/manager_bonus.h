@@ -21,7 +21,7 @@ void manager_bonus(proj * p) {
 	if (count >= sum / 2)
 	{
 		tmpU = findUserById(p->manager_id);
-		tmpU->salery = floor(tmpU->salery * 1.5);
+		tmpU->salery = floor(tmpU->salery * 1.15);
 		setUser(tmpU);
 	} 
 }

@@ -34,7 +34,7 @@ void management_category() {
 				else {
 					printf("Enter name of new category: ");
 
-					getchar();  gets(name);
+ 					getchar();  gets(name);
 					addCat(id, name, pId, "-1");
 				}
 			}
