@@ -110,6 +110,8 @@ void management_projets() {
 							user * tmpU = findUserById(newMan);
 							if ((tmpU != NULL) && (tmpU->level == 2) && (tmpU->porj_id == 0)) {
 								updateProj(tmp->id, tmp->name, newMan, tmp->due, tmp->status, tmp->cost);
+
+								updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->password, tmpU->level, tmp->id, tmpU->task_id, tmpU->salery, tmpU->online, tmpU->coments);
 							}
 							else {
 								printf("error:NULL-%d level-%d porj_id-%d", tmpU != NULL, tmpU->level == 2, tmpU->porj_id == 0);
