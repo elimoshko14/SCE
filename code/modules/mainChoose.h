@@ -8,7 +8,7 @@ void directorChoose(int ch) {
 	if (i == ch){  management_tasks();  }i++;
 	if (i == ch){  menageComments();  }i++;
 
-	if (i == ch){  /*displayProjects();*/   }i++;
+	if (i == ch){  displayProjects();   }i++;
 	if (i == ch){  displayWorkers();  }i++;
 	if (i == ch){  displayManagers();   }i++;
 	

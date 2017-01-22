@@ -12,7 +12,7 @@ typedef struct user{
 	int salery;
 	bool online;
 	char coments[256];
-	char due[256];
+	char password[256];
 
 }user;
 

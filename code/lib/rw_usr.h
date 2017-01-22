@@ -148,7 +148,7 @@ void getUsers() {
 
 
 		// get tags array (strings)
-		fscanf(users_file, "%s[10]", user_struct->due);
+		fscanf(users_file, "%s[256]", user_struct->password);
 		fgets(buffer, 256, users_file);
 
 		pushUser(user_struct);
@@ -184,12 +184,12 @@ void setUser(user *node) {
 	
 
 	fprintf(user_file, buffer,
-		node->id, node->name, node->level, node->porj_id, node->task_id, node->lang, node->salery, node->online, node->coments, node->due);
+		node->id, node->name, node->level, node->porj_id, node->task_id, node->lang, node->salery, node->online, node->coments, node->password);
 
 	fclose(user_file);
 }
 
-void addUser(int id, char name[], char lang[], char due[], int level, int proj_id, int  task_id, int salery, int online, char comments[]) {
+void addUser(int id, char name[], char lang[], char password[], int level, int proj_id, int  task_id, int salery, int online, char comments[]) {
 
 	// user information 
 	struct user * newUser = (struct user *)malloc(sizeof(struct user));
@@ -203,14 +203,14 @@ void addUser(int id, char name[], char lang[], char due[], int level, int proj_i
 	newUser->salery = salery;
 	newUser->online = online;
 	strcpy(newUser->coments, comments);
-	strcpy(newUser->due, due);
+	strcpy(newUser->password, password);
 
 	pushUser(newUser);
 	setUser(newUser);
 
 }
 
-void updateUser(int id, char name[], char lang[], char due[], int level, int proj_id, int  task_id, int salery, int online, char comments[]) {
+void updateUser(int id, char name[], char lang[], char password[], int level, int proj_id, int  task_id, int salery, int online, char comments[]) {
 	user *node = findUserById(id);
 	if (node != NULL) {
 		printf("User has been find!\n");
@@ -223,7 +223,7 @@ void updateUser(int id, char name[], char lang[], char due[], int level, int pro
 		node->salery = salery;
 		node->online = online;
 		strcpy(node->coments, comments);
-		strcpy(node->due, due);
+		strcpy(node->password, password);
 	}
 	else
 	{
