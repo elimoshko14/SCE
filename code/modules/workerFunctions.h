@@ -22,6 +22,15 @@ void myTask() {
 
 	}
 }
+
+void rejectTask() {
+	task *tmpT = findTaskById(user_ptr->task_id);
+	updateTask(tmpT->id, tmpT->title, tmpT->user_id, tmpT->category_id, tmpT->cost, tmpT->status, tmpT->tags, "#", tmpT->comments);
+	printf("Your request to reject  task has been send to manager\nPress Enter to back");
+	getchar();
+	getchar();
+}
+
 void completeTask() {
 	task *tmpT = findTaskById(user_ptr->task_id);
 	if (tmpT) {
@@ -31,7 +40,8 @@ void completeTask() {
 			getchar();
 		}
 		else {
-			updateTask(tmpT->id, tmpT->title, user_ptr->id, tmpT->category_id, tmpT->cost, 1, tmpT->tags, "#22/01/2017", tmpT->comments);
+			updateTask(tmpT->id, tmpT->title, user_ptr->id, tmpT->category_id, tmpT->cost, 1, tmpT->tags, "*22/01/2017", tmpT->comments);
+			manager_bonus(findProjById(user_ptr->porj_id));
 			printf("Very nice manager will check your task and give you another\nBack to menu Press Enter");
 			getchar();
 			getchar();

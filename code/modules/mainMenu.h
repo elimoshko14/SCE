@@ -66,6 +66,7 @@ void menu_3() {
 		printf("[%d] Manage comments:\n", ++i);
 		printf("[%d] Display all comments:\n", ++i);
 		printf("[%d] Display all workers:\n", ++i);
+		printf("[%d] Rejection of task:\n", ++i);
 		printf("[%d] Exit", ++i);
 
 		printf("\n\n Please make your choise: ");
