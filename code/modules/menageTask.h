@@ -49,7 +49,7 @@ void management_tasks() {
 					int uId = getInt();
 					user *tmpU;				
 					tmpU = findUserById(uId);
-					if ((tmpU != NULL) && (tmpU->task_id == 0)) {
+					if ((tmpU != NULL) && (tmpU->task_id == 0) && (tmpU->level == 3)) {
 						addTask(id, title, uId, cId, cost, 0, tags, due, "-1");
 						updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->password, tmpU->level, tmpU->porj_id, id, tmpU->salery, tmpU->online, tmpU->coments);
 					}
