@@ -124,7 +124,7 @@ void management_tasks() {
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, newCost, tmp->status, tmp->tags, tmp->due, tmp->comments);
 						}
 						else if (a == 3) {
-							printf("Enter New dead line: ");
+							printf("Enter New due: ");
 							getchar(); gets_s(newDue, 256);
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, tmp->tags, newDue, tmp->comments);
 						}
@@ -132,8 +132,7 @@ void management_tasks() {
 						else if (a == 4) {
 							printf("Enter New status (0 or 1): ");
 							newStatus = getInt();
-							if (newStatus > 1 || newStatus < 0)  printf("%s\n", errors[2][3]);
-							else updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, newStatus, tmp->tags, tmp->due, tmp->comments);
+							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, newStatus, tmp->tags, tmp->due, tmp->comments);
 						}
 
 						else if (a == 5) {
