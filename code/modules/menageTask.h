@@ -19,8 +19,11 @@ void management_tasks() {
 			char due[256];
 
 			system("cls");
-			printf("Enter ID of exist project: ");
-			pId = getInt();
+			if (user_ptr->level == 1) {
+				printf("Enter ID of exist project: ");
+				pId = getInt();
+			}
+			else { pId = user_ptr->porj_id; }
 
 			// if project is not exist arise error
 			if (findProjById(pId) == NULL)
@@ -59,8 +62,11 @@ void management_tasks() {
 
 			// if categories exist
 			if (categories_list) {
-				printf("Enter ID of exist project: ");
-				pId = getInt();
+				if (user_ptr->level == 1) {
+					printf("Enter ID of exist project: ");
+					pId = getInt();
+				}
+				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
 				
 				printf("Enter ID of exist category: ");
@@ -91,6 +97,7 @@ void management_tasks() {
 						printf("[%d] Change Due:\n", ++i);
 						printf("[%d] Change Status\n", ++i);
 						printf("[%d] Change Tags\n", ++i);
+						printf("[%d] Change Task Category\n", ++i);
 						printf("[%d] Back to previous menu\n", ++i);
 						int a = getInt();
 
@@ -125,7 +132,16 @@ void management_tasks() {
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, newTags, tmp->due, tmp->comments);
 						}
 
-						else if (a == 6) { break; }
+						else if (a == 6) {  
+							printf("Enter id of exist category: ");
+							cId = getInt();
+							tmpC = findCatById(cId);
+							if (tmpC == NULL)
+								printf("%s\n", errors[1][0]);
+							else 
+								updateTask(tmp->id, tmp->title, tmp->user_id, cId, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments);
+						}
+						else if (a == 7) { break; }
 
 						else { break; }
 					}
@@ -144,10 +160,14 @@ void management_tasks() {
 
 		// delete
 		else if (x == 3) {
+			int pId;
 			// if task exist
 			if (tasks_list) {
-				printf("Enter ID of exist project: ");
-				int pId = getInt();
+				if (user_ptr->level == 1) {
+					printf("Enter ID of exist project: ");
+					pId = getInt();
+				}
+				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
 
 				printf("Enter ID of exist category: ");

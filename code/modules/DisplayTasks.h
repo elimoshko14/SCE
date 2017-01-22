@@ -5,11 +5,15 @@ void displayTask(int status) {
 	}
 
 	else {
+		int pId;
 		if (tasks_list) {
 			task_node *t = NULL;
 
-			printf("Enter ID of exist project: ");
-			int pId = getInt();
+			if (user_ptr->level == 1) {
+				printf("Enter ID of exist project: ");
+				 pId = getInt();
+			}
+			else { pId = user_ptr->porj_id; }
 			proj *tmpP = findProjById(pId);
 
 			printf("All Tasks by project %s:\n", tmpP->name);
