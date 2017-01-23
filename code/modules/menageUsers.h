@@ -2,13 +2,13 @@ void management_users() {
 	while (1) {
 		int i = 0;
 		printf("-----------------------------------\n\n");
-		printf("[%d] Add new user:\n", ++i);
-		printf("[%d] Edit user:\n", ++i);
-		printf("[%d] Delete user:\n", ++i);
+		printf("[%d] %s:\n", ++i, i18("Add new user"));
+		printf("[%d] %s:\n", ++i, i18("Edit user"));
+		printf("[%d] %s:\n", ++i, i18("Delete user"));
 		printf("[%d] Back to Menu\n", ++i);
 		printf("-----------------------------------\n\n");
 
-		printf("Make your choise: ");
+		printf("%s: ", i18("Make your choise"));
 		int x = getInt();
 
 		// add
@@ -17,7 +17,7 @@ void management_users() {
 			char name[256];
 			system("cls");
 			if (user_ptr->level == 1) {
-				printf("Enter ID of exist project: ");
+				printf("%s: ", i18("Enter ID of exist project"));
 				pId = getInt();
 			}
 			else { pId = user_ptr->porj_id; }
@@ -27,16 +27,16 @@ void management_users() {
 				printf("%s\n", errors[0][0]);
 
 			else {
-				printf("Enter unique id of new user: ");
+				printf("%s: ", i18("Enter unique id of new user"));
 				id = getInt();
 				if (findUserById(id) != NULL)
 					printf("%s\n", errors[4][1]);
 				else {
-					printf("Enter name of user: ");
+					printf("%s: ", i18("Enter name of user"));
 					getchar();  gets_s(name,256);
-					printf("Enter level of user\n[2] Manager\n[3] Worker\n ");
+					printf("%s\n[2] %s\n[3] %s\n ", i18("Enter level of user"), i18("Manager"), i18("Worker"));
 					level = getInt();
-					printf("Enter salery of new user (in $): ");
+					printf("%s (in $): ", i18("Enter salery of new user"));
 					salery = getInt(); 
 
 					addUser(id, name, "EN", "String", level, pId, 0, salery, 0, "-1");
@@ -55,20 +55,20 @@ void management_users() {
 			if (projects_list) {
 				int pId;
 				if (user_ptr->level == 1) {
-					printf("Enter ID of exist project: ");
+					printf("%s: ", i18("Enter ID of exist project"));
 					pId = getInt();
 				}
 				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
 				
-				printf("All Users in project [%s]:\n", tmpP->name);
+				printf("%s [%s]:\n", i18("All Users in project"), tmpP->name);
 				user_node * t = users_list;
 				while (t) {
 					if (t->ptr->porj_id == pId)
 						printUser(t->ptr);
 					t = t->next;
 				}
-				printf("Enter id of users which need to update\n");
+				printf("%s\n", i18("Enter id of users which need to update"));
 				int id = getInt();
 				user * tmp = findUserById(id);
 
@@ -77,28 +77,28 @@ void management_users() {
 					while (1) {
 						system("cls");
 						i = 0;
-						printf("\n Update user %s\n----------------------\n", tmp->name);
-						printf("[%d] Change Name:\n", ++i);
-						printf("[%d] Change Salery:\n", ++i);
-						printf("[%d] Change Current Task\n", ++i);
-						printf("[%d] Change Level:\n", ++i);
-						printf("[%d] Change Language of system:\n", ++i);
-						printf("[%d] Back to previous menu\n", ++i);
+						printf("\n %s %s\n----------------------\n", i18("Update user"), tmp->name);
+						printf("[%d] %s:\n", ++i, i18("Change Name"));
+						printf("[%d] %s:\n", ++i, i18("Change Salery"));
+						printf("[%d] %s\n", ++i, i18("Change Current Task"));
+						printf("[%d] %s:\n", ++i, i18("Change Level"));
+						printf("[%d] %s:\n", ++i, i18("Change Language of system"));
+						printf("[%d] %s\n", ++i, i18("Back to previous menu"));
 						int a = getInt();
 
 						if (a == 1) {
-							printf("Enter New name: ");
+							printf("%s: ", i18("Enter New name"));
 							getchar(); gets_s(newName,256);
 							updateUser(tmp->id, newName, tmp->lang, tmp->password, tmp->level, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
 						}
 
 						else if (a == 2) {
-							printf("Enter New salery in ($): ");
+							printf("%s ($): ", i18("Enter New salery in"));
 							newSalery = getInt();
 							updateUser(tmp->id, tmp->name, tmp->lang, tmp->password, tmp->level, tmp->porj_id, tmp->task_id, newSalery, tmp->online, tmp->coments);
 						}
 						else if (a == 3) {
-							printf("Enter task id: ");
+							printf("%s: ", i18("Enter task id"));
 							int tId = getInt();
 							task *tmpT = findTaskById(tId);
 							if (tmpT == NULL) {
@@ -117,14 +117,14 @@ void management_users() {
 						}
 
 						else if (a == 4) {
-							printf("Enter New level\n[2] Manager\n[3] Worker\n: ");
+							printf("%s\n[2] %s\n[3] %s\n: ", i18("Enter New level"), i18("Manager"), i18("Worker"));
 							newLevel = getInt();
 							if (newLevel > 3 || newLevel < 2)  printf("%s\n", errors[4][2]);
 							else updateUser(tmp->id, tmp->name, tmp->lang, tmp->password, newLevel, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
 						}
 
 						else if (a == 5) { 
-							printf("Choose New language \n[1]EN\n[2]RU: ");
+							printf("%s \n[1]EN\n[2]RU: ", i18("Choose New language"));
 							int langChoose = getInt();
 							char newLang[3];
 							if (langChoose == 2) { strcpy(newLang, "EN"); }
@@ -156,20 +156,20 @@ void management_users() {
 			if (users_list) {
 				int pId;
 				if (user_ptr->level == 1) {
-					printf("Enter ID of exist project: ");
+					printf("%s: ", i18("Enter ID of exist project"));
 					pId = getInt();
 				}
 				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
 
-				printf("All Users in project [%s]:\n", tmpP->name);
+				printf("%s [%s]:\n",i18("All Users in project"), tmpP->name);
 				user_node * t = users_list;
 				while (t) {
 					if (t->ptr->porj_id == pId)
 						printUser(t->ptr);
 					t = t->next;
 				}
-				printf("Enter id of user which need to delete\n");
+				printf("%s\n", i18("Enter id of user which need to delete"));
 				int id = getInt();
 				user *tmpU = findUserById(id);
 				if (tmpU == NULL)
@@ -182,7 +182,7 @@ void management_users() {
 				}
 			}
 			else {
-				printf("User list empty\n");
+				printf("%s\n", i18("User list empty"));
 			}
 		}
 

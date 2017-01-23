@@ -1,11 +1,11 @@
 void startMode() {
-	printf("PROJECTS MANAGMENT SYSTEM\n=========================\n");
+	printf("%s\n=========================\n",i18("PROJECTS MANAGMENT SYSTEM"));
 
-	printf("To start working with system please input your id: ");
+	printf("%s",i18("To start working with system please input your id: "));
 	int identificator = getInt();
 	char c;
 	while ((c = getchar()) != '\n' && c != EOF) {}
-	printf("Please enter your password: ");
+	printf("%s ",i18("Please enter your password:"));
 	char pass[256];
 	gets_s(pass, 256);
 

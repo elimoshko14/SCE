@@ -1,0 +1,81 @@
+Add new user
+Add new user
+Добавить нового пользователя
+Edit user
+Edit user
+Изменить пользователя
+Delete user
+Delete user
+Удалить пользователя
+Make your choise
+Make your choise
+Сделай свой выбор
+Enter unique id of new user
+Enter unique id of new user
+Введите уникальный идентификатор нового пользователя
+Enter name of user
+Enter name of user
+Введите имя пользователя
+Enter level of user
+Enter level of user
+Введите уровень пользователя
+Manager
+Manager
+Менеджер
+Worker
+Worker
+работник
+Enter salery of new user
+Enter salery of new user
+Введите зарплату нового пользователя
+All Users in project
+All Users in project
+Все пользователи в проекте
+Enter id of users which need to update
+Enter id of users which need to update
+Введите идентификатор пользователей, которые необходимо обновить
+Update user
+Update user
+Обновление пользователя
+Change Name
+Change Name
+Сменить имя
+Change Salery
+Change Salery
+Изменение заработной платы
+Change Current Task
+Change Current Task
+Изменение текущей задачи
+Change Level
+Change Level
+Изменение уровня
+Change Language of system
+Change Language of system
+Изменить язык системы
+Back to previous menu
+Back to previous menu
+Назад к предыдущему меню
+Enter New name
+Enter New name
+Введите новое имя
+Enter New salery in
+Enter New salery in
+Введите новый зарплату
+Enter task id
+Enter task id
+Введите идентификатор задачи
+Enter New level
+Enter New level
+Ввести новый уровень
+Choose New language
+Choose New language
+Выберите новый язык
+All Users in project
+All Users in project
+Все пользователи в проекте
+Enter id of user which need to delete
+Enter id of user which need to delete
+Введите идентификатор пользователя, который нужно удалить
+User list empty
+User list empty
+Список пользователей пуст
