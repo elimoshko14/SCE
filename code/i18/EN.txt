@@ -1,0 +1,4 @@
+MANAGE_PROJECT
+Manage projects
+MANAGE_USERS
+Manage users

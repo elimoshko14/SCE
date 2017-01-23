@@ -129,6 +129,12 @@
     <Text Include="..\db\comments.txt">
       <Filter>db</Filter>
     </Text>
+    <Text Include="..\i18\RU.txt">
+      <Filter>db</Filter>
+    </Text>
+    <Text Include="..\i18\EN.txt">
+      <Filter>db</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="App">

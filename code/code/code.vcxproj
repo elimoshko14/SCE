@@ -69,6 +69,8 @@
     <Text Include="..\db\projects.txt" />
     <Text Include="..\db\tasks.txt" />
     <Text Include="..\db\users.txt" />
+    <Text Include="..\i18\EN.txt" />
+    <Text Include="..\i18\RU.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3E329424-3EC4-4F9B-B0B5-DBB908503819}</ProjectGuid>
