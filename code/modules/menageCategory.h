@@ -2,13 +2,13 @@ void management_category() {
 	while (1) {
 		int i = 0;
 		printf("-----------------------------------\n\n");
-		printf("[%d] Add new category:\n", ++i);
-		printf("[%d] Edit category:\n", ++i);
-		printf("[%d] Delete category:\n", ++i);
-		printf("[%d] Back to Menu\n", ++i);
+		printf("[%d] %s\n", ++i,i18("Add new category:"));
+		printf("[%d] %s\n", ++i,i18("Edit category:"));
+		printf("[%d] %s\n", ++i,i18("Delete category:"));
+		printf("[%d] %s\n", ++i,i18("Back to Menu"));
 		printf("-----------------------------------\n\n");
 
-		printf("Make your choise: ");
+		printf("%s ",i18("Make your choise:"));
 		int x = getInt();
 
 		// add
@@ -17,7 +17,7 @@ void management_category() {
 			char name[256];
 			system("cls");
 			if (user_ptr->level == 1) {
-				printf("Enter ID of exist project: ");
+				printf("%s ",i18("Enter ID of exist project:"));
 				pId = getInt();
 			}
 			else {
@@ -32,7 +32,7 @@ void management_category() {
 				if (findCatById(id) != NULL)
 					printf("%s\n", errors[1][1]);
 				else {
-					printf("Enter name of new category: ");
+					printf("%s ",i18("Enter name of new category:"));
 
  					getchar();  gets_s(name,256);
 					addCat(id, name, pId, "-1");
@@ -49,7 +49,7 @@ void management_category() {
 			// if categories exist
 			if (categories_list) {
 				if (user_ptr->level == 1) {
-					printf("Enter ID of exist project: ");
+					printf("%s",i18("Enter ID of exist project: "));
 					pId = getInt();
 				}
 				else {
@@ -57,14 +57,14 @@ void management_category() {
 				}
 				proj *tmpP = findProjById(pId);
 				
-				printf("All Categories by project %s:\n", tmpP->name);
+				printf("%s %s:\n",i18("All Categories by project"), tmpP->name);
 				category_node * t = categories_list;
 				while (t) {
 					if (t->ptr->proj_id == pId)
 						printCat(t->ptr);
 					t = t->next;
 				}
-				printf("Enter id of category which need to update\n");
+				printf("%s\n",i18("Enter id of category which need to update"));
 				int id = getInt();
 				category * tmp = findCatById(id);
 
@@ -72,7 +72,7 @@ void management_category() {
 				if (tmp != NULL) {
 						system("cls");
 							char newName[256];
-							printf("Enter New name: ");
+							printf("%s ",i18("Enter New name:"));
 							getchar(); gets_s(newName,256);
 							UpdateCat(tmp->id, newName, tmp->proj_id, tmp->comment_arr); 
 				}
@@ -94,7 +94,7 @@ void management_category() {
 			// if category exist
 			if (categories_list) {
 				if (user_ptr->level == 1) {
-					printf("Enter ID of exist project: ");
+					printf("%s ",i18("Enter ID of exist project:"));
 					pId = getInt();
 				}
 				else {
@@ -102,21 +102,21 @@ void management_category() {
 				}
 				proj *tmpP = findProjById(pId);
 
-				printf("All Categories by project %s:\n", tmpP->name);
+				printf("%s %s:\n",i18("All Categories by project"), tmpP->name);
 				category_node * t = categories_list;
 				while (t) {
 					if (t->ptr->proj_id == pId)
 						printCat(t->ptr);
 					t = t->next;
 				}
-				printf("Enter id of category which need to delete\n");
+				printf("%s\n",i18("Enter id of category which need to delete"));
 				int id = getInt();
 				if (findCatById(id) == NULL)
 					printf("%s\n", errors[1][0]);
 				
 				else {
-					printf("Warning! Deleting a Category will delete all it's tasks\n");
-					printf("Are you sure? [1 / 0]\n");
+					printf("%s\n",i18("Warning! Deleting a Category will delete all it's tasks"));
+					printf("%s\n",i18("Are you sure? [1 / 0]"));
 					int checker = getInt();
 					if (checker == 1)
 						unSetCat(id);
