@@ -53,7 +53,7 @@ char * i18(char * key) {
 	temp = dictionary;
 	while (temp != NULL)
 	{
-		if (strcmp(temp->ptr->key, key))
+		if (strcmp(temp->ptr->key, key) == 0)
 			if (!user_ptr || strcmp(user_ptr->lang, "EN") == 0)
 				return temp->ptr->value_en;
 			else
