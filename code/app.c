@@ -9,6 +9,7 @@
 /*	Generic Includes */
 #include "lib/globals.h"
 #include "lib/structs.h"
+#include "i18/helper.h"
 
 //api methods//
 #include "lib/api.h"
@@ -35,7 +36,6 @@ int main() {
 	init();
 	// main loop
 	while (1) {
-		
 		// start if user not login
 		if (user_ptr == NULL) { startMode(); }
 

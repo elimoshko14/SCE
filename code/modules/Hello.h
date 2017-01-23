@@ -15,5 +15,8 @@ void startMode() {
 		system("cls");
 		printf("%s\n", errors[4][0]);
 	}
-	else { user_ptr = auth;  }
+	else { 
+		user_ptr = auth;
+		changeLang();
+	}
 }

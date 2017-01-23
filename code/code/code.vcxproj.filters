@@ -109,6 +109,9 @@
     <ClInclude Include="..\modules\copyTask.h">
       <Filter>modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\i18\helper.h">
+      <Filter>App</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">

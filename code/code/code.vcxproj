@@ -25,6 +25,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\i18\helper.h" />
     <ClInclude Include="..\lib\api.h" />
     <ClInclude Include="..\lib\globals.h" />
     <ClInclude Include="..\lib\rw-cmnt.h" />
