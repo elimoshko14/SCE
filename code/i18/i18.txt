@@ -283,3 +283,210 @@ Hello
 welcome to system
 welcome to system
 Добро пожаловать в систему
+Please enter the ID of the task you wish to copy
+Please enter the ID of the task you wish to copy
+Пожалуйста, введите идентификатор задачи, которую вы хотите скопировать
+Task has been copy ID To back press enter
+Task has been copy ID To back press enter
+Задача была копия ID Для резервного нажмите клавишу ВВОД
+There is no task with this ID
+There is no task with this ID
+Там нет задачи с этим идентификатором
+To Back press [0]
+To Back press [0]
+На задний план нажмите [0]
+Enter ID of exist project: 
+Enter ID of exist project: 
+Введите идентификатор проекта существуют:
+All Users in project
+All Users in project
+Все пользователи в проекте
+All Workers in project
+All Workers in project
+Все работающие в проекте
+PROJECTS MANAGMENT SYSTEM
+PROJECTS MANAGMENT SYSTEM
+СИСТЕМА УПРАВЛЕНИЯ ПРОЕКТЫ
+To start working with system please input your id: 
+To start working with system please input your id: 
+Для начала работы с системой пожалуйста, введите свой идентификатор:
+Please enter your password:
+Please enter your password:
+Пожалуйста введите ваш пароль:
+Bye Bye
+Bye Bye
+пока-пока
+Add new category:
+Add new category:
+Добавить новую категорию:
+Edit category:
+Edit category:
+Изменить категорию:
+Delete category:
+Delete category:
+Удалить категорию:
+Back to Menu
+Back to Menu
+Назад к меню
+Make your choise:
+Make your choise:
+Сделай свой выбор:
+Enter ID of exist project:
+Enter ID of exist project:
+Введите идентификатор проекта существуют:
+Enter name of new category:
+Enter name of new category:
+Введите название новой категории:
+Enter ID of exist project: 
+Enter ID of exist project: 
+Введите идентификатор проекта существуют:
+All Categories by project
+All Categories by project
+Все категории по проекту
+Enter id of category which need to update
+Enter id of category which need to update
+Введите идентификатор категории, которые нужно обновить
+Enter New name:
+Enter New name:
+Введите новое название:
+Enter ID of exist project:
+Enter ID of exist project:
+Введите идентификатор проекта существуют:
+All Categories by project
+All Categories by project
+Все категории по проекту
+Enter id of category which need to delete
+Enter id of category which need to delete
+Введите идентификатор категории, которые нужно удалить
+Warning! Deleting a Category will delete all it's tasks
+Warning! Deleting a Category will delete all it's tasks
+Предупреждение! Удаление категории будут удалены все это задачи
+Are you sure? [1 / 0]
+Are you sure? [1 / 0]
+Ты уверен? [1/0]
+Add new task:
+Add new task:
+Добавить новую задачу:
+Edit task:
+Edit task:
+Редактировать задание:
+Delete task:
+Delete task:
+Удалить задачу:
+Make your choise:
+Make your choise:
+Сделай свой выбор:
+Enter ID of exist project:
+Enter ID of exist project:
+Введите идентификатор проекта существуют:
+Enter title of new task:
+Enter title of new task:
+Введите название новой задачи:
+Enter cost of new task:
+Enter cost of new task:
+Введите стоимость новой задачи:
+Enter tags for new task:
+Enter tags for new task:
+Введите метки для новой задачи:
+Enter due of new task in format(d/m/y):
+Enter due of new task in format(d/m/y):
+Введите из-за новой задачи в формате (d / м / г):
+Enter id of user which will do this task:
+Enter id of user which will do this task:
+Введите идентификатор пользователя, который будет делать эту задачу:
+All Tasks by project
+All Tasks by project
+Все задачи по проекту
+in category
+in category
+в категории
+Enter id of task which need to update
+Enter id of task which need to update
+Введите идентификатор задачи, которые необходимо обновить
+Update task
+Update task
+задача обновления
+Change Title:
+Change Title:
+Изменение Название:
+Change Cost:
+Change Cost:
+Изменение стоимости:
+Change Due:
+Change Due:
+Изменение Due:
+Change Status:
+Change Status:
+Изменить статус:
+Change Tags:
+Change Tags:
+Изменить Ключевые слова:
+Change Task Category:
+Change Task Category:
+Изменение Категория задачи:
+Change Task User:
+Change Task User:
+Изменение пользовательской задачи:
+Back to previous menu
+Back to previous menu
+Назад к предыдущему меню
+Enter New title: 
+Enter New title: 
+Введите новый заголовок:
+Enter New cost:
+Enter New cost:
+Введите новый стоимость:
+Enter New password:
+Enter New password:
+Введите новый пароль:
+Enter New status (0 or 1):
+Enter New status (0 or 1):
+Введите новый статус (0 или 1):
+Enter New tags:
+Enter New tags:
+Введите новые теги:
+Enter id of exist category:
+Enter id of exist category:
+Введите идентификатор категории существуют:
+Enter id of exist user: 
+Enter id of exist user: 
+Введите идентификатор пользователя существует:
+Enter id of exist project:
+Enter id of exist project:
+Введите идентификатор проекта существуют:
+All Tasks by project
+All Tasks by project
+Все задачи по проекту
+in category
+in category
+в категории
+Enter id of task which need to delete
+Enter id of task which need to delete
+Введите идентификатор задачи, которую необходимо удалить
+Press Enter to continue
+Press Enter to continue
+Нажмите Enter, чтобы продолжить
+Back to menu Press Enter
+Back to menu Press Enter
+Назад к меню Нажмите Enter
+Now you don't have a task to do
+Now you don't have a task to do
+Теперь вам не стоит задача сделать
+Your request to reject  task has been send to manager
+Your request to reject  task has been send to manager
+Ваш запрос отклонить задание было отправить менеджеру
+Press Enter to back
+Press Enter to back
+Нажмите Enter, чтобы поддержать
+Your task is waiting approval
+Your task is waiting approval
+Ваша задача ожидает одобрения
+Your task is completed
+Your task is completed
+Ваша задача выполнена
+Very nice manager will check your task and give you another\nBack to menu Press Enter
+Very nice manager will check your task and give you another\nBack to menu Press Enter
+Очень хороший менеджер проверит вашу задачу и дать вам еще один \ Nback в меню Нажмите Enter
+Now you don't have a task to do
+Now you don't have a task to do
+Теперь вам не стоит задача сделать
