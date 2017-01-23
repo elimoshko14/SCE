@@ -5,7 +5,7 @@ void startMode() {
 	int identificator = getInt();
 	char c;
 	while ((c = getchar()) != '\n' && c != EOF) {}
-	printf("%s ",i8("Please enter your password:"));
+	printf("%s ",i18("Please enter your password:"));
 	char pass[256];
 	gets_s(pass, 256);
 
