@@ -55,7 +55,7 @@ void completeTask() {
 			updateTask(tmpT->id, tmpT->title, user_ptr->id, tmpT->category_id, tmpT->cost, -1, tmpT->tags, "*22/01/2017", tmpT->comments);
 			manager_bonus(findProjById(user_ptr->porj_id));
 			worker_bonus(findUserById(tmpT->user_id));
-			printf("%s",i18("Very nice manager will check your task and give you another\nBack to menu Press Enter"));
+			printf("%s",i18("Very nice manager will check your task and give you anotherBack to menu Press Enter"));
 			getchar();
 			getchar();
 		}

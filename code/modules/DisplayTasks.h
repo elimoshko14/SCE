@@ -22,7 +22,7 @@ void displayTask(int status) {
 				if (tmpC->ptr->proj_id == pId) {
 					printf("%s\n", i18("Category :"));
 					printf("%s\n", tmpC->ptr->name);
-					printf("%s\n", i18("TASKS\n\n"));
+					printf("%s\n", i18("TASKS\n"));
 					// tasks print
 					t = tasks_list;
 					while (t) {

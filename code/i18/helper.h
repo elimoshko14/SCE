@@ -38,8 +38,6 @@ void changeLang() {
 		fgets(trans->value_ru, LEN, file_ptr);
 		strtok(trans->value_ru, "\n");
 
-
-
 		pushKey(trans);
 		ch = fgetc(file_ptr);
 		ungetc(ch, file_ptr);
@@ -49,12 +47,13 @@ void changeLang() {
 }
 
 char * i18(char * key) {
+	strtok(key,"\n");
 	struct dict_node * temp;
 	temp = dictionary;
 	while (temp != NULL)
 	{
 		if (strcmp(temp->ptr->key, key) == 0)
-			if (!user_ptr || strcmp(user_ptr->lang, "EN") == 0)
+			if (user_ptr == NULL || strcmp(user_ptr->lang, "EN") == 0)
 				return temp->ptr->value_en;
 			else
 				return temp->ptr->value_ru;

@@ -24,7 +24,7 @@ void init() {
 	getProjs();
 	getCategories();
 	getTasks();
-
+	changeLang();
 	getComments();
 }
 
