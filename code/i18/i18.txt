@@ -103,3 +103,177 @@ Display all workers:
 Overdue of task:
 Overdue of task:
 Просроченные задания:
+Enter ID of exist project:
+Enter ID of exist project:
+Введи ИД проекта:
+All Categories by project
+All Categories by project
+Все категории даного проекта
+To Back press
+To Back press
+Чтобы вернутса нажмите
+Add new user
+Add new user
+Добавить нового пользователя
+Edit user
+Edit user
+Изменить пользователя
+Delete user
+Delete user
+Удалить пользователя
+Make your choise
+Make your choise
+Сделай свой выбор
+Enter unique id of new user
+Enter unique id of new user
+Введите уникальный идентификатор нового пользователя
+Enter name of user
+Enter name of user
+Введите имя пользователя
+Enter level of user
+Enter level of user
+Введите уровень пользователя
+Manager
+Manager
+Менеджер
+Worker
+Worker
+работник
+Enter salery of new user
+Enter salery of new user
+Введите зарплату нового пользователя
+All Users in project
+All Users in project
+Все пользователи в проекте
+Enter id of users which need to update
+Enter id of users which need to update
+Введите идентификатор пользователей, которые необходимо обновить
+Update user
+Update user
+Обновление пользователя
+Change Name
+Change Name
+Сменить имя
+Change Salery
+Change Salery
+Изменение заработной платы
+Change Current Task
+Change Current Task
+Изменение текущей задачи
+Change Level
+Change Level
+Изменение уровня
+Change Language of system
+Change Language of system
+Изменить язык системы
+Back to previous menu
+Back to previous menu
+Назад к предыдущему меню
+Enter New name
+Enter New name
+Введите новое имя
+Enter New salery in
+Enter New salery in
+Введите новый зарплату
+Enter task id
+Enter task id
+Введите идентификатор задачи
+Enter New level
+Enter New level
+Ввести новый уровень
+Choose New language
+Choose New language
+Выберите новый язык
+All Users in project
+All Users in project
+Все пользователи в проекте
+Enter id of user which need to delete
+Enter id of user which need to delete
+Введите идентификатор пользователя, который нужно удалить
+User list empty
+User list empty
+Список пользователей пуст
+Add new comment
+Add new comment
+Добавить комментарий
+Edit comment
+Edit comment
+Редактировать комментарий
+Delete comment
+Delete comment
+Удалить комментарий
+Back to Menu
+Back to Menu
+Назад к меню
+Make your choise
+Make your choise
+Сделай свой выбор
+Enter ID of exist project
+Enter ID of exist project
+Введите идентификатор проекта
+Enter ID of exist task
+Enter ID of exist task
+Введите идентификатор задачи
+Enter title of new comment
+Enter title of new comment
+Введите название нового комментария
+Enter your comment
+Enter your comment
+Введите свой комментарий
+All Comments by project
+All Comments by project
+Все комментарии по проекту
+for Task
+for Task
+для задачи
+Enter id of task which need to update
+Enter id of task which need to update
+Введите идентификатор задачи, которые необходимо обновить
+Update comment
+Update comment
+Обновить комментарий
+Change Title
+Change Title
+Изменить название
+Change Comment
+Change Comment
+Изменить комментарий
+Back to previous menu
+Back to previous menu
+Назад к предыдущему меню
+Enter New title
+Enter New title
+Введите новый заголовок
+Enter New Comment
+Enter New Comment
+Введите новый комментарий
+in task
+in task
+в задаче
+Enter id of comment need to delete
+Enter id of comment need to delete
+Введите идентификатор комментария необходимо удалить
+Enter ID of exist project
+Enter ID of exist project
+Введите идентификатор проекта
+Enter ID of exist task
+Enter ID of exist task
+Введите идентификатор задачи
+All Comments from project
+All Comments from project
+Все комментарии от проекта
+to task
+to task
+к задаче
+Author
+Author
+автор
+Enter ID of exist user
+Enter ID of exist user
+Введите идентификатор пользователя
+by User
+by User
+пользователем
+In Task
+In Task
+В задаче
