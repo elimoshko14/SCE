@@ -1,6 +1,105 @@
-MANAGE_PROJECT
-Manage projects
-ва ы павы аы па впа
-MANAGE_USERS
-Manage users
-ыавп ы ап выа пыв 
+Manage projects:
+Manage projects:
+Управление проектами:
+Manage users:
+Manage users:
+Управление пользователями:
+Manage category:
+Manage category:
+Управление категории:
+Manage tasks:
+Manage tasks:
+Управление задачами:
+Manage comments:
+Manage comments:
+Управление комментариями:
+Display all projects:
+Display all projects:
+Отображение всех проектов:
+Display all workers:
+Display all workers:
+Отображение всех работников:
+Display all managers:
+Display all managers:
+Показать все менеджеры:
+Display all categorys by specific project:
+Display all categorys by specific project:
+Показать все categorys от конкретного проекта:
+Display all tasks by specific project:
+Display all tasks by specific project:
+Показать все задачи по конкретному проекту:
+Display all completed tasks by specific project:
+Display all completed tasks by specific project:
+Показать все выполненные задачи от конкретного проекта:
+Display all uncompleted tasks by specific project:
+Display all uncompleted tasks by specific project:
+Показать все незавершенные задачи по конкретному проекту:
+Display all comments by specific task:
+Display all comments by specific task:
+Показать все комментарии от конкретной задачи:
+Display all comments by specific user:
+Display all comments by specific user:
+Показать все комментарии от конкретного пользователя:
+Display all users by specific project:
+Display all users by specific project:
+Показать всех пользователей от конкретного проекта:
+Copy Specific Task
+Copy Specific Task
+Копировать Конкретные задачи
+Copy Specific project
+Copy Specific project
+Копировать Конкретный проект
+Switch language to Russian:
+Switch language to Russian:
+Переключение языка на английский:
+Exit
+Exit
+Выход
+Display all categorys
+Display all categorys
+Показать все категории
+Display all tasks:
+Display all tasks:
+Показать все поставленные задачи:
+Display all completed tasks:
+Display all completed tasks:
+Показать все выполненные задачи:
+Display all uncompleted tasks:
+Display all uncompleted tasks:
+Показать все выполненные задачи:
+Display all comments by specific task:
+Display all comments by specific task:
+Показать все комментарии от конкретной задачи:
+Display all comments by specific user:
+Display all comments by specific user:
+Показать все комментарии от конкретного пользователя:
+Display all users:
+Display all users:
+Показать всех пользователей:
+Copy Specific Task
+Copy Specific Task
+Копировать Конкретные задачи
+Please make your choise:
+Please make your choise:
+Пожалуйста, сделайте свой выбор:
+Project info:
+Project info:
+Информация о проекте:
+My Task:
+My Task:
+Мое задание:
+Complete a Task:
+Complete a Task:
+Выполнения задачи:
+Manage comments:
+Manage comments:
+Управление комментариями:
+Display all comments:
+Display all comments:
+Показать все комментарии:
+Display all workers:
+Display all workers:
+Отображение всех работников:
+Overdue of task:
+Overdue of task:
+Просроченные задания:
