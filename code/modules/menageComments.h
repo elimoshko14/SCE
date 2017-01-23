@@ -2,13 +2,13 @@ void menageComments() {
 	while (1) {
 		int i = 0;
 		printf("-----------------------------------\n\n");
-		printf("[%d] Add new comment:\n", ++i);
-		printf("[%d] Edit comment:\n", ++i);
-		printf("[%d] Delete comment:\n", ++i);
-		printf("[%d] Back to Menu\n", ++i);
+		printf("[%d] %s:\n", ++i, i18("Add new comment"));
+		printf("[%d] %s:\n", ++i, i18("Edit comment"));
+		printf("[%d] %s:\n", ++i, i18("Delete comment"));
+		printf("[%d] %s\n", ++i, i18("Back to Menu"));
 		printf("-----------------------------------\n\n");
 
-		printf("Make your choise: ");
+		printf("%s: ", i18("Make your choise"));
 		int x = getInt();
 
 		// add
@@ -23,7 +23,7 @@ void menageComments() {
 			// director all project
 			// manager and worker only current project
 			if (user_ptr->level == 1) {
-				printf("Enter ID of exist project: ");
+				printf("%s: ",i18("Enter ID of exist project"));
 				pId = getInt();
 			}
 			else {
@@ -38,7 +38,7 @@ void menageComments() {
 				if (user_ptr->level == 3)
 					tId = user_ptr->task_id;
 				else {
-					printf("Enter ID of exist task: ");
+					printf("%s: ", i18("Enter ID of exist task"));
 					tId = getInt();
 				}
 				
@@ -46,9 +46,9 @@ void menageComments() {
 					printf("%s\n", errors[2][0]);
 				else {
 					id = ++unique_comment_key;
-					printf("Enter title of new comment: ");
+					printf("%s: ", i18("Enter title of new comment"));
 					getchar();  gets_s(title,256);
-					printf("Enter your comment: ");
+					printf("%s: ", i18("Enter your comment"));
 					getchar();  gets_s(body,256);
 					addComment(id, title, body, pId, tId, user_ptr->id);
 				}
@@ -67,7 +67,7 @@ void menageComments() {
 			// if task exist
 			if (tasks_list) {
 				if (user_ptr->level == 1) {
-					printf("Enter ID of exist project: ");
+					printf("%s: ", i18("Enter ID of exist project"));
 					pId = getInt();
 				}
 				else {
@@ -79,20 +79,20 @@ void menageComments() {
 					tId = user_ptr->task_id;
 				}
 				else {
-					printf("Enter ID of exist task: ");
+					printf("%s: ", i18("Enter ID of exist task"));
 					tId = getInt();
 				}
 				task *tmpT = findTaskById(tId);
 
 
-				printf("All Comments by project %s for Task [%s]:\n", tmpP->name, tmpT->title);
+				printf("%s %s %s [%s]:\n",i18("All Comments by project"), tmpP->name, i18("for Task"), tmpT->title);
 				comment_node * t = comments_list;
 				while (t) {
 					if (t->ptr->task_id == tId)
 						printComment(t->ptr);
 					t = t->next;
 				}
-				printf("Enter id of task which need to update\n");
+				printf("%s\n",i18("Enter id of task which need to update"));
 				int id = getInt();
 
 				comment * tmp = findcomentById(id);
@@ -102,21 +102,21 @@ void menageComments() {
 					while (1) {
 						system("cls");
 						i = 0;
-						printf("\n Update comment %s\n----------------------\n", tmp->title);
-						printf("[%d] Change Title:\n", ++i);
-						printf("[%d] Change Comment:\n", ++i);
-						printf("[%d] Back to previous menu\n", ++i);
+						printf("\n %s %s\n----------------------\n", i18("Update comment"), tmp->title);
+						printf("[%d] %s:\n", ++i, i18("Change Title"));
+						printf("[%d] %s:\n", ++i, i18("Change Comment"));
+						printf("[%d] %s\n", ++i, i18("Back to previous menu"));
 						int a = getInt();
 
 
 						if (a == 1) {
-							printf("Enter New title: ");
+							printf("%s: ", i18("Enter New title"));
 							getchar(); gets_s(newTitle,256);
 							updateComment(tmp->id, newTitle, tmp->body, tmp->porj_id, tmp->task_id, tmp->user_id);
 						}
 
 						else if (a == 2) {
-							printf("Enter New Comment: ");
+							printf("%s: ", i18("Enter New Comment"));
 							getchar(); gets_s(newBody,256);
 							updateComment(tmp->id, tmp->title, newBody, tmp->porj_id, tmp->task_id, tmp->user_id);
 						}
@@ -144,7 +144,7 @@ void menageComments() {
 			// if comment exist
 			if (comments_list) {
 				if (user_ptr->level == 1) {
-					printf("Enter ID of exist project: ");
+					printf("%s: ", i18("Enter ID of exist project"));
 					pId = getInt();
 				}
 				else {
@@ -156,13 +156,13 @@ void menageComments() {
 					tId = user_ptr->task_id;
 				}
 				else {
-					printf("Enter ID of exist task: ");
+					printf("%s: ", i18("Enter ID of exist task"));
 					tId = getInt();
 				}
 				task *tmpT = findTaskById(tId);
 
 
-				printf("All Comments by project %s in task %s:\n", tmpP->name, tmpT->title);
+				printf("%s %s %s %s:\n", i18("All Comments by project"), tmpP->name, i18("in task"), tmpT->title);
 				comment_node * t = comments_list;
 				while (t) {
 					if (t->ptr->task_id == tId)
@@ -170,7 +170,7 @@ void menageComments() {
 					t = t->next;
 				}
 				
-				printf("Enter id of comment need to delete\n");
+				printf("%s\n", i18("Enter id of comment need to delete"));
 				int id = getInt();
 				if (findcomentById(id) == NULL)
 					printf("%s\n", errors[3][0]);

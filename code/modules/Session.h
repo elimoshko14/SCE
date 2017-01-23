@@ -1,6 +1,6 @@
 void userSession() {
 	system("cls");
-	printf("\nHello %s welcome to system\n\n", user_ptr->name);
+	printf("\n %s %s\n\n",i18("Hello"),  user_ptr->name, i18("welcome to system"));
 	// print main menu
 	mainMenu();
 

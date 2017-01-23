@@ -1,0 +1,60 @@
+Add new comment
+Add new comment
+Добавить комментарий
+Edit comment
+Edit comment
+Редактировать комментарий
+Delete comment
+Delete comment
+Удалить комментарий
+Back to Menu
+Back to Menu
+Назад к меню
+Make your choise
+Make your choise
+Сделай свой выбор
+Enter ID of exist project
+Enter ID of exist project
+Введите идентификатор проекта
+Enter ID of exist task
+Enter ID of exist task
+Введите идентификатор задачи
+Enter title of new comment
+Enter title of new comment
+Введите название нового комментария
+Enter your comment
+Enter your comment
+Введите свой комментарий
+All Comments by project
+All Comments by project
+Все комментарии по проекту
+for Task
+for Task
+для задачи
+Enter id of task which need to update
+Enter id of task which need to update
+Введите идентификатор задачи, которые необходимо обновить
+Update comment
+Update comment
+Обновить комментарий
+Change Title
+Change Title
+Изменить название
+Change Comment
+Change Comment
+Изменить комментарий
+Back to previous menu
+Back to previous menu
+Назад к предыдущему меню
+Enter New title
+Enter New title
+Введите новый заголовок
+Enter New Comment
+Enter New Comment
+Введите новый комментарий
+in task
+in task
+в задаче
+Enter id of comment need to delete
+Enter id of comment need to delete
+Введите идентификатор комментария необходимо удалить
