@@ -82,6 +82,7 @@ void management_users() {
 						printf("[%d] Change Salery:\n", ++i);
 						printf("[%d] Change Current Task\n", ++i);
 						printf("[%d] Change Level:\n", ++i);
+						printf("[%d] Change Language of system:\n", ++i);
 						printf("[%d] Back to previous menu\n", ++i);
 						int a = getInt();
 
@@ -122,7 +123,17 @@ void management_users() {
 							else updateUser(tmp->id, tmp->name, tmp->lang, tmp->password, newLevel, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
 						}
 
-						else if (a == 5) { break; }
+						else if (a == 5) { 
+							printf("Choose New language \n[1]EN\n[2]RU: ");
+							int langChoose = getInt();
+							char newLang[3];
+							if (langChoose == 2) { strcpy(newLang, "EN"); }
+							else { strcpy(newLang, "EN"); }
+
+							updateUser(tmp->id, tmp->name, newLang, tmp->password, tmp->level, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
+						}
+
+						else if (a == 6) { break; }
 
 						else { break; }
 					}
