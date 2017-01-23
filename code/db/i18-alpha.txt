@@ -1,0 +1,98 @@
+﻿Please enter the ID of the Proj you wish to copy
+Please enter the ID of the Proj you wish to copy
+Пожалуйста, введите идентификатор Proj вы хотите скопировать
+There is no Proj with this ID
+There is no Proj with this ID
+Там нет Proj с этим идентификатором
+Enter ID of exist project:
+Enter ID of exist project:
+Введите идентификатор проекта существуют:
+All Tasks by project
+All Tasks by project
+Все задачи по проекту
+Category :
+Category :
+Категория:
+TASKS
+TASKS
+ЗАДАЧИ
+To Back press [0]
+To Back press [0]
+На задний план нажмите [0]
+Add new project:
+Add new project:
+Добавить новый проект:
+Add new project:
+Add new project:
+Добавить новый проект:
+Edit project:
+Edit project:
+Изменить проект:
+Delete project:
+Delete project:
+Удалить проект:
+Back to Menu
+Back to Menu
+Назад к меню
+Make your choise:
+Make your choise:
+Сделай свой выбор:
+Enter manager id for new project:
+Enter manager id for new project:
+Введите удостоверение личности менеджера для нового проекта:
+Enter name of new project:
+Enter name of new project:
+Введите имя нового проекта:
+Enter cost of new project:
+Enter cost of new project:
+Введите стоимость нового проекта:
+Enter dead line of new project in format (d/m/y):
+Enter dead line of new project in format (d/m/y):
+Enter мертвой линии нового проекта в формате (d / м / г):
+All Projects:
+All Projects:
+Все проекты:
+Enter id of project which need to update
+Enter id of project which need to update
+Введите идентификатор проекта, который нужно обновить
+Update project
+Update project
+проект обновления
+Change Name:
+Change Name:
+Сменить имя:
+Change Due:
+Change Due:
+Изменение Due:
+Change Status
+Change Status
+Изменить статус
+Change Manager
+Change Manager
+менеджер изменения
+Back to previous menu
+Back to previous menu
+Назад к предыдущему меню
+Enter New name:
+Enter New name:
+Введите новое название:
+Enter New cost:
+Enter New cost:
+Введите новый стоимость:
+Enter New dead line:
+Enter New dead line:
+Введите новый мертвой линии:
+Enter New status (0 or 1):
+Enter New status (0 or 1):
+Введите новый статус (0 или 1):
+Enter id of new Manager:
+Enter id of new Manager:
+Введите идентификатор нового менеджера:
+All Projects:
+All Projects:
+Все проекты:
+Enter id of project which need delete
+Enter id of project which need delete
+Введите идентификатор проекта, который нужно удалить
+
+

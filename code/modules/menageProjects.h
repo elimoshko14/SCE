@@ -2,13 +2,17 @@ void management_projets() {
 	while (1) {
 		int i = 0;
 		printf("-----------------------------------\n\n");
-		printf("[%d] Add new project:\n", ++i);
-		printf("[%d] Edit project:\n", ++i);
-		printf("[%d] Delete project:\n", ++i);
-		printf("[%d] Back to Menu\n", ++i);
+		printf("[%d]", ++i);
+		printf("%s\n", i18("Add new project:\n"));
+		printf("[%d]", ++i);
+		printf("%s\n", i18("Edit project:\n"));
+		printf("[%d]", ++i);
+		printf("%s\n", i18("Delete project:\n"));
+		printf("[%d]", ++i);
+		printf("%s\n", i18("Back to Menu\n"));
 		printf("-----------------------------------\n\n");
 
-		printf("Make your choise: ");
+		printf("%s\n", i18("Make your choise:\n"));
 		int x = getInt();
 
 		// add
@@ -24,7 +28,7 @@ void management_projets() {
 				printf("%s\n", errors[0][1]);
 
 			else {
-				printf("Enter manager id for new project: ");
+				printf("%s\n", i18("Enter manager id for new project:\n"));
 				manId = getInt();
 				user * tmp = findUserById(manId);
 				// if not found user
@@ -38,11 +42,11 @@ void management_projets() {
 				}
 				
 				else {
-					printf("Enter name of new project: ");
+					printf("%s\n", i18("Enter name of new project:\n"));
 					getchar();  gets_s(name,256);
-					printf("Enter cost of new project: ");
+					printf("%s\n", i18("Enter cost of new project:\n"));
 					cost = getInt();
-					printf("Enter dead line of new project in format (d/m/y): ");
+					printf("%s\n", i18("Enter dead line of new project in format (d/m/y):\n"));
 					getchar();  gets_s(due,256);
 
 					addProj(id, name, manId, cost, due);
@@ -57,9 +61,9 @@ void management_projets() {
 
 			// if projects exist
 			if (projects_list) {
-				printf("All Projects:\n");
+				printf("%s\n", i18("All Projects:\n"));
 				printProjTree();
-				printf("Enter id of project which need to update\n");
+				printf("%s\n", i18("Enter id of project which need to update\n"));
 				int id = getInt();
 				proj *tmp = findProjById(id);
 
@@ -68,44 +72,51 @@ void management_projets() {
 					while (1) {
 						system("cls");
 						i = 0;
-						printf("\n Update project %s\n----------------------\n", tmp->name);
-						printf("[%d] Change Name:\n", ++i);
-						printf("[%d] Change Cost:\n", ++i);
-						printf("[%d] Change Due:\n", ++i);
-						printf("[%d] Change Status\n", ++i);
-						printf("[%d] Change Manager\n", ++i);
-						printf("[%d] Back to previous menu\n", ++i);
+						printf("\n%s", i18("Update project"));
+						printf(" %s\n----------------------\n", tmp->name);
+						printf("[%d]", ++i);
+						printf("%s\n", i18("Change Name:\n"));
+						printf("[%d]", ++i);
+						printf("%s\n", i18("Change Cost:\n"));
+						printf("[%d]", ++i);
+						printf("%s\n", i18("Change Due:\n"));
+						printf("[%d]", ++i);
+						printf("%s\n", i18("Change Status\n"));
+						printf("[%d]", ++i);
+						printf("%s\n", i18("Change Manager\n"));
+						printf("[%d]", ++i);
+						printf("%s\n", i18("Back to previous menu\n"));
 						int a = getInt();
 
 						
 						if (a== 1) { 
 							char newName[256];
-							printf("Enter New name: ");
+							printf("%s\n", i18("Enter New name:"));
 							getchar(); gets_s(newName,256);
 							updateProj(tmp->id, newName, tmp->manager_id, tmp->due, tmp->status, tmp->cost); 
 							}
 
 						else if(a==2) {
-							printf("Enter New cost: ");
+							printf("%s\n", i18("Enter New cost:"));
 							int newCost = getInt();
 							updateProj(tmp->id, tmp->name, tmp->manager_id, tmp->due, tmp->status, newCost); 
 							}
 						else if (a == 3) {
 							char newDline[256];
-							printf("Enter New dead line: ");
+							printf("%s\n", i18("Enter New dead line:"));
 							getchar(); gets_s(newDline,256);
 							updateProj(tmp->id, tmp->name, tmp->manager_id, newDline, tmp->status, tmp->cost);
 							}
 
 						else if (a == 4) {
-							printf("Enter New status (0 or 1): ");
+							printf("%s\n", i18("Enter New status (0 or 1):"));
 							int newStatus = getInt();
 							if (newStatus > 1 || newStatus < 0)  printf("%s\n", errors[0][3]); 
 							else updateProj(tmp->id, tmp->name, tmp->manager_id, tmp->due, newStatus, tmp->cost);
 							}
 
 						else if (a == 5) {
-							printf("Enter id of new Manager: ");
+							printf("%s\n", i18("Enter id of new Manager:"));
 							int newMan = getInt();
 							user * tmpU = findUserById(newMan);
 							if ((tmpU != NULL) && (tmpU->level == 2) && (tmpU->porj_id == 0)) {
@@ -139,9 +150,9 @@ void management_projets() {
 		else if (x == 3) {
 			// if projects exist
 			if (projects_list) {
-				printf("All Projects:\n");
+				printf("%s\n", i18("All Projects:\n"));
 				printProjTree();
-				printf("Enter id of project which need delete\n");
+				printf("%s\n", i18("Enter id of project which need delete\n"));
 				int id = getInt();
 				if (findProjById(id) == NULL)
 					printf("%s\n", errors[0][0]);

@@ -2,7 +2,7 @@
 void CopyProj() {
 	int copy_id;
 	if (projects_list) {
-		printf("Please enter the ID of the Proj you wish to copy\n");
+		printf("%s\n",i18("Please enter the ID of the Proj you wish to copy"));
 		copy_id = getInt();
 		proj *tmpT = findProjById(copy_id);
 		if (tmpT) {
@@ -33,7 +33,7 @@ void CopyProj() {
 		}
 		else
 		{
-			printf("There is no Proj with this ID\n");
+			printf("%s\n", i18("There is no Proj with this ID\n"));
 		}
 	}
 }
