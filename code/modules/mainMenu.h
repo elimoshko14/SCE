@@ -1,7 +1,7 @@
 // director menu
 void menu_1() {
 	int i = 0;
-	printf("[%d] Manage projects:\n", ++i);
+	printf("[%d] Manage projects:\n", ++i); 
 	printf("[%d] Manage users:\n", ++i);
 	printf("[%d] Manage category:\n", ++i);
 	printf("[%d] Manage tasks:\n", ++i);

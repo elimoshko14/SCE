@@ -4,9 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <time.h>
 #include <math.h>
-
 /*********************/
 /*	Generic Includes */
 #include "lib/globals.h"
@@ -14,12 +12,16 @@
 
 //api methods//
 #include "lib/api.h"
-
+ 
 //system functions//
 #include "modules/functions.h"
 
 // init functions to bild all dinamic structures
 void init() {
+	system("chcp 1251");
+	printf("פפûגפûגפûגפû גפû ג\n");
+
+
 	getUsers();
 	getProjs();
 	getCategories();
@@ -34,7 +36,6 @@ void init() {
 int main() {
 	// initialization of system
 	init();
-
 	// main loop
 	while (1) {
 		
