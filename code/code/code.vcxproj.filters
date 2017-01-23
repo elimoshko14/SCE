@@ -129,10 +129,7 @@
     <Text Include="..\db\comments.txt">
       <Filter>db</Filter>
     </Text>
-    <Text Include="..\i18\RU.txt">
-      <Filter>db</Filter>
-    </Text>
-    <Text Include="..\i18\EN.txt">
+    <Text Include="..\i18\i18.txt">
       <Filter>db</Filter>
     </Text>
   </ItemGroup>

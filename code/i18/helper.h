@@ -1,46 +1,65 @@
 #define LEN 1000
 
-char MANAGE_PROJECT[LEN];
-char MANAGE_USERS[LEN];
-
+void pushKey(dict * node)
+{
+	struct dict_node * temp;
+	temp = (struct dict_node *)malloc(sizeof(struct dict_node));
+	temp->ptr = node;
+	if (dictionary == NULL)
+	{
+		dictionary = temp;
+		dictionary->next = NULL;
+	}
+	else
+	{
+		temp->next = dictionary;
+		dictionary = temp;
+	}
+}
 
 void changeLang() {
 
-	if (!user_ptr) {
-		strcpy(MANAGE_PROJECT, "Manage projects");
+	char i18[] = "../i18/i18.txt";
+	FILE * file_ptr;
+	file_ptr = fopen(i18, "r");
+	if (isEmptyFile(file_ptr)) return;
+
+	// GET DATA FROM FILE //
+	char ch; // See end of loop
+	do {
+		struct dict * trans = (struct dict *)malloc(sizeof(struct dict));
+
+		fgets(trans->key, 256, file_ptr);
+		strtok(trans->key, "\n");
+
+		fgets(trans->value_en, LEN, file_ptr);
+		strtok(trans->value_en, "\n");
+
+		fgets(trans->value_ru, LEN, file_ptr);
+		strtok(trans->value_ru, "\n");
+
+
+
+		pushKey(trans);
+		ch = fgetc(file_ptr);
+		ungetc(ch, file_ptr);
+	} while (!feof(file_ptr) && ch != EOF);
+
+	fclose(file_ptr);
+}
+
+char * i18(char * key) {
+	struct dict_node * temp;
+	temp = dictionary;
+	while (temp != NULL)
+	{
+		if (strcmp(temp->ptr->key, key))
+			if (!user_ptr || strcmp(user_ptr->lang, "EN") == 0)
+				return temp->ptr->value_en;
+			else
+				return temp->ptr->value_ru;
+		else
+			temp = temp->next;
 	}
-	else {
-		char i18_ru[] = "../i18/RU.txt";
-		char i18_en[] = "../i18/EN.txt";
-		FILE * file_ptr;
-		if (strcmp(user_ptr->lang, "EN") == 0)
-			file_ptr = fopen(i18_en, "r");
-		else file_ptr = fopen(i18_ru, "r");
-		if (isEmptyFile(file_ptr)) return;
-
-		// GET DATA FROM FILE //
-		char ch; // See end of loop
-		do {
-			char key[LEN], value[LEN];
-			fgets(key, LEN, file_ptr);
-			strtok(key, "\n");
-
-			if (strcmp(key, "MANAGE_PROJECT") == 0) {
-				fgets(value, LEN, file_ptr);
-				strtok(value, "\n");
-				strcpy(MANAGE_PROJECT, value);
-			}
-			else if (strcmp(key, "MANAGE_USERS") == 0) {
-				fgets(value, LEN, file_ptr);
-				strtok(value, "\n");
-				strcpy(MANAGE_USERS, value);
-			}
-			else {}
-			
-			ch = fgetc(file_ptr);
-			ungetc(ch, file_ptr);
-		} while (!feof(file_ptr) && ch != EOF);
-
-		fclose(file_ptr);
-	}
+	return NULL;
 }

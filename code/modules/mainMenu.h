@@ -1,8 +1,8 @@
 // director menu
 void menu_1() {
 	int i = 0;
-	printf("[%d] %s:\n", ++i, MANAGE_PROJECT);
-	printf("[%d] %s:\n", ++i, MANAGE_USERS); 
+	printf("[%d] %s:\n", ++i, i18("MANAGE_PROJECT"));
+	printf("[%d] %s:\n", ++i, i18("MANAGE_USERS"));
 	printf("[%d] Manage category:\n", ++i);
 	printf("[%d] Manage tasks:\n", ++i);
 	printf("[%d] Manage comments:\n", ++i);

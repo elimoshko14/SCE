@@ -2,6 +2,18 @@ typedef int bool;
 #define true 1
 #define false 0
 
+
+typedef struct dict {
+	char key[256];
+	char value_en[1000];
+	char value_ru[1000];
+}dict;
+
+typedef struct dict_node {
+	struct dict * ptr;
+	struct dict_node * next;
+}dict_node;
+
 typedef struct user{
 	long id;
 	char name[256];

@@ -14,6 +14,7 @@ struct proj_node * projects_list = NULL;
 struct task_node * tasks_list = NULL;
 struct comment_node * comments_list = NULL;
 struct category_node * categories_list = NULL;
+struct dict_node * dictionary = NULL;
 
 // array of errors 
 char errors[6][10][100] = {
