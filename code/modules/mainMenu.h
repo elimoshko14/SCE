@@ -2,7 +2,7 @@
 void menu_1() {
 	int i = 0;
 	printf("[%d] %s:\n", ++i, MANAG_PROJECT);
-	printf("[%d] Manage users:\n", ++i);
+	printf("[%d] %s:\n", ++i, MANAG_USERS); 
 	printf("[%d] Manage category:\n", ++i);
 	printf("[%d] Manage tasks:\n", ++i);
 	printf("[%d] Manage comments:\n", ++i);
