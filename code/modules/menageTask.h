@@ -2,13 +2,13 @@ void management_tasks() {
 	while (1) {
 		int i = 0;
 		printf("-----------------------------------\n\n");
-		printf("[%d] Add new task:\n", ++i);
-		printf("[%d] Edit task:\n", ++i);
-		printf("[%d] Delete task:\n", ++i);
-		printf("[%d] Back to Menu\n", ++i);
+		printf("[%d] %s\n", ++i,i18("Add new task:"));
+		printf("[%d] %s\n", ++i,i18("Edit task:"));
+		printf("[%d] %s\n", ++i,i18("Delete task:"));
+		printf("[%d] %s\n", ++i,i18("Back to Menu"));
 		printf("-----------------------------------\n\n");
 
-		printf("Make your choise: ");
+		printf("%s ",i18("Make your choise:"));
 		int x = getInt();
 
 		// add
@@ -20,7 +20,7 @@ void management_tasks() {
 
 			system("cls");
 			if (user_ptr->level == 1) {
-				printf("Enter ID of exist project: ");
+				printf("%s ",i18("Enter ID of exist project:"));
 				pId = getInt();
 			}
 			else { pId = user_ptr->porj_id; }
@@ -30,22 +30,22 @@ void management_tasks() {
 				printf("%s\n", errors[0][0]);
 
 			else {
-				printf("Enter ID of exist category: ");
+				printf("%s ",i18("Enter ID of exist category:"));
 				cId = getInt();
 				if (findCatById(cId) == NULL)
 					printf("%s\n", errors[1][0]);
 				else {
 					id = ++unique_task_key;
-					printf("Enter title of new task: ");
+					printf("%s ",i18("Enter title of new task:"));
 					getchar();  gets_s(title,256);
-					printf("Enter cost of new task: ");
+					printf("%s ",i18("Enter cost of new task:"));
 					cost = getInt();
-					printf("Enter tags for new task: ");
+					printf("%s ",i18("Enter tags for new task:"));
 					getchar();  gets_s(tags,256);
-					printf("Enter due of new task in format(d/m/y): ");
+					printf("%s ",i18("Enter due of new task in format(d/m/y):"));
 					getchar();  gets_s(due,256);
 
-					printf("Enter id of user which will do this task: ");
+					printf("%s ",i18("Enter id of user which will do this task:"));
 					int uId = getInt();
 					user *tmpU;				
 					tmpU = findUserById(uId);
@@ -72,7 +72,7 @@ void management_tasks() {
 			// if categories exist
 			if (categories_list) {
 				if (user_ptr->level == 1) {
-					printf("Enter ID of exist project: ");
+					printf("%s ",i18("Enter ID of exist project:"));
 					pId = getInt();
 				}
 				else { pId = user_ptr->porj_id; }
@@ -83,14 +83,14 @@ void management_tasks() {
 				category *tmpC = findCatById(cId);
 
 
-				printf("All Tasks by project %s in category %s:\n", tmpP->name, tmpC->name);
+				printf("%s %s %s %s:\n",i18("All Tasks by project"), tmpP->name,i18("in category"), tmpC->name);
 				task_node * t = tasks_list;
 				while (t) {
 					if (t->ptr->category_id == cId)
 						printTask(t->ptr);
 					t = t->next;
 				}
-				printf("Enter id of task which need to update\n");
+				printf("%s\n",i18("Enter id of task which need to update"));
 				int id = getInt();
 
 				task * tmp = findTaskById(id);
@@ -100,49 +100,49 @@ void management_tasks() {
 					while (1) {
 						system("cls");
 						i = 0;
-						printf("\n Update task %s\n----------------------\n", tmp->title);
-						printf("[%d] Change Title:\n", ++i);
-						printf("[%d] Change Cost:\n", ++i);
-						printf("[%d] Change Due:\n", ++i);
-						printf("[%d] Change Status\n", ++i);
-						printf("[%d] Change Tags\n", ++i);
-						printf("[%d] Change Task Category\n", ++i);
-						printf("[%d] Change Task User\n", ++i);
-						printf("[%d] Back to previous menu\n", ++i);
+						printf("\n %s %s\n----------------------\n",i18("Update task"), tmp->title);
+						printf("[%d] %s\n", ++i,i18("Change Title:"));
+						printf("[%d] %s\n", ++i,i18("Change Cost:"));
+						printf("[%d] %s\n", ++i,i18("Change Due:"));
+						printf("[%d] %s\n", ++i,i18("Change Status:"));
+						printf("[%d] %s\n", ++i,i18("Change Tags:"));
+						printf("[%d] %s\n", ++i,i18("Change Task Category:"));
+						printf("[%d] %s\n", ++i,i18("Change Task User:"));
+						printf("[%d] %s\n", ++i,i18("Back to previous menu"));
 						int a = getInt();
 
 
 						if (a == 1) {
-							printf("Enter New title: ");
+							printf("%s",i18("Enter New title: "));
 							getchar(); gets_s(newTitle,256);
 							updateTask(tmp->id, newTitle, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments); 
 						}
 
 						else if (a == 2) {
-							printf("Enter New cost: ");
+							printf("%s ",i18("Enter New cost:"));
 							newCost = getInt();
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, newCost, tmp->status, tmp->tags, tmp->due, tmp->comments);
 						}
 						else if (a == 3) {
-							printf("Enter New password: ");
+							printf("%s ",i18("Enter New password:"));
 							getchar(); gets_s(newDue, 256);
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, tmp->tags, newDue, tmp->comments);
 						}
 
 						else if (a == 4) {
-							printf("Enter New status (0 or 1): ");
+							printf("%s ",i18("Enter New status (0 or 1):"));
 							newStatus = getInt();
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, newStatus, tmp->tags, tmp->due, tmp->comments);
 						}
 
 						else if (a == 5) {
-							printf("Enter New tags: ");
+							printf("%s ",i18("Enter New tags:"));
 							getchar(); gets_s(newTags,256);
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, newTags, tmp->due, tmp->comments);
 						}
 
 						else if (a == 6) {  
-							printf("Enter id of exist category: ");
+							printf("%s ", i18("Enter id of exist category:"));
 							cId = getInt();
 							tmpC = findCatById(cId);
 							if (tmpC == NULL)
@@ -151,7 +151,7 @@ void management_tasks() {
 								updateTask(tmp->id, tmp->title, tmp->user_id, cId, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments);
 						}
 						else if (a == 7) {
-							printf("Enter id of exist user: ");
+							printf("%s",i18("Enter id of exist user: "));
 							int uId = getInt();
 							user *tmpU = findUserById(uId);
 							if (tmpU == NULL)
@@ -185,18 +185,18 @@ void management_tasks() {
 			// if task exist
 			if (tasks_list) {
 				if (user_ptr->level == 1) {
-					printf("Enter ID of exist project: ");
+					printf("%s ",i18("Enter id of exist project:"));
 					pId = getInt();
 				}
 				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
 
-				printf("Enter ID of exist category: ");
+				printf("%s ",i18("Enter id of exist category:"));
 				int cId = getInt();
 				category *tmpC = findCatById(cId);
 
 
-				printf("All Tasks by project %s in category %s:\n", tmpP->name, tmpC->name);
+				printf("%s %s %s %s:\n",i18("All Tasks by project"), tmpP->name,i18("in category"), tmpC->name);
 				task_node * t = tasks_list;
 				while (t) {
 					if (t->ptr->category_id == cId)
@@ -204,7 +204,7 @@ void management_tasks() {
 					t = t->next;
 				}
 				
-				printf("Enter id of task which need to delete\n");
+				printf("%s\n",i18("Enter id of task which need to delete"));
 				int id = getInt();
 				if (findTaskById(id) == NULL)
 					printf("%s\n", errors[2][0]);

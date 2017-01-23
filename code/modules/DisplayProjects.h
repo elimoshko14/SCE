@@ -7,6 +7,6 @@ void displayProjects() {
 		printf("%s\n", errors[0][2]);
 	}
 
-	printf("To Back press [0]");
+	printf("%s",i18("To Back press [0]"));
 	int t = getInt();
 }
