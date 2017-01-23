@@ -19,9 +19,6 @@
 // init functions to bild all dinamic structures
 void init() {
 	system("chcp 1251");
-	printf("פפûגפûגפûגפû גפû ג\n");
-
-
 	getUsers();
 	getProjs();
 	getCategories();
