@@ -67,17 +67,17 @@ void menu_3() {
 	}
 	else {
 		int i = 0;
-		printf("[%d] Project info:\n", ++i);
-		printf("[%d] My Task:\n", ++i);
-		printf("[%d] Complete a Task:\n", ++i);
-		printf("[%d] Manage comments:\n", ++i);
-		printf("[%d] Display all comments:\n", ++i);
-		printf("[%d] Display all workers:\n", ++i);
-		printf("[%d] Overdue of task:\n", ++i);
-		printf("[%d] Switch language to Russian:\n", ++i);
-		printf("[%d] Exit", ++i);
+		printf("[%d] %s\n", ++i, i18("Project info:"));
+		printf("[%d] %s\n", ++i, i18("My Task:"));
+		printf("[%d] %s\n", ++i, i18("Complete a Task:"));
+		printf("[%d] %s\n", ++i, i18("Manage comments:"));
+		printf("[%d] %s\n", ++i, i18("Display all comments:"));
+		printf("[%d] %s\n", ++i, i18("Display all workers:"));
+		printf("[%d] %s\n", ++i, i18("Overdue of task:"));
+		printf("[%d] %s\n", ++i, i18("Switch language to Russian:"));
+		printf("[%d] %s", ++i, i18("Exit"));
 
-		printf("\n\n Please make your choise: ");
+		printf("\n\n%s", i18("Please make your choise:"));
 	}
 }
 
