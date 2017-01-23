@@ -14,7 +14,7 @@ void displayCommentsByTask() {
 			// director all project
 			// manager and worker only current project
 			if (user_ptr->level == 1) {
-				printf("Enter ID of exist project: ");
+				printf("%s: ",i18("Enter ID of exist project"));
 				 pId = getInt();
 			}
 
@@ -26,12 +26,12 @@ void displayCommentsByTask() {
 			if (user_ptr->level == 3) { tId = user_ptr->task_id;  
 			}
 			else {
-				printf("Enter ID of exist task: ");
+				printf("%s: ",i18("Enter ID of exist task"));
 				tId = getInt();
 			}
 			task *tmpT = findTaskById(tId);
 
-			printf("All Comments from project %s, to task ::%s:: \n", tmpP->name, tmpT->title);
+			printf("%s %s, %s ::%s:: \n",i18("All Comments from project"), tmpP->name, i18("to task"), tmpT->title);
 					// comments print
 					t = comments_list;
 					while (t) {
@@ -40,7 +40,7 @@ void displayCommentsByTask() {
 							printComment(t->ptr);
 							tmpU = findUserById(t->ptr->user_id);
 							if (tmpU)
-								printf("Author ::%s::", tmpU->name);
+								printf("%s ::%s::",i18("Author"), tmpU->name);
 							printf("\n\n");
 						}
 						t = t->next;
@@ -48,7 +48,7 @@ void displayCommentsByTask() {
 		}
 	}
 
-	printf("To Back press [0]");
+	printf("%s [0]", i18("To Back press"));
 	int t = getInt();
 }
 
@@ -67,17 +67,18 @@ void displayCommentsByUser() {
 			task *tmpT = NULL;
 
 			if (user_ptr->level == 1) {
-				printf("Enter ID of exist project: ");
+				printf("%s: ", i18("Enter ID of exist project"));
 				pId = getInt();
 			}
 			else { pId = user_ptr->porj_id; }
 			proj *tmpP = findProjById(pId);
 
-			printf("Enter ID of exist user: ");
+			printf("%s: ",i18("Enter ID of exist user"));
 			int uId = getInt();
 			user *tmpU = findUserById(uId);
 
-			printf("All Comments from project %s, by User ::%s:: \n", tmpP->name, tmpU->name);
+			printf("%s %s, %s, ::%s:: \n",i18("All Comments from project"), tmpP->name,
+				i18("by User"), tmpU->name);
 			// comments print
 			t = comments_list;
 			while (t) {
@@ -86,7 +87,7 @@ void displayCommentsByUser() {
 					printComment(t->ptr);
 					tmpT = findTaskById(t->ptr->task_id);
 					if (tmpT)
-						printf("In Task [%s]", tmpT->title);
+						printf("%s [%s]", i18("In Task"), tmpT->title);
 					printf("\n\n");
 				}
 				t = t->next;
@@ -94,6 +95,6 @@ void displayCommentsByUser() {
 		}
 	}
 
-	printf("To Back press [0]");
+	printf("%s [0]", i18("To Back press"));
 	int t = getInt();
 }
