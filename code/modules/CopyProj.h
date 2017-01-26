@@ -1,4 +1,3 @@
-
 void CopyProj() {
 	int copy_id;
 	if (projects_list) {
@@ -31,9 +30,10 @@ void CopyProj() {
 			}
 
 		}
-		else
-		{
+		else {
 			printf("%s\n", i18("There is no Proj with this ID\n"));
 		}
 	}
+	printf("%s [0]", i18("To Back press"));
+	int t = getInt();
 }

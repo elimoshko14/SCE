@@ -1,7 +1,7 @@
 void displayTask(int status) {
 	system("cls");
 	if (projects_list == NULL) {
-		printf("%s\n", i18("Projects List is empty")); return;
+		printf("%s\n", i18("Projects List is empty")); 
 	}
 
 	else {

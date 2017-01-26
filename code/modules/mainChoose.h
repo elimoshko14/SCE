@@ -25,7 +25,7 @@ void directorChoose(int ch) {
 	
 	if (i == ch){ copyTask();   }i++;
 	if (i == ch) { CopyProj(); }i++;
-	if (i == ch){ /*Translate*/   }i++;
+	if (i == ch) { dinamicLangSwitch(); }i++;
 	if (i == ch){  printf("\n\n Bye Bye \n\n"); exit(0);  }
 }
 

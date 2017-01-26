@@ -24,7 +24,7 @@ Display all managers:
 Показать все менеджеры:
 Display all categorys by specific project:
 Display all categorys by specific project:
-Показать все categorys от конкретного проекта:
+Показать все категории от конкретного проекта:
 Display all tasks by specific project:
 Display all tasks by specific project:
 Показать все задачи по конкретному проекту:

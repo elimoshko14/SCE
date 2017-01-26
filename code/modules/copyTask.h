@@ -6,13 +6,12 @@ void copyTask() {
 			task *tmpT = findTaskById(copy_id);
 			if (tmpT) {
 				addTask(++unique_task_key, tmpT->title, 0, tmpT->category_id, tmpT->cost, tmpT->status, tmpT->tags, tmpT->due, "");
-				printf("%s",i18("Task has been copy ID To back press enter"));
-				getchar(); 
-				getchar();
+				printf("%s",i18("Task has been copy ID"));
 			}
-			else
-			{
+			else {
 				printf("%s\n",i18("There is no task with this ID"));
 		}
 	}
+		printf("%s [0]", i18("To Back press"));
+		int t = getInt();
 }

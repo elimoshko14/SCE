@@ -12,6 +12,7 @@
 #include "modules/workerFunctions.h"
 #include "modules/copyTask.h"
 #include "modules/CopyProj.h"
+#include "modules/dinamicLangSwitch.h"
 
 #include "modules/mainMenu.h"
 #include "modules/mainChoose.h"
