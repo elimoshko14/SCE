@@ -5,7 +5,7 @@ void management_users() {
 		printf("[%d] %s:\n", ++i, i18("Add new user"));
 		printf("[%d] %s:\n", ++i, i18("Edit user"));
 		printf("[%d] %s:\n", ++i, i18("Delete user"));
-		printf("[%d] Back to Menu\n", ++i);
+		printf("[%d] %s\n", ++i, i18("Back to Menu"));
 		printf("-----------------------------------\n\n");
 
 		printf("%s: ", i18("Make your choise"));
@@ -24,13 +24,13 @@ void management_users() {
 
 			// if project is not exist arise error
 			if (findProjById(pId) == NULL)
-				printf("%s\n", errors[0][0]);
+				printf("%s\n", i18("Not found projects with this id"));
 
 			else {
 				printf("%s: ", i18("Enter unique id of new user"));
 				id = getInt();
 				if (findUserById(id) != NULL)
-					printf("%s\n", errors[4][1]);
+					printf("%s\n", i18("User is allready exist"));
 				else {
 					printf("%s: ", i18("Enter name of user"));
 					getchar();  gets_s(name,256);
@@ -102,10 +102,10 @@ void management_users() {
 							int tId = getInt();
 							task *tmpT = findTaskById(tId);
 							if (tmpT == NULL) {
-								printf("%s\n", errors[2][0]);
+								printf("%s\n", i18("Not found task with this id"));
 							}
 							else if(tmpT->user_id != 0) {
-								printf("%s\n", errors[4][3]);
+								printf("%s\n", i18("Another user is allready do it"));
 							}
 							else {
 								// first set new task to user
@@ -119,7 +119,7 @@ void management_users() {
 						else if (a == 4) {
 							printf("%s\n[2] %s\n[3] %s\n: ", i18("Enter New level"), i18("Manager"), i18("Worker"));
 							newLevel = getInt();
-							if (newLevel > 3 || newLevel < 2)  printf("%s\n", errors[4][2]);
+							if (newLevel > 3 || newLevel < 2)  printf("%s\n", i18("Level of this user is not appropriate"));
 							else updateUser(tmp->id, tmp->name, tmp->lang, tmp->password, newLevel, tmp->porj_id, tmp->task_id, tmp->salery, tmp->online, tmp->coments);
 						}
 
@@ -141,12 +141,12 @@ void management_users() {
 					
 				// not found user
 				else {
-					printf("%s\n", errors[4][0]);
+					printf("%s\n", i18("User not found!"));
 				}
 			}
 			// arise error no projects => no users (except director)
 			else {
-				printf("%s\n", errors[0][2]);
+				printf("%s\n", i18("Projects List is empty"));
 			}
 		}
 
@@ -173,7 +173,7 @@ void management_users() {
 				int id = getInt();
 				user *tmpU = findUserById(id);
 				if (tmpU == NULL)
-					printf("%s\n", errors[4][0]);
+					printf("%s\n", i18("User not found!"));
 				
 				else {
 					int task_id = tmpU->task_id;

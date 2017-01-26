@@ -601,3 +601,63 @@ All Projects:
 Enter id of project which need delete
 Enter id of project which need delete
 Введите идентификатор проекта, который нужно удалить
+Not found projects with this id
+Not found projects with this id
+Не найдено проектов с этим идентификатором
+Projects is allready exist
+Projects is allready exist
+Проекты уже существуют
+Projects List is empty
+Projects List is empty
+Список проектов пуст
+Project status incorrect
+Project status incorrect
+Статус проекта неверны
+Not found category with this id
+Not found category with this id
+Не найдено категорию с этим идентификатором
+Category is allready exist
+Category is allready exist
+Категория уже существует
+Categories List is empty
+Categories List is empty
+Категории Список пуст
+Not found task with this id
+Not found task with this id
+Не найдено задачу с этим идентификатором
+Task is allready exist
+Task is allready exist
+Задача уже существует
+Tasks List is empty
+Tasks List is empty
+Список задач пуст
+Task status incorrect
+Task status incorrect
+Статус задачи неверны
+Not found comments with this id
+Not found comments with this id
+Не найдено комментарии с этим идентификатором
+Comment is allready exist
+Comment is allready exist
+Комментарий уже существует
+Comments List is empty
+Comments List is empty
+Комментарии Список пуст
+User not found!
+User not found!
+Пользователь не найден!
+User is allready exist
+User is allready exist
+Пользователь уже существует
+Level of this user is not appropriate
+Level of this user is not appropriate
+Уровень этого пользователя не подходит
+Another user is allready do it
+Another user is allready do it
+Другой пользователь уже это сделать
+You don't have a project to work for a while
+You don't have a project to work for a while
+У вас нет проекта, чтобы работать на некоторое время
+This options is disabled
+This options is disabled
+Эта опция отключена

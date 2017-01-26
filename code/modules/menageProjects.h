@@ -25,7 +25,7 @@ void management_projets() {
 
 			// if project is allready exist arise error
 			if (findProjById(id) != NULL) 
-				printf("%s\n", errors[0][1]);
+				printf("%s\n", i18("Projects is allready exist"));
 
 			else {
 				printf("%s\n", i18("Enter manager id for new project:"));
@@ -33,12 +33,12 @@ void management_projets() {
 				user * tmp = findUserById(manId);
 				// if not found user
 				if (tmp == NULL)
-					printf("%s\n", errors[4][0]);
+					printf("%s\n", i18("User not found!"));
 
 
 				// if this user worker or director we need only manager
 				else if (tmp->level != 2) {
-					printf("%s\n", errors[4][1]);
+					printf("%s\n", i18("User is allready exist"));
 				}
 				
 				else {
@@ -111,7 +111,7 @@ void management_projets() {
 						else if (a == 4) {
 							printf("%s\n", i18("Enter New status (0 or 1):"));
 							int newStatus = getInt();
-							if (newStatus > 1 || newStatus < 0)  printf("%s\n", errors[0][3]); 
+							if (newStatus > 1 || newStatus < 0)  printf("%s\n", i18("Project status incorrect")); 
 							else updateProj(tmp->id, tmp->name, tmp->manager_id, tmp->due, newStatus, tmp->cost);
 							}
 
@@ -137,12 +137,12 @@ void management_projets() {
 					
 				// not found project
 				else {
-					printf("%s\n", errors[0][0]);
+					printf("%s\n", i18("Not found projects with this id"));
 				}
 			}
 			// arise error
 			else {
-				printf("%s\n", errors[0][2]);
+				printf("%s\n", i18("Projects List is empty"));
 			}
 		}
 
@@ -155,7 +155,7 @@ void management_projets() {
 				printf("%s\n", i18("Enter id of project which need delete"));
 				int id = getInt();
 				if (findProjById(id) == NULL)
-					printf("%s\n", errors[0][0]);
+					printf("%s\n", i18("Not found projects with this id"));
 				
 				else {
 					// delete current project

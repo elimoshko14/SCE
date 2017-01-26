@@ -32,7 +32,7 @@ void menageComments() {
 
 			// if project is not exist arise error
 			if (findProjById(pId) == NULL)
-				printf("%s\n", errors[0][0]);
+				printf("%s\n", i18("Not found projects with this id"));
 
 			else {
 				if (user_ptr->level == 3)
@@ -43,7 +43,7 @@ void menageComments() {
 				}
 				
 				if (findTaskById(tId) == NULL)
-					printf("%s\n", errors[2][0]);
+					printf("%s\n", i18("Not found task with this id"));
 				else {
 					id = ++unique_comment_key;
 					printf("%s: ", i18("Enter title of new comment"));
@@ -129,12 +129,12 @@ void menageComments() {
 					
 				// not found comment
 				else {
-					printf("%s\n", errors[3][0]);
+					printf("%s\n", i18("Not found comments with this id"));
 				}
 			}
 			// arise error no task => no comments
 			else {
-				printf("%s\n", errors[2][2]);
+				printf("%s\n", i18("Task is allready exist"));
 			}
 		}
 
@@ -173,7 +173,7 @@ void menageComments() {
 				printf("%s\n", i18("Enter id of comment need to delete"));
 				int id = getInt();
 				if (findcomentById(id) == NULL)
-					printf("%s\n", errors[3][0]);
+					printf("%s\n", i18("Not found comments with this id"));
 				else {
 					// delete current comment
 					unSetComment(id);

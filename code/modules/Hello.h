@@ -12,7 +12,7 @@ void startMode() {
 
 	if (auth == NULL) {
 		system("cls");
-		printf("%s\n", errors[4][0]);
+		printf("%s\n", i18("User not found!"));
 	}
 	else { 
 		user_ptr = auth;

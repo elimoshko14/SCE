@@ -28,7 +28,7 @@ void menu_1() {
 void menu_2(){
 	// check if this manager has project
 	if (user_ptr->porj_id == 0 || findProjById(user_ptr->porj_id) == NULL) {
-		printf("%s\n", errors[4][4]);
+		printf("%s\n", i18("Another user is allready do it"));
 		exit(0);
 	}
 
@@ -62,7 +62,7 @@ void menu_2(){
 void menu_3() {
 	// check if this manager has project
 	if (user_ptr->porj_id == 0 || findProjById(user_ptr->porj_id) == NULL) {
-		printf("%s\n", errors[4][4]);
+		printf("%s\n", i18("Another user is allready do it"));
 		exit(0);
 	}
 	else {

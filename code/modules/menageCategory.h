@@ -25,12 +25,12 @@ void management_category() {
 			}
 			// if project is not exist arise error
 			if (findProjById(pId) == NULL)
-				printf("%s\n", errors[0][0]);
+				printf("%s\n", i18("Not found projects with this id"));
 
 			else {
 				id = ++unique_category_key;
 				if (findCatById(id) != NULL)
-					printf("%s\n", errors[1][1]);
+					printf("%s\n", i18("Category is allready exist"));
 				else {
 					printf("%s ",i18("Enter name of new category:"));
 
@@ -79,12 +79,12 @@ void management_category() {
 					
 				// not found category
 				else {
-					printf("%s\n", errors[1][0]);
+					printf("%s\n", i18("Not found category with this id"));
 				}
 			}
 			// arise error
 			else {
-				printf("%s\n", errors[1][2]);
+				printf("%s\n", i18("Categories List is empty"));
 			}
 		}
 
@@ -112,7 +112,7 @@ void management_category() {
 				printf("%s\n",i18("Enter id of category which need to delete"));
 				int id = getInt();
 				if (findCatById(id) == NULL)
-					printf("%s\n", errors[1][0]);
+					printf("%s\n", i18("Not found category with this id"));
 				
 				else {
 					printf("%s\n",i18("Warning! Deleting a Category will delete all it's tasks"));

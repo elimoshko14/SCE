@@ -16,30 +16,7 @@ struct comment_node * comments_list = NULL;
 struct category_node * categories_list = NULL;
 struct dict_node * dictionary = NULL;
 
-// array of errors 
-char errors[6][10][100] = {
-	// projects errors [0]
-{ "Not found projects with this id", "Projects is allready exist", "Projects List is empty", "Project status incorrect"   },
 
-// category errors [1]
-{ "Not found category with this id", "Category is allready exist", "Categories List is empty" },
-
-// tasks errors [2]
-{ "Not found task with this id", "Task is allready exist", "Tasks List is empty", "Task status incorrect" },
-
-// comments errors [3]
-{ "Not found comments with this id", "Comment is allready exist", "Comments List is empty" },
-
-// user errors [4]
-{  "User not found!",
-"User is allready exist",
-"Level of this user is not appropriate", "Another user is allready do it",
-"You don't have a project to work for a while"
-}, 
-
-	// main errors [5]
-{ "This options is disabled" }
-};
 
 //global technic functions
 int isEmptyFile(FILE *file) {

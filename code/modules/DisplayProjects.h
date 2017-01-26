@@ -4,7 +4,7 @@ void displayProjects() {
 		printProjTree();
 	}
 	else {
-		printf("%s\n", errors[0][2]);
+		printf("%s\n", i18("Projects List is empty"));
 	}
 
 	printf("%s",i18("To Back press [0]"));

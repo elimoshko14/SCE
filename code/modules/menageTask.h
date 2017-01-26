@@ -27,13 +27,13 @@ void management_tasks() {
 
 			// if project is not exist arise error
 			if (findProjById(pId) == NULL)
-				printf("%s\n", errors[0][0]);
+				printf("%s\n", i18("Not found projects with this id"));
 
 			else {
 				printf("%s ",i18("Enter ID of exist category:"));
 				cId = getInt();
 				if (findCatById(cId) == NULL)
-					printf("%s\n", errors[1][0]);
+					printf("%s\n", i18("Not found category with this id"));
 				else {
 					id = ++unique_task_key;
 					printf("%s ",i18("Enter title of new task:"));
@@ -146,7 +146,7 @@ void management_tasks() {
 							cId = getInt();
 							tmpC = findCatById(cId);
 							if (tmpC == NULL)
-								printf("%s\n", errors[1][0]);
+								printf("%s\n", i18("Not found category with this id"));
 							else 
 								updateTask(tmp->id, tmp->title, tmp->user_id, cId, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments);
 						}
@@ -155,7 +155,7 @@ void management_tasks() {
 							int uId = getInt();
 							user *tmpU = findUserById(uId);
 							if (tmpU == NULL)
-								printf("%s\n", errors[4][0]);
+								printf("%s\n", i18("User not found!"));
 							else
 							{
 								updateTask(tmp->id, tmp->title, uId, tmp->category_id, tmp->cost, tmp->status, tmp->tags, tmp->due, tmp->comments);
@@ -170,12 +170,12 @@ void management_tasks() {
 					
 				// not found task
 				else {
-					printf("%s\n", errors[2][0]);
+					printf("%s\n", i18("Not found task with this id"));
 				}
 			}
 			// no categoryies no tasks
 			else {
-				printf("%s\n", errors[1][2]);
+				printf("%s\n", i18("Categories List is empty"));
 			}
 		}
 
@@ -207,7 +207,7 @@ void management_tasks() {
 				printf("%s\n",i18("Enter id of task which need to delete"));
 				int id = getInt();
 				if (findTaskById(id) == NULL)
-					printf("%s\n", errors[2][0]);
+					printf("%s\n", i18("Not found task with this id"));
 				else {
 					// delete current task
 					unSetTask(id);
