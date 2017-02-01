@@ -28,20 +28,6 @@ void management_projets() {
 				printf("%s\n", i18("Projects is allready exist"));
 
 			else {
-				printf("%s\n", i18("Enter manager id for new project:"));
-				manId = getInt();
-				user * tmp = findUserById(manId);
-				// if not found user
-				if (tmp == NULL)
-					printf("%s\n", i18("User not found!"));
-
-
-				// if this user worker or director we need only manager
-				else if (tmp->level != 2) {
-					printf("%s\n", i18("User is allready exist"));
-				}
-				
-				else {
 					printf("%s\n", i18("Enter name of new project:"));
 					getchar();  gets_s(name,256);
 					printf("%s\n", i18("Enter cost of new project:"));
@@ -49,8 +35,7 @@ void management_projets() {
 					printf("%s\n", i18("Enter dead line of new project in format (d/m/y):"));
 					getchar();  gets_s(due,256);
 
-					addProj(id, name, manId, cost, due);
-				}
+					addProj(id, name, 0, cost, due);
 			}
 		}
 
@@ -70,7 +55,7 @@ void management_projets() {
 				// if found project update it
 				if (tmp != NULL) {
 					while (1) {
-						system("cls");
+						//system("cls");
 						i = 0;
 						printf("\n%s", i18("Update project"));
 						printf(" %s\n----------------------\n", tmp->name);
@@ -125,7 +110,7 @@ void management_projets() {
 								updateUser(tmpU->id, tmpU->name, tmpU->lang, tmpU->password, tmpU->level, tmp->id, tmpU->task_id, tmpU->salery, tmpU->online, tmpU->coments);
 							}
 							else {
-								printf("error:NULL-%d level-%d porj_id-%d", tmpU != NULL, tmpU->level == 2, tmpU->porj_id == 0);
+								printf("\n%s\n", i18("Error incorrect user"));
 							}
 						}
 
