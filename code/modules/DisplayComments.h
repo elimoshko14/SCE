@@ -1,5 +1,5 @@
 void displayCommentsByTask() {
-	system("cls");
+	
 	if (projects_list == NULL) {
 		printf("%s\n", i18("Projects List is empty"));
 	}
@@ -54,7 +54,7 @@ void displayCommentsByTask() {
 
 
 void displayCommentsByUser() {
-	system("cls");
+	
 	if (projects_list == NULL) {
 		printf("%s\n", i18("Projects List is empty"));
 	}

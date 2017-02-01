@@ -18,7 +18,7 @@ void management_tasks() {
 			char tags[256];
 			char due[256];
 
-			system("cls");
+			
 			if (user_ptr->level == 1) {
 				printf("%s ",i18("Enter ID of exist project:"));
 				pId = getInt();
@@ -67,7 +67,7 @@ void management_tasks() {
 			char newDue[256];
 
 			// it is possible update all fields except ID's
-			system("cls");
+			
 
 			// if categories exist
 			if (categories_list) {
@@ -98,7 +98,7 @@ void management_tasks() {
 				// if found task update it
 				if (tmp != NULL) {
 					while (1) {
-						system("cls");
+						
 						i = 0;
 						printf("\n %s %s\n----------------------\n",i18("Update task"), tmp->title);
 						printf("[%d] %s\n", ++i,i18("Change Title:"));

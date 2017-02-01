@@ -15,7 +15,7 @@ void management_users() {
 		if (x == 1) {
 			int id, pId, salery, level;
 			char name[256];
-			system("cls");
+			
 			if (user_ptr->level == 1) {
 				printf("%s: ", i18("Enter ID of exist project"));
 				pId = getInt();
@@ -49,7 +49,7 @@ void management_users() {
 			int  newSalery, newLevel;
 			char newName[256];
 			// it is possible update all fields except ID's
-			system("cls");
+			
 
 			// if projects exist
 			if (projects_list) {
@@ -75,7 +75,7 @@ void management_users() {
 				// if found user update it
 				if (tmp != NULL) {
 					while (1) {
-						system("cls");
+						
 						i = 0;
 						printf("\n %s %s\n----------------------\n", i18("Update user"), tmp->name);
 						printf("[%d] %s:\n", ++i, i18("Change Name"));

@@ -15,7 +15,7 @@ void management_category() {
 		if (x == 1) {
 			int id, pId;
 			char name[256];
-			system("cls");
+			
 			if (user_ptr->level == 1) {
 				printf("%s ",i18("Enter ID of exist project:"));
 				pId = getInt();
@@ -44,7 +44,7 @@ void management_category() {
 		else if (x == 2) {
 			int pId;
 			// it is possible update all fields except ID
-			system("cls");
+			
 
 			// if categories exist
 			if (categories_list) {
@@ -70,7 +70,7 @@ void management_category() {
 
 				// if found category update it
 				if (tmp != NULL) {
-						system("cls");
+						
 							char newName[256];
 							printf("%s ",i18("Enter New name:"));
 							getchar(); gets_s(newName,256);
