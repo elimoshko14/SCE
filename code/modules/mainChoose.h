@@ -22,6 +22,7 @@ void directorChoose(int ch) {
 	if (i == ch){ displayCommentsByUser();  }i++;
 	
 	if (i == ch){  displayUsersbyProject();   }i++;
+	if (i == ch) { exportCSV(); }i++;
 	
 	if (i == ch){ copyTask();   }i++;
 	if (i == ch) { CopyProj(); }i++;
