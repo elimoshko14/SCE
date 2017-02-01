@@ -20,7 +20,7 @@ void management_projets() {
 			int id, manId, cost;
 			char due[256];
 			char name[256];
-			system("cls");
+			
 			id = ++unique_project_key;
 
 			// if project is allready exist arise error
@@ -42,8 +42,6 @@ void management_projets() {
 		// update
 		else if (x == 2) {
 			// it is possible update all fields except ID
-			system("cls");
-
 			// if projects exist
 			if (projects_list) {
 				printf("%s\n", i18("All Projects:"));
@@ -55,7 +53,6 @@ void management_projets() {
 				// if found project update it
 				if (tmp != NULL) {
 					while (1) {
-						//system("cls");
 						i = 0;
 						printf("\n%s", i18("Update project"));
 						printf(" %s\n----------------------\n", tmp->name);
@@ -149,12 +146,6 @@ void management_projets() {
 				}
 			}
 		}
-
-		// back to main menu
-		else if (x == 4) {
-			return;
-		}
-
 		// if choise is wrong back 
 		else { return;  }
 	}

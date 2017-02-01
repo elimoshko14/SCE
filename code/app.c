@@ -37,7 +37,7 @@ int main() {
 
 
 	// starting ask
-	printf("For Testing version press: [1]\nFor user version press: any key\n");
+	printf("For Testing version press: [1]\nFor user version press: [0]\n");
 	int a = getInt();
 
 	/*TESING VERSION*/
@@ -49,7 +49,7 @@ int main() {
 		/*USER VERSION*/
 		// main loop
 		while (1) {
-			system("cls");
+			
 			// start if user not login
 			if (user_ptr == NULL) { startMode(); }
 

@@ -1,5 +1,5 @@
 void displayCategories() {
-	system("cls");
+	
 	if (projects_list == NULL) {
 		printf("%s\n", i18("Projects List is empty")); 
 	}

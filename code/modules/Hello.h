@@ -11,7 +11,7 @@ void startMode() {
 	user *auth = login(identificator, pass);
 
 	if (auth == NULL) {
-		system("cls");
+		
 		printf("%s\n", i18("User not found!"));
 	}
 	else { 

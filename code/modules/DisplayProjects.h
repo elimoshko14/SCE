@@ -1,5 +1,5 @@
 void displayProjects() {
-	system("cls");
+	
 	if (projects_list != NULL) {
 		printProjTree();
 	}

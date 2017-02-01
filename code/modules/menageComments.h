@@ -17,7 +17,7 @@ void menageComments() {
 			char title[256];
 			char body[256];
 
-			system("cls");
+			
 
 			// by user level
 			// director all project
@@ -62,7 +62,7 @@ void menageComments() {
 			char newBody[256];
 
 			// it is possible update all fields except ID's
-			system("cls");
+			
 
 			// if task exist
 			if (tasks_list) {
@@ -100,7 +100,7 @@ void menageComments() {
 				// if found comment update it
 				if (tmp != NULL) {
 					while (1) {
-						system("cls");
+						
 						i = 0;
 						printf("\n %s %s\n----------------------\n", i18("Update comment"), tmp->title);
 						printf("[%d] %s:\n", ++i, i18("Change Title"));

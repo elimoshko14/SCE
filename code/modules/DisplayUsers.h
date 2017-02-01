@@ -1,5 +1,5 @@
 void displayUsersbyProject() {
-	system("cls");
+	
 	if (projects_list == NULL) {
 		printf("%s\n", i18("Projects List is empty"));
 	}
@@ -30,7 +30,7 @@ void displayUsersbyProject() {
 
 void displayWorkers() {
 	int pId;
-		system("cls");
+		
 		if (projects_list == NULL) {
 			printf("%s\n", i18("Projects List is empty"));
 		}
@@ -66,7 +66,7 @@ void displayWorkers() {
 }
 
 void displayManagers() {
-	system("cls");
+	
 	if (projects_list == NULL) {
 		printf("%s\n", i18("Projects List is empty")); 
 	}

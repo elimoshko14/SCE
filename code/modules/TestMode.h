@@ -1,7 +1,7 @@
 void testMode() {
 	int tCh;
 	while (1) {
-		system("cls");
+		
 		printf("\n::TESTING VERSION OF PROJECT::\n============================================\n");
 		testMenu();
 		printf("\n\nMake your choose: ");
