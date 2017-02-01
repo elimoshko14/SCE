@@ -27,7 +27,7 @@ void directorChoose(int ch) {
 	if (i == ch) { CopyProj(); }i++;
 	if (i == ch) { dinamicLangSwitch(); }i++;
 	if (i == ch) { printf("\n\n Bye Bye \n\n"); user_ptr = NULL;  return; }
-	else { printf("***ERROR**** \n\n"); }
+	if (ch > i || ch < 0) { printf("Invalid key\n"); }
 }
 
 void managerChoose(int ch) {
@@ -46,8 +46,8 @@ void managerChoose(int ch) {
 	if (i == ch){ displayUsersbyProject();  }i++;
 	if (i == ch){ copyTask();   }i++;
 	if (i == ch){ dinamicLangSwitch(); }i++;
-	if (i == ch){  printf("\n\n Bye Bye \n\n"); return;  }
-	else { printf("***ERROR**** \n\n"); }
+	if (i == ch){  printf("\n\n Bye Bye \n\n"); user_ptr = NULL;  return;}
+	if (ch > i || ch < 0) { printf("Invalid key\n"); }
 }
 
 void workerChoose(int ch) {
@@ -60,6 +60,6 @@ void workerChoose(int ch) {
 	if (i == ch){  displayWorkers();   }i++;
 	if (i == ch){  redueTask();   }i++;
 	if (i == ch){ dinamicLangSwitch(); }i++;
-	if (i == ch){  printf("\n\n Bye Bye \n\n"); return;  }
-	else { printf("***ERROR**** \n\n"); }
+	if (i == ch) { printf("\n\n Bye Bye \n\n"); user_ptr = NULL;  return; }
+	if (ch > i || ch < 0) { printf("Invalid key\n"); }
 }
