@@ -13,13 +13,15 @@ void displayCategories() {
 			}
 			else { pId = user_ptr->porj_id; }
 			proj *tmpP = findProjById(pId);
-
+			if (tmpP == NULL) { printf("Id of project not exsist\n"); }
+			else{
 			printf("%s %s:\n", i18("All Categories by project"), tmpP->name);
 			category_node * t = categories_list;
 			while (t) {
 				if (t->ptr->proj_id == pId)
 					printCat(t->ptr);
 				t = t->next;
+			}
 			}
 		}
 	}
