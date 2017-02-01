@@ -100,11 +100,17 @@
     <ClInclude Include="..\modules\testMenu.h">
       <Filter>modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\modules\testChoose.h">
-      <Filter>modules</Filter>
-    </ClInclude>
     <ClInclude Include="..\modules\TestMode.h">
       <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testNewUserInfo.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testUpdateTask.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testManageProject.h">
+      <Filter>unit testing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -16,3 +16,6 @@
 
 #include "../unitTesting/testGetDbs.h"
 #include "../unitTesting/testLogin.h"
+#include "../unitTesting/testNewUserInfo.h"
+#include "../unitTesting/testUpdateTask.h"
+#include "../unitTesting/testManageProject.h"

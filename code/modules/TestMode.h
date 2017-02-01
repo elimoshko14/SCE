@@ -10,7 +10,7 @@ void testMode() {
 		if (i == ch) { unitTestLogin(); }i++;
 		if (i == ch) { unitTestGetDbs(); }i++;
 		if (i == ch) { management_category(); }i++;
-		if (i == ch) { management_tasks(); }i++;
+		if (i == ch) { unitTestNewUserInfo(); }i++;
 		if (i == ch) { menageComments(); }i++;
 
 		if (i == ch) { displayProjects(); }i++;
