@@ -112,6 +112,15 @@
     <ClInclude Include="..\unitTesting\testManageProject.h">
       <Filter>unit testing</Filter>
     </ClInclude>
+    <ClInclude Include="..\unitTesting\testDeleteNonActiveUsers.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testPrintProj.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\unitTesting\testCloneProj.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">
