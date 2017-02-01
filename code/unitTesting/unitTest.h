@@ -18,3 +18,7 @@
 #include "../unitTesting/testLogin.h"
 #include "../unitTesting/testSerch.h"
 #include "../unitTesting/testDue.h"
+#include "../unitTesting/testUnitBonusManager.h"
+#include "../unitTesting/testEditCtgry.h"
+#include "../unitTesting/testPrintProjWorker.h"
+#include "../unitTesting/testPrintTask.h"

@@ -11,6 +11,10 @@ void testMode() {
 		if (i == ch) { unitTestGetDbs(); }i++;
 		if (i == ch) { unitTestSerch(); }i++;
 		if (i == ch) { unitTestDue(); }i++;
+		if (i == ch) { unitTestBonusManager(); }i++;
+		if (i == ch) { unitTestEditCtgry(); }i++;
+		if (i == ch) { testPrintProjWorker(); }i++;
+		if (i == ch) { testPrintTask(); }i++;
 		if (i == ch) { printf("\n\n Bye Bye \n\n"); return; }
 
 		printf("\n============================================\n::FINISH TEST::\n\n");

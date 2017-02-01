@@ -77,11 +77,11 @@ void management_tasks() {
 				}
 				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
-				
+				if (!tmpP)break;
 				printf("Enter ID of exist category: ");
 				cId = getInt();
 				category *tmpC = findCatById(cId);
-
+				if (!tmpC)break;
 
 				printf("%s %s %s %s:\n",i18("All Tasks by project"), tmpP->name,i18("in category"), tmpC->name);
 				task_node * t = tasks_list;
@@ -190,11 +190,11 @@ void management_tasks() {
 				}
 				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
-
+				if (!tmpP)break;
 				printf("%s ",i18("Enter id of exist category:"));
 				int cId = getInt();
 				category *tmpC = findCatById(cId);
-
+				if (!tmpC)break;
 
 				printf("%s %s %s %s:\n",i18("All Tasks by project"), tmpP->name,i18("in category"), tmpC->name);
 				task_node * t = tasks_list;

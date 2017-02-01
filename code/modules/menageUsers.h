@@ -60,7 +60,7 @@ void management_users() {
 				}
 				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
-				
+				if (!tmpP)break;
 				printf("%s [%s]:\n", i18("All Users in project"), tmpP->name);
 				user_node * t = users_list;
 				while (t) {
@@ -161,7 +161,7 @@ void management_users() {
 				}
 				else { pId = user_ptr->porj_id; }
 				proj *tmpP = findProjById(pId);
-
+				if (!tmpP)break;
 				printf("%s [%s]:\n",i18("All Users in project"), tmpP->name);
 				user_node * t = users_list;
 				while (t) {

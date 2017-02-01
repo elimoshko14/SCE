@@ -74,7 +74,7 @@ void menageComments() {
 					pId = user_ptr->porj_id;
 				}
 				proj *tmpP = findProjById(pId);
-				
+				if (!tmpP)break;
 				if (user_ptr->level == 3) {
 					tId = user_ptr->task_id;
 				}
@@ -83,7 +83,7 @@ void menageComments() {
 					tId = getInt();
 				}
 				task *tmpT = findTaskById(tId);
-
+				if (!tmpT)break;
 
 				printf("%s %s %s [%s]:\n",i18("All Comments by project"), tmpP->name, i18("for Task"), tmpT->title);
 				comment_node * t = comments_list;
@@ -96,7 +96,7 @@ void menageComments() {
 				int id = getInt();
 
 				comment * tmp = findcomentById(id);
-
+	
 				// if found comment update it
 				if (tmp != NULL) {
 					while (1) {
@@ -151,7 +151,7 @@ void menageComments() {
 					pId = user_ptr->porj_id;
 				}
 				proj *tmpP = findProjById(pId);
-
+				if (!tmpP)break;
 				if (user_ptr->level == 3) {
 					tId = user_ptr->task_id;
 				}

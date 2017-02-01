@@ -56,7 +56,7 @@ void management_category() {
 					pId = user_ptr->porj_id;
 				}
 				proj *tmpP = findProjById(pId);
-				
+				if (!tmpP)break;
 				printf("%s %s:\n",i18("All Categories by project"), tmpP->name);
 				category_node * t = categories_list;
 				while (t) {
@@ -67,7 +67,6 @@ void management_category() {
 				printf("%s\n",i18("Enter id of category which need to update"));
 				int id = getInt();
 				category * tmp = findCatById(id);
-
 				// if found category update it
 				if (tmp != NULL) {
 						
@@ -101,7 +100,7 @@ void management_category() {
 					pId = user_ptr->porj_id;
 				}
 				proj *tmpP = findProjById(pId);
-
+				if (!tmpP)break;
 				printf("%s %s:\n",i18("All Categories by project"), tmpP->name);
 				category_node * t = categories_list;
 				while (t) {
