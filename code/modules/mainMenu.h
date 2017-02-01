@@ -16,6 +16,7 @@ void menu_1() {
 	printf("[%d] %s\n", ++i, i18("Display all comments by specific task:"));
 	printf("[%d] %s\n", ++i, i18("Display all comments by specific user:"));
 	printf("[%d] %s\n", ++i, i18("Display all users by specific project:"));
+	printf("[%d] CSV\n", ++i);
 	printf("[%d] %s\n", ++i, i18("Copy Specific Task"));
 	printf("[%d] %s\n", ++i, i18("Copy Specific project"));
 	printf("[%d] %s\n", ++i, i18("Switch language to Russian:"));

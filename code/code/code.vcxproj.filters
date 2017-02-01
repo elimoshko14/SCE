@@ -100,9 +100,6 @@
     <ClInclude Include="..\modules\testMenu.h">
       <Filter>modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\modules\testChoose.h">
-      <Filter>modules</Filter>
-    </ClInclude>
     <ClInclude Include="..\modules\TestMode.h">
       <Filter>modules</Filter>
     </ClInclude>
