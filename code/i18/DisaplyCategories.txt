@@ -1,9 +1,0 @@
-Enter ID of exist project:
-Enter ID of exist project:
-Введи ИД проекта:
-All Categories by project
-All Categories by project
-Все категории даного проекта
-To Back press
-To Back press
-Чтобы вернутса нажмите

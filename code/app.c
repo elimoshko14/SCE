@@ -37,7 +37,7 @@ int main() {
 
 
 	// starting ask
-	printf("For Testing version press: [1]\nFor user version press: any key\n");
+	printf("For Testing version press: [1]\nFor user version press: [0]\n");
 	int a = getInt();
 
 	/*TESING VERSION*/

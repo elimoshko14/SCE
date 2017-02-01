@@ -124,7 +124,7 @@ void management_tasks() {
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, newCost, tmp->status, tmp->tags, tmp->due, tmp->comments);
 						}
 						else if (a == 3) {
-							printf("%s ",i18("Enter New password:"));
+							printf("%s ",i18("Enter New Date:"));
 							getchar(); gets_s(newDue, 256);
 							updateTask(tmp->id, tmp->title, tmp->user_id, tmp->category_id, tmp->cost, tmp->status, tmp->tags, newDue, tmp->comments);
 						}
