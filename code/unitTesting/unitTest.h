@@ -16,3 +16,4 @@
 
 #include "../unitTesting/testGetDbs.h"
 #include "../unitTesting/testLogin.h"
+#include "../unitTesting/testUnitBonusManager.h"
