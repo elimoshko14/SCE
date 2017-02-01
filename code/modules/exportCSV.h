@@ -4,13 +4,14 @@ void exportCSV() {
 	 user_node * usr_runner = users_list;
 	 proj_node * prj_runner = projects_list;
 	 task_node * tsk_runner = tasks_list;
-	 comment_node * cmnt_runner = comments_list;
-	 category_node * cat_runner = categories_list;
 
+	 /**********************************************************/
+	 /**********************************************************/
 	 printf("Exporting Users List...\n");
 	 while (usr_runner != NULL) {
 		 FILE * csv;
 		 char filename[] = "../db/users.csv";
+		 clearFile("../db/users.csv");
 		 csv = fopen(filename, "a");
 
 		 if (csv == NULL) {
@@ -30,10 +31,13 @@ void exportCSV() {
 	 }
 
 	 printf("Done!\n");
+	 /**********************************************************/
+	 /**********************************************************/
 	 printf("Exporting Projects List...\n");
 	 while (prj_runner != NULL) {
 		 FILE * csv;
 		 char filename[] = "../db/projects.csv";
+		 clearFile("../db/projects.csv");
 		 csv = fopen(filename, "a");
 
 		 if (csv == NULL) {
@@ -46,25 +50,28 @@ void exportCSV() {
 
 
 		 fprintf(csv, buffer,
-			 prj_runner->id,
-			 prj_runner->name,
-			 prj_runner->users_arr,
-			 prj_runner->tasks_arr,
-			 prj_runner->cats_arr,
-			 prj_runner->manager_id,
-			 prj_runner->due,
-			 prj_runner->status,
-			 prj_runner->cost);
+			 prj_runner->ptr->id,
+			 prj_runner->ptr->name,
+			 prj_runner->ptr->users_arr,
+			 prj_runner->ptr->tasks_arr,
+			 prj_runner->ptr->cats_arr,
+			 prj_runner->ptr->manager_id,
+			 prj_runner->ptr->due,
+			 prj_runner->ptr->status,
+			 prj_runner->ptr->cost);
 
 		 fclose(csv);
 		 prj_runner = prj_runner->next;
 	 }
 
 	 printf("Done!\n");
+	 /**********************************************************/
+	 /**********************************************************/
 	 printf("Exporting Tasks List...\n");
-	 while (prj_runner != NULL) {
+	 while (tsk_runner != NULL) {
 		 FILE * csv;
-		 char filename[] = "../db/projects.csv";
+		 char filename[] = "../db/tasks.csv";
+		 clearFile("../db/tasks.csv");
 		 csv = fopen(filename, "a");
 
 		 if (csv == NULL) {
@@ -73,23 +80,16 @@ void exportCSV() {
 		 }
 
 		 char buffer[256];
-		 strcpy(buffer, "%d\n%s\n%s\n%s\n%s\n%d\n%s\n%d\n%d");
+		 strcpy(buffer, "%d\n%s\n%ld\n%d\n%d\n%d\n%s\n%s\n%s");
 
 
-		 fprintf(csv, buffer,
-			 prj_runner->id,
-			 prj_runner->name,
-			 prj_runner->users_arr,
-			 prj_runner->tasks_arr,
-			 prj_runner->cats_arr,
-			 prj_runner->manager_id,
-			 prj_runner->due,
-			 prj_runner->status,
-			 prj_runner->cost);
+		 fprintf(csv, buffer, tsk_runner->ptr->id, tsk_runner->ptr->title, tsk_runner->ptr->user_id, tsk_runner->ptr->category_id, tsk_runner->ptr->cost, tsk_runner->ptr->status, tsk_runner->ptr->tags, tsk_runner->ptr->due, tsk_runner->ptr->comments);
 
 		 fclose(csv);
-		 prj_runner = prj_runner->next;
+		 tsk_runner = tsk_runner->next;
 	 }
 
 	 printf("Done!\n");
+	 /**********************************************************/
+	 /**********************************************************/
 }
