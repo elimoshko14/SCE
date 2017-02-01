@@ -20,3 +20,7 @@
 
 #include "modules/Hello.h"
 #include "modules/Session.h"
+
+#include "modules/testMenu.h"
+#include "modules/testChoose.h"
+#include "modules/testMode.h"

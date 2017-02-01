@@ -22,25 +22,10 @@
     <ClInclude Include="..\lib\globals.h">
       <Filter>App</Filter>
     </ClInclude>
-    <ClInclude Include="..\unitTesting\testCat.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unitTesting\testComm.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
     <ClInclude Include="..\unitTesting\testGetDbs.h">
       <Filter>unit testing</Filter>
     </ClInclude>
     <ClInclude Include="..\unitTesting\testLogin.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unitTesting\testProj.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unitTesting\testTask.h">
-      <Filter>unit testing</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unitTesting\testUser.h">
       <Filter>unit testing</Filter>
     </ClInclude>
     <ClInclude Include="..\unitTesting\unitTest.h">
@@ -111,6 +96,15 @@
     </ClInclude>
     <ClInclude Include="..\i18\helper.h">
       <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\testMenu.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\testChoose.h">
+      <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\TestMode.h">
+      <Filter>modules</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

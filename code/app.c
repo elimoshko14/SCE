@@ -29,7 +29,7 @@ void init() {
 }
 
 /*	Unit Testing MAIN 	 */
-// #include "unitTesting/unitTest.h" 
+#include "unitTesting/unitTest.h" 
 
 int main() {
 	// initialization of system
@@ -37,12 +37,12 @@ int main() {
 
 
 	// starting ask
-	printf("For Testing version press: [1]\nFor user version press: any key");
+	printf("For Testing version press: [1]\nFor user version press: any key\n");
 	int a = getInt();
 
 	/*TESING VERSION*/
 	if (a == 1) {
-
+		testMode();
 	}
 
 	else {
