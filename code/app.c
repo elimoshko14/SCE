@@ -44,7 +44,7 @@ int main() {
 			// starting ask
 			printf("For Testing version press: [0]\nFor user version press: [1]\nFor exit press: [2]\n");
 			a = getInt();
-			if (a == 0) testMode();
+			if (a == 0) unitTestSerch();
 			else if (a == 2)
 				break;
 		}

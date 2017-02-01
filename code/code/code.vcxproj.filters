@@ -106,6 +106,9 @@
     <ClInclude Include="..\modules\TestMode.h">
       <Filter>modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\unitTesting\Serch.h">
+      <Filter>unit testing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\db\projects.txt">
