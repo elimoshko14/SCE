@@ -12,4 +12,6 @@ bool unitTestBonusManager() {
 	
 	manager_bonus(p);
 	printProj(p);
+
+	return true;
 }

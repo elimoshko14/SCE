@@ -15,6 +15,12 @@ void testMode() {
 		if (i == ch) { unitTestEditCtgry(); }i++;
 		if (i == ch) { testPrintProjWorker(); }i++;
 		if (i == ch) { testPrintTask(); }i++;
+		if (i == ch) { testDeleteNonActiveUsers(); }i++;
+		if (i == ch) { unitTestManageProject(); }i++;
+		if (i == ch) { unitTestNewUserInfo(); }i++;
+		if (i == ch) { unittestPrintProj(); }i++;
+		if (i == ch) { unitTestUpdateTask(); }i++;
+		if (i == ch) { unittestCloneProj(); }i++;
 		if (i == ch) { printf("\n\n Bye Bye \n\n"); return; }
 
 		printf("\n============================================\n::FINISH TEST::\n\n");

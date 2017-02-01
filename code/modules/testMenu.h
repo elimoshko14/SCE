@@ -8,5 +8,11 @@ void testMenu() {
 	printf("[%d] %s\n", ++i, "Test Edit Category");
 	printf("[%d] %s\n", ++i, "Test Print Project Worker");
 	printf("[%d] %s\n", ++i, "Test Print Task");
+	printf("[%d] %s\n", ++i, "Test Delete non active users");
+	printf("[%d] %s\n", ++i, "Test Manage Project");
+	printf("[%d] %s\n", ++i, "Test New User Info");
+	printf("[%d] %s\n", ++i, "Test Print Projects");
+	printf("[%d] %s\n", ++i, "Test Update Task");
+	printf("[%d] %s\n", ++i, "Test Clone Project");
 	printf("[%d] %s", ++i, "Exit");
 }

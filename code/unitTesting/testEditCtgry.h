@@ -5,4 +5,6 @@ bool unitTestEditCtgry() {
 	UpdateCat(5, "of shitt",8,"-1");
 	printCat(findCatById(5));
 	unSetCat(5);
+
+	return true;
 }
