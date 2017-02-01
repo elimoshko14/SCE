@@ -48,9 +48,9 @@ int main() {
 			else if (a == 2)
 				break;
 		}
-			
-		startMode();
-		if (user_ptr != NULL) userSession();
+		if (user_ptr == NULL)
+			startMode();
+		else userSession();
 		a = 1;
 	}
 	printf("\n");
