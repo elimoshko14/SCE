@@ -13,6 +13,7 @@
 #include "modules/copyTask.h"
 #include "modules/CopyProj.h"
 #include "modules/dinamicLangSwitch.h"
+#include "modules/exportCSV.h"
 
 #include "modules/mainMenu.h"
 #include "modules/mainChoose.h"
