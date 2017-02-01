@@ -1,37 +1,30 @@
 bool unitTestGetDbs() {
 
-	printf("----------- TASKS -----------\n\n");
-	getTasks();
-	printTaskTree();
-	if (!tasks_list) 
-		printf("\nERROR!\ntasks_list is NULL!\n");
-
-	printf("----------- USERS -----------\n\n");
-	getUsers();
-	printUserTree();
-	if (!users_list)
-		printf("ERROR!\nusers_list is NULL!\n");
-
-
-	printf("----------- Categories -----------\n\n");
-	getCategories();
-	printCatTree();
-	if (!categories_list)
-		printf("ERROR!\ncategories_list is NULL!\n");
-
-
-	printf("----------- Project -----------\n\n");
-	getProjs();
+	printf("\n----------- Project -----------\n\n");
 	printProjTree();
 	if (!projects_list)
 		printf("ERROR!\nprojects_list is NULL!\n");
 
+	printf("\n----------- Categories -----------\n\n");
+	printCatTree();
+	if (!categories_list)
+		printf("ERROR!\ncategories_list is NULL!\n");
 
-	printf("----------- Comments -----------\n\n");
-	getComments();
+	printf("\n----------- Tasks -----------\n\n");
+	printTaskTree();
+	if (!tasks_list)
+		printf("\nERROR!\ntasks_list is NULL!\n");
+
+	printf("\n----------- Comments -----------\n\n");
 	printComentTree();
 	if (!comments_list)
 		printf("ERROR!\ncomments_list is NULL!\n");
+
+
+	printf("----------- Users -----------\n\n");
+	printUserTree();
+	if (!users_list)
+		printf("ERROR!\nusers_list is NULL!\n");
 
 	return true;
 }

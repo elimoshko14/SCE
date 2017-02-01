@@ -12,4 +12,3 @@ bool unitTestLogin() {
 	printf("ERROR!\nuser_ptr is NULL!\n");
 	return false;
 }
-

@@ -2,8 +2,8 @@ void testChoose(int ch) {
 
 	int i = 1;
 	
-	if (i == ch){ management_projets();   }i++;
-	if (i == ch){  management_users();   }i++;
+	if (i == ch){ unitTestLogin();   }i++;
+	if (i == ch) { unitTestGetDbs(); }i++;
 	if (i == ch){  management_category();   }i++;
 	if (i == ch){  management_tasks();  }i++;
 	if (i == ch){  menageComments();  }i++;
