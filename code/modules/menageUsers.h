@@ -39,7 +39,7 @@ void management_users() {
 					printf("%s (in $): ", i18("Enter salery of new user"));
 					salery = getInt(); 
 
-					addUser(id, name, "EN", "String", level, pId, 0, salery, 0, "-1");
+					addUser(id, name, "EN", "1234", level, pId, 0, salery, 0, "-1");
 				}
 			}
 		}

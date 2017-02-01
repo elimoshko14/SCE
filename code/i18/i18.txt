@@ -439,8 +439,11 @@ Enter New status (0 or 1):
 Enter New tags:
 Enter New tags:
 ¬ведите новые теги:
-Enter id of exist category:
-Enter id of exist category:
+Enter ID of exist category
+Enter ID of exist category
+¬ведите идентификатор категории существуют
+Enter id of exist category
+Enter id of exist category
 ¬ведите идентификатор категории существуют:
 Enter id of exist user: 
 Enter id of exist user: 

@@ -44,7 +44,7 @@ void managerChoose(int ch) {
 	
 	if (i == ch){ displayUsersbyProject();  }i++;
 	if (i == ch){ copyTask();   }i++;
-	if (i == ch){ /* Translate */  }i++;
+	if (i == ch){ dinamicLangSwitch(); }i++;
 	if (i == ch){  printf("\n\n Bye Bye \n\n"); exit(0);  }i++;
 }
 
@@ -57,6 +57,6 @@ void workerChoose(int ch) {
 	if (i == ch){  displayCommentsByTask();  }i++;
 	if (i == ch){  displayWorkers();   }i++;
 	if (i == ch){  redueTask();   }i++;
-	if (i == ch){  /*Translate*/   }i++;
+	if (i == ch){ dinamicLangSwitch(); }i++;
 	if (i == ch){  printf("\n\n Bye Bye \n\n"); exit(0);  }
 }

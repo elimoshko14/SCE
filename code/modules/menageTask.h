@@ -30,7 +30,7 @@ void management_tasks() {
 				printf("%s\n", i18("Not found projects with this id"));
 
 			else {
-				printf("%s ",i18("Enter ID of exist category:"));
+				printf("%s: ",i18("Enter ID of exist category"));
 				cId = getInt();
 				if (findCatById(cId) == NULL)
 					printf("%s\n", i18("Not found category with this id"));
