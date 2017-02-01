@@ -1,17 +1,13 @@
 bool unitTestBonusManager() {
-	proj* p = (proj*)malloc(sizeof(proj*));
-	strcpy(p->cats_arr ,"-1");
-	p->cost = 1234;
-	strcpy(p->due ,"1234567890");
-	p->id = 1;
-	p->manager_id = 1;
-	strcpy(p->name, "chen");
-	p->status = 1;
-	strcpy(p->tasks_arr, "-1");
-	strcpy(p->users_arr, "-1");
-	
+	addProj(1000, "Test Proj", 1, 150000, "2/10/2020");
+	proj * p = findProjById(1000);
+	if (p == NULL) {
+		printf("ERROR\n");
+		return false;
+	}
+	printUser(findUserById(p->manager_id));
 	manager_bonus(p);
-	printProj(p);
-
+	printUser(findUserById(p->manager_id));
+	unSetProj(p->id);
 	return true;
 }

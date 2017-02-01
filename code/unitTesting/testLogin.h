@@ -7,6 +7,7 @@ bool unitTestLogin() {
 	if (user_ptr) {
 		printf("\n----------- Logged in user -----------\n");
 		printUser(user_ptr);
+		user_ptr = NULL;
 		return true;
 	}
 	printf("ERROR!\nuser_ptr is NULL!\n");

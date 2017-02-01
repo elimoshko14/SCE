@@ -4,6 +4,8 @@ void manager_bonus(proj * p) {
 	while (tmp!=NULL)
 	{
 		user *u = findUserById(tmp->ptr->user_id);
+		if (u == NULL)
+			return NULL;
 		if (u->porj_id == p->id)
 		{
 			if ((tmp->ptr->status) == 1)
