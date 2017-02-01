@@ -12,14 +12,7 @@ user * login(int user_id, char * pass) {
 		user * tmp_user_node = findUserById(user_id);
 		// if we did not find it, we can show error, but no way to know if func is broken
 		// or the user is not in system
-		if (!tmp_user_node) {
-			printf("ID not found\n");
-			system("pause");
-			return NULL;
-		}
-
-
-		printf("%s\n", tmp_user_node->password);
+		if (!tmp_user_node) return NULL;
 
 		if (strcmp(tmp_user_node->password, pass) == 0){
 			tmp_user_node->online = true;
@@ -27,9 +20,7 @@ user * login(int user_id, char * pass) {
 			return tmp_user_node;
 		}
 		printf("ERROR\n");
-		system("pause"); 
 		return NULL;
 	}
-
 	return NULL;
 }

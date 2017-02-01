@@ -10,10 +10,7 @@ void startMode() {
 
 	user *auth = login(identificator, pass);
 
-	if (auth == NULL) {
-		
-		printf("%s\n", i18("User not found!"));
-	}
+	if (auth == NULL) printf("Error, user or password invalid!\n");
 	else { 
 		user_ptr = auth;
 		changeLang();

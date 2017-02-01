@@ -17,7 +17,7 @@ void management_projets() {
 
 		// add
 		if (x == 1) {
-			int id, manId, cost;
+			int id, cost;
 			char due[256];
 			char name[256];
 			

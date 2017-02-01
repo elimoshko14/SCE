@@ -26,7 +26,7 @@ void directorChoose(int ch) {
 	if (i == ch){ copyTask();   }i++;
 	if (i == ch) { CopyProj(); }i++;
 	if (i == ch) { dinamicLangSwitch(); }i++;
-	if (i == ch){  printf("\n\n Bye Bye \n\n"); exit(0);  }
+	if (i == ch) { printf("\n\n Bye Bye \n\n"); user_ptr = NULL;  return; }
 }
 
 void managerChoose(int ch) {

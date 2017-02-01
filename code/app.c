@@ -35,27 +35,23 @@ int main() {
 	// initialization of system
 	init();
 
-
-	// starting ask
-	printf("For Testing version press: [1]\nFor user version press: [0]\n");
-	int a = getInt();
-
-	/*TESING VERSION*/
-	if (a == 1) {
-		testMode();
-	}
-
-	else {
-		/*USER VERSION*/
-		// main loop
-		while (1) {
-			
-			// start if user not login
-			if (user_ptr == NULL) { startMode(); }
-
-			// user session with all functions of system
-			else { userSession(); }
+	/*USER VERSION*/
+	int a = 1;
+	// main loop
+	while (1) {
+		/*TESING VERSION*/
+		if (a == 0 || user_ptr == NULL) {
+			// starting ask
+			printf("For Testing version press: [0]\nFor user version press: [1]\nFor exit press: [2]\n");
+			a = getInt();
+			if (a == 0) testMode();
+			else if (a == 2)
+				break;
 		}
+			
+		startMode();
+		if (user_ptr != NULL) userSession();
+		a = 1;
 	}
 	printf("\n");
 	return 0;

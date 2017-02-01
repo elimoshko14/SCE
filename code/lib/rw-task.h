@@ -200,7 +200,7 @@ void updateTask(int id, char title[], int user_id, int cat_id, int cost, int sta
 		strcpy(newTask->due, due);
 		strcpy(newTask->comments, comments);
 		printf("Update Complited!\n"); 
-		system("pause");
+		
 	}
 	else
 	{
